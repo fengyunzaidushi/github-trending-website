@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run dev:*)",
+      "Bash(npm run lint)",
+      "Bash(curl:*)",
+      "Bash(lsof:*)",
+      "Bash(env)",
+      "Bash(node:*)",
+      "Bash(pkill:*)",
+      "Bash(python:*)",
+      "Bash(npm run lint:*)",
+      "Bash(npm run build:*)"
+    ],
+    "deny": []
+  }
+}
