@@ -1,100 +1,14 @@
 import { NextRequest, NextResponse } from 'next/server'
-
-// Mock repository data for search
-const mockSearchRepos = [
-  {
-    id: '1',
-    name: 'microsoft/vscode',
-    url: 'https://github.com/microsoft/vscode',
-    description: 'Visual Studio Code',
-    zh_description: 'Visual Studio Code 编辑器',
-    language: 'TypeScript',
-    owner: 'microsoft',
-    repo_name: 'vscode',
-    stars: 160000,
-    forks: 28000,
-    stars_today: 150,
-    rank: 1
-  },
-  {
-    id: '2',
-    name: 'facebook/react',
-    url: 'https://github.com/facebook/react',
-    description: 'The library for web and native user interfaces',
-    zh_description: 'Web 和原生用户界面库',
-    language: 'JavaScript',
-    owner: 'facebook',
-    repo_name: 'react',
-    stars: 220000,
-    forks: 45000,
-    stars_today: 200,
-    rank: 2
-  },
-  {
-    id: '3',
-    name: 'vercel/next.js',
-    url: 'https://github.com/vercel/next.js',
-    description: 'The React Framework',
-    zh_description: 'React 应用框架',
-    language: 'JavaScript',
-    owner: 'vercel',
-    repo_name: 'next.js',
-    stars: 120000,
-    forks: 26000,
-    stars_today: 80,
-    rank: 3
-  },
-  {
-    id: '4',
-    name: 'pytorch/pytorch',
-    url: 'https://github.com/pytorch/pytorch',
-    description: 'Tensors and Dynamic neural networks in Python',
-    zh_description: 'Python 中的张量和动态神经网络',
-    language: 'Python',
-    owner: 'pytorch',
-    repo_name: 'pytorch',
-    stars: 78000,
-    forks: 21000,
-    stars_today: 120,
-    rank: 4
-  },
-  {
-    id: '5',
-    name: 'golang/go',
-    url: 'https://github.com/golang/go',
-    description: 'The Go programming language',
-    zh_description: 'Go 编程语言',
-    language: 'Go',
-    owner: 'golang',
-    repo_name: 'go',
-    stars: 120000,
-    forks: 17000,
-    stars_today: 80,
-    rank: 5
-  },
-  {
-    id: '6',
-    name: 'microsoft/TypeScript',
-    url: 'https://github.com/microsoft/TypeScript',
-    description: 'TypeScript is a superset of JavaScript',
-    zh_description: 'TypeScript 是 JavaScript 的超集',
-    language: 'TypeScript',
-    owner: 'microsoft',
-    repo_name: 'TypeScript',
-    stars: 98000,
-    forks: 12000,
-    stars_today: 60,
-    rank: 6
-  }
-]
+import { supabaseAdmin } from '@/lib/supabase'
+import { TrendingCategory, TrendingPeriod } from '@/types/database'
 
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url)
   
   const query = searchParams.get('q') || ''
   const language = searchParams.get('language')
-  const category = searchParams.get('category') || 'all'
-  const period = searchParams.get('period') || 'daily'
+  const category = (searchParams.get('category') || 'all') as TrendingCategory
+  const period = (searchParams.get('period') || 'daily') as TrendingPeriod
   const page = parseInt(searchParams.get('page') || '1')
   const pageSize = parseInt(searchParams.get('pageSize') || '25')
   const minStars = parseInt(searchParams.get('minStars') || '0')
@@ -108,57 +22,100 @@ export async function GET(request: NextRequest) {
   }
 
   try {
-    console.log('Mock Search API called:', { query, searchField, language })
-    
-    // 模拟数据处理延迟
-    await new Promise(resolve => setTimeout(resolve, 100))
+    console.log('Search API called:', { query, searchField, language, category, period })
 
-    // 根据搜索字段筛选
-    let filteredRepos = mockSearchRepos.filter(repo => {
-      const queryLower = query.toLowerCase()
-      
-      switch (searchField) {
-        case 'name':
-          return repo.name.toLowerCase().includes(queryLower)
-        case 'description':
-          return repo.description.toLowerCase().includes(queryLower) ||
-                 (repo.zh_description && repo.zh_description.toLowerCase().includes(queryLower))
-        case 'owner':
-          return repo.owner.toLowerCase().includes(queryLower)
-        case 'all':
-        default:
-          return repo.name.toLowerCase().includes(queryLower) ||
-                 repo.description.toLowerCase().includes(queryLower) ||
-                 (repo.zh_description && repo.zh_description.toLowerCase().includes(queryLower)) ||
-                 repo.owner.toLowerCase().includes(queryLower)
-      }
-    })
+    // 构建搜索查询
+    let dbQuery = supabaseAdmin
+      .from('repositories')
+      .select(`
+        id,
+        name,
+        url,
+        description,
+        zh_description,
+        language,
+        owner,
+        repo_name,
+        trending_data!inner(
+          date,
+          category,
+          period,
+          stars,
+          forks,
+          stars_today,
+          rank
+        )
+      `)
+      .eq('trending_data.category', category)
+      .eq('trending_data.period', period)
+      .gte('trending_data.stars', minStars)
 
-    // 语言筛选
+    // 根据搜索字段构建搜索条件
+    let searchCondition = ''
+    switch (searchField) {
+      case 'name':
+        searchCondition = `name.ilike.%${query}%`
+        break
+      case 'description':
+        searchCondition = `description.ilike.%${query}%,zh_description.ilike.%${query}%`
+        break
+      case 'owner':
+        searchCondition = `owner.ilike.%${query}%`
+        break
+      case 'all':
+      default:
+        searchCondition = `name.ilike.%${query}%,description.ilike.%${query}%,zh_description.ilike.%${query}%,owner.ilike.%${query}%`
+        break
+    }
+
+    // 搜索条件
+    dbQuery = dbQuery.or(searchCondition)
+
+    // 如果指定了语言，添加语言过滤
     if (language) {
-      filteredRepos = filteredRepos.filter(repo => 
-        repo.language?.toLowerCase() === language.toLowerCase()
+      dbQuery = dbQuery.eq('language', language)
+    }
+
+    // 按星标数排序
+    dbQuery = dbQuery.order('stars', { ascending: false, referencedTable: 'trending_data' })
+
+    // 分页
+    const from = (page - 1) * pageSize
+    const to = from + pageSize - 1
+    dbQuery = dbQuery.range(from, to)
+
+    const { data, error, count } = await dbQuery
+
+    if (error) {
+      console.error('Database error:', error)
+      return NextResponse.json(
+        { error: 'Failed to search repositories', details: error.message },
+        { status: 500 }
       )
     }
 
-    // 最小星标数筛选
-    if (minStars > 0) {
-      filteredRepos = filteredRepos.filter(repo => repo.stars >= minStars)
-    }
-
-    // 添加元数据
-    const transformedData = filteredRepos.map(repo => ({
-      ...repo,
-      date: new Date().toISOString().split('T')[0],
-      category,
-      period
-    }))
-
-    console.log('Mock search results:', { count: transformedData.length })
+    // 转换数据格式
+    const transformedData = data?.map(repo => ({
+      id: repo.id,
+      name: repo.name,
+      url: repo.url,
+      description: repo.description,
+      zh_description: repo.zh_description,
+      language: repo.language,
+      owner: repo.owner,
+      repo_name: repo.repo_name,
+      stars: repo.trending_data[0]?.stars || 0,
+      forks: repo.trending_data[0]?.forks || 0,
+      stars_today: repo.trending_data[0]?.stars_today || 0,
+      rank: repo.trending_data[0]?.rank || 0,
+      date: repo.trending_data[0]?.date,
+      category: repo.trending_data[0]?.category,
+      period: repo.trending_data[0]?.period
+    })) || []
 
     return NextResponse.json({
       data: transformedData,
-      total: transformedData.length,
+      total: count || 0,
       page,
       pageSize,
       query,
@@ -170,7 +127,7 @@ export async function GET(request: NextRequest) {
     })
 
   } catch (error) {
-    console.error('Mock Search API error:', error)
+    console.error('API error:', error)
     return NextResponse.json(
       { error: 'Internal server error' },
       { status: 500 }
