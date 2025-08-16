@@ -224,42 +224,51 @@ export default function HomeClient({ searchParams }: HomeClientProps) {
       />
       
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
-        {/* Header */}
-        <header className="bg-white dark:bg-gray-800 shadow-sm border-b border-gray-200 dark:border-gray-700">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center justify-between h-16">
-              <div className="flex items-center">
-                <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
-                  🔥 GitHub Trending
-                </h1>
-                <span className="ml-3 text-sm text-gray-500 dark:text-gray-400">
-                  实时追踪最热门的开源项目
-                </span>
-              </div>
-              
-              <div className="flex items-center gap-4">
-                <DatePicker 
-                  selectedDate={selectedDate}
-                  onDateChange={handleDateChange}
-                />
-                <PeriodSelector 
-                  currentPeriod={currentPeriod}
-                  onPeriodChange={handlePeriodChange}
-                />
+        {/* Fixed Header and Search Section */}
+        <div className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-800 shadow-lg border-b border-gray-200 dark:border-gray-700">
+          {/* Header */}
+          <header className="border-b border-gray-200 dark:border-gray-700">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="flex items-center justify-between h-16">
+                <div className="flex items-center">
+                  <h1 className="text-2xl font-bold text-gray-900 dark:text-white">
+                    🔥 GitHub Trending
+                  </h1>
+                  <span className="ml-3 text-sm text-gray-500 dark:text-gray-400">
+                    实时追踪最热门的开源项目
+                  </span>
+                </div>
+                
+                <div className="flex items-center gap-4">
+                  <DatePicker 
+                    selectedDate={selectedDate}
+                    onDateChange={handleDateChange}
+                  />
+                  <PeriodSelector 
+                    currentPeriod={currentPeriod}
+                    onPeriodChange={handlePeriodChange}
+                  />
+                </div>
               </div>
             </div>
+          </header>
+
+          {/* Search Component */}
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 bg-white dark:bg-gray-800">
+            <SearchComponent 
+              onSearch={handleSearch}
+              isLoading={searchLoading}
+              currentCategory={currentCategory}
+              currentPeriod={currentPeriod}
+            />
           </div>
-        </header>
+        </div>
+
+        {/* Spacer to push content below fixed header */}
+        <div className="pt-[180px]"></div>
 
         {/* Main Content */}
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          {/* Search Component */}
-          <SearchComponent 
-            onSearch={handleSearch}
-            isLoading={searchLoading}
-            currentCategory={currentCategory}
-            currentPeriod={currentPeriod}
-          />
           
           {/* Search Results Header */}
           {isSearchMode && (
