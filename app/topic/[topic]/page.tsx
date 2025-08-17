@@ -14,6 +14,7 @@ export default function TopicDetailPage({ params }: Props) {
   const [data, setData] = useState<TopicRepositoriesResponse | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
+  const [readmeContents, setReadmeContents] = useState<Record<number, string>>({})
 
   useEffect(() => {
     const fetchData = async () => {
@@ -29,6 +30,11 @@ export default function TopicDetailPage({ params }: Props) {
 
         const result: TopicRepositoriesResponse = await response.json()
         setData(result)
+        
+        // 获取每个仓库的 README 内容
+        result.data.forEach(repo => {
+          fetchReadmeContent(repo.id, repo.owner, repo.name)
+        })
       } catch (err) {
         setError(err instanceof Error ? err.message : '未知错误')
       } finally {
@@ -38,6 +44,23 @@ export default function TopicDetailPage({ params }: Props) {
 
     fetchData()
   }, [topic])
+
+  const fetchReadmeContent = async (repoId: number, owner: string, repoName: string) => {
+    try {
+      const response = await fetch(`/api/readme?owner=${owner}&repo=${repoName}`)
+      const data = await response.json()
+      
+      setReadmeContents(prev => ({
+        ...prev,
+        [repoId]: data.content || '该仓库没有README文件'
+      }))
+    } catch (error) {
+      setReadmeContents(prev => ({
+        ...prev,
+        [repoId]: '获取README失败'
+      }))
+    }
+  }
 
   if (loading) {
     return (
@@ -142,6 +165,23 @@ export default function TopicDetailPage({ params }: Props) {
                 </p>
               )}
 
+              {/* README 内容 */}
+              <div className="mb-4">
+                <h4 className="text-sm font-medium text-gray-900 dark:text-white mb-2">README:</h4>
+                <div className="bg-gray-50 dark:bg-gray-900 rounded-lg p-4 max-h-64 overflow-y-auto">
+                  {readmeContents[repo.id] ? (
+                    <pre className="whitespace-pre-wrap text-xs text-gray-700 dark:text-gray-300 font-mono leading-relaxed">
+                      {readmeContents[repo.id]}
+                    </pre>
+                  ) : (
+                    <div className="text-center py-4">
+                      <div className="inline-block animate-spin rounded-full h-4 w-4 border-b-2 border-blue-600 mb-2"></div>
+                      <p className="text-xs text-gray-500">加载README中...</p>
+                    </div>
+                  )}
+                </div>
+              </div>
+
               {repo.zh_description && (
                 <p className="text-gray-600 dark:text-gray-400 mb-3 text-sm">
                   {repo.zh_description}
@@ -149,7 +189,7 @@ export default function TopicDetailPage({ params }: Props) {
               )}
 
               <div className="flex flex-wrap gap-2 mb-4">
-                {repo.topics.slice(0, 6).map(topicName => (
+                {repo.topics.map(topicName => (
                   <Link
                     key={topicName}
                     href={`/topic/${encodeURIComponent(topicName)}`}
@@ -158,11 +198,6 @@ export default function TopicDetailPage({ params }: Props) {
                     #{topicName}
                   </Link>
                 ))}
-                {repo.topics.length > 6 && (
-                  <span className="text-xs text-gray-500 px-2 py-1">
-                    +{repo.topics.length - 6} 更多
-                  </span>
-                )}
               </div>
 
               <div className="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">
