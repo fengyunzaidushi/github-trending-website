@@ -12,7 +12,9 @@
 		"cf-typegen": "wrangler types --env-interface CloudflareEnv ./cloudflare-env.d.ts",
 		"import-data": "tsx scripts/import-data.ts",
 		"import-data:mjs": "node scripts/import-data.mjs",
-		"db:setup": "tsx scripts/setup-database.ts"
+		"db:setup": "tsx scripts/setup-database.ts",
+		"topic:setup-db": "node scripts/setup-topic-database.mjs",
+		"topic:import": "node scripts/import-topic-data.mjs"
 	},
 	"dependencies": {
 		"@opennextjs/cloudflare": "^1.6.3",
