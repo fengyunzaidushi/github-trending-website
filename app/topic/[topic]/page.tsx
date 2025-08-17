@@ -2,7 +2,7 @@
 
 import { useState, useEffect, use } from 'react'
 import Link from 'next/link'
-import { TopicRepository, TopicRepositoriesResponse } from '@/types/database'
+import { TopicRepositoriesResponse } from '@/types/database'
 
 interface Props {
   params: Promise<{ topic: string }>
@@ -54,12 +54,57 @@ export default function TopicDetailPage({ params }: Props) {
         ...prev,
         [repoId]: data.content || '该仓库没有README文件'
       }))
-    } catch (error) {
+    } catch {
       setReadmeContents(prev => ({
         ...prev,
         [repoId]: '获取README失败'
       }))
     }
+  }
+
+  function renderMarkdownContent(content: string) {
+    return content
+      .split('\n')
+      .map((line, index) => {
+        // Handle headers
+        if (line.startsWith('# ')) {
+          return <h1 key={index} className="text-3xl font-bold mb-6 text-foreground">{line.slice(2)}</h1>;
+        }
+        if (line.startsWith('## ')) {
+          return <h2 key={index} className="text-2xl font-semibold mb-4 text-foreground border-b border-border pb-2">{line.slice(3)}</h2>;
+        }
+        if (line.startsWith('### ')) {
+          return <h3 key={index} className="text-xl font-semibold mb-3 text-foreground">{line.slice(4)}</h3>;
+        }
+        
+        // Handle list items
+        if (line.startsWith('- **') && line.includes('**:')) {
+          const match = line.match(/^- \*\*(.*?)\*\*: (.*)$/);
+          if (match) {
+            return (
+              <li key={index} className="leading-7 mb-2">
+                <strong className="font-semibold text-foreground">{match[1]}</strong>: {match[2]}
+              </li>
+            );
+          }
+        }
+        if (line.startsWith('- ')) {
+          return <li key={index} className="leading-7 list-disc list-inside mb-1 text-foreground/90">{line.slice(2)}</li>;
+        }
+        
+        // Handle numbered lists
+        if (/^\d+\./.test(line)) {
+          return <li key={index} className="leading-7 list-decimal list-inside mb-1 text-foreground/90">{line.replace(/^\d+\.\s/, '')}</li>;
+        }
+        
+        // Handle empty lines
+        if (line.trim() === '') {
+          return <div key={index} className="h-4" />;
+        }
+        
+        // Handle regular paragraphs
+        return <p key={index} className="mb-4 text-foreground/90 leading-7">{line}</p>;
+      });
   }
 
   if (loading) {
@@ -170,9 +215,9 @@ export default function TopicDetailPage({ params }: Props) {
                 <h4 className="text-sm font-medium text-gray-900 dark:text-white mb-2">README:</h4>
                 <div className="bg-gray-50 dark:bg-gray-900 rounded-lg p-4 max-h-64 overflow-y-auto">
                   {readmeContents[repo.id] ? (
-                    <pre className="whitespace-pre-wrap text-xs text-gray-700 dark:text-gray-300 font-mono leading-relaxed">
-                      {readmeContents[repo.id]}
-                    </pre>
+                    <div className="prose prose-sm max-w-none dark:prose-invert">
+                      {renderMarkdownContent(readmeContents[repo.id])}
+                    </div>
                   ) : (
                     <div className="text-center py-4">
                       <div className="inline-block animate-spin rounded-full h-4 w-4 border-b-2 border-blue-600 mb-2"></div>

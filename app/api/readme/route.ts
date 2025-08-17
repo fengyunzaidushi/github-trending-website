@@ -31,7 +31,7 @@ export async function GET(request: NextRequest) {
       throw new Error(`GitHub API错误: ${response.status}`)
     }
 
-    const data = await response.json()
+    const data = await response.json() as { content: string; encoding: string; size: number }
     
     // 解码base64内容
     const content = Buffer.from(data.content, 'base64').toString('utf-8')
