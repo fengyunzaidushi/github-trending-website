@@ -65,7 +65,7 @@ export async function GET(
       { data: repositories, error: dataError }
     ] = await Promise.all([
       countQuery,
-      query.order('created_at', { ascending: false }).range(offset, offset + pageSize - 1)
+      query.order('stargazers_count', { ascending: false }).range(offset, offset + pageSize - 1)
     ])
 
     console.log('Query results:', { count, countError, dataLength: repositories?.length, dataError })

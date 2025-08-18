@@ -20,7 +20,7 @@ export default function TopicsPage() {
   const fetchTopics = async () => {
     try {
       setLoading(true)
-      const response = await fetch(`/api/topics?page=${page}&pageSize=${pageSize}`)
+      const response = await fetch(`/api/topicstar?page=${page}&pageSize=${pageSize}`)
       
       if (!response.ok) {
         throw new Error('获取话题列表失败')
@@ -86,7 +86,7 @@ export default function TopicsPage() {
           {topics.map((topic) => (
             <Link
               key={topic.id}
-              href={`/topic/${encodeURIComponent(topic.name)}`}
+              href={`/topicstar/${encodeURIComponent(topic.name)}`}
               className="block bg-white dark:bg-gray-800 rounded-lg shadow-sm border border-gray-200 dark:border-gray-700 hover:shadow-md hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-200"
             >
               <div className="p-4">

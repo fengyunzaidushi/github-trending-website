@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
+import Link from 'next/link'
 import RepoCard from '@/components/RepoCard'
 import LanguageTabs from '@/components/LanguageTabs'
 import PeriodSelector from '@/components/PeriodSelector'
@@ -237,6 +238,22 @@ export default function HomeClient({ searchParams }: HomeClientProps) {
                   <span className="ml-3 text-sm text-gray-500 dark:text-gray-400">
                     实时追踪最热门的开源项目
                   </span>
+                  
+                  {/* Navigation Links */}
+                  <nav className="ml-6 flex items-center gap-4">
+                    <Link 
+                      href="/topic" 
+                      className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors text-sm font-medium"
+                    >
+                      主题
+                    </Link>
+                    <Link 
+                      href="/topic/claude-code" 
+                      className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors text-sm font-medium"
+                    >
+                      Claude Code
+                    </Link>
+                  </nav>
                 </div>
                 
                 <div className="flex items-center gap-4">

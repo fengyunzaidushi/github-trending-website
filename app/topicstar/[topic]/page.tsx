@@ -36,7 +36,7 @@ export default function TopicDetailPage({ params }: Props) {
         setLoading(true)
         setError(null)
         
-        const url = new URL(`/api/topics/${encodeURIComponent(topic)}`, window.location.origin)
+        const url = new URL(`/api/topicstar/${encodeURIComponent(topic)}`, window.location.origin)
         url.searchParams.set('page', currentPage.toString())
         url.searchParams.set('pageSize', pageSize.toString())
         
@@ -163,8 +163,8 @@ export default function TopicDetailPage({ params }: Props) {
         {/* 头部信息 */}
         <div className="mb-8">
           <nav className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-            <Link href="/topic" className="hover:text-blue-600 dark:hover:text-blue-400">
-              话题列表
+            <Link href="/topicstar" className="hover:text-blue-600 dark:hover:text-blue-400">
+              热门话题
             </Link>
             <span className="mx-2">/</span>
             <span className="text-gray-900 dark:text-white">{topic}</span>
