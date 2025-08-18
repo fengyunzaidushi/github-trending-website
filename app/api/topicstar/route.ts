@@ -37,7 +37,7 @@ export async function GET(request: NextRequest) {
     const sortedTopics = Array.from(topicCounts.entries())
       .sort((a, b) => b[1] - a[1]) // 按使用频率降序排序
       .slice(offset, offset + pageSize)
-      .map(([name, count], index) => ({
+      .map(([name, count]) => ({
         id: name,
         name: name,
         display_name: name.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),

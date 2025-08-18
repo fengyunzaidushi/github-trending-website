@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
 import TopicNavigation from '@/components/TopicNavigation'
 import { Topic, TopicListResponse } from '@/types/database'
@@ -13,11 +13,7 @@ export default function TopicsPage() {
   const [total, setTotal] = useState(0)
   const pageSize = 50
 
-  useEffect(() => {
-    fetchTopics()
-  }, [page])
-
-  const fetchTopics = async () => {
+  const fetchTopics = useCallback(async () => {
     try {
       setLoading(true)
       const response = await fetch(`/api/topics?page=${page}&pageSize=${pageSize}`)
@@ -34,7 +30,11 @@ export default function TopicsPage() {
     } finally {
       setLoading(false)
     }
-  }
+  }, [page, pageSize])
+
+  useEffect(() => {
+    fetchTopics()
+  }, [fetchTopics])
 
   const totalPages = Math.ceil(total / pageSize)
 

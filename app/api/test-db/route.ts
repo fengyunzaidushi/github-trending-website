@@ -1,7 +1,7 @@
-import { NextRequest, NextResponse } from 'next/server'
+import { NextResponse } from 'next/server'
 import { supabaseAdmin } from '@/lib/supabase'
 
-export async function GET(request: NextRequest) {
+export async function GET() {
   try {
     console.log('Testing Supabase connection...')
     
@@ -13,7 +13,7 @@ export async function GET(request: NextRequest) {
     if (error) {
       // 如果函数不存在，尝试直接查询已知表
       console.log('Function not found, trying direct table access...')
-      const { data: testData, error: testError } = await supabaseAdmin
+      const { error: testError } = await supabaseAdmin
         .from('repositories')
         .select('id')
         .limit(1)
