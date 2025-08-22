@@ -11,7 +11,8 @@
       "Bash(python:*)",
       "Bash(npm run lint:*)",
       "Bash(npm run build:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(npx next dev:*)"
     ],
     "deny": []
   }

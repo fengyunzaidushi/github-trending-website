@@ -3,10 +3,10 @@ import { supabaseAdmin } from '@/lib/supabase'
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { login: string } }
+  { params }: { params: Promise<{ login: string }> }
 ) {
   try {
-    const { login } = params
+    const { login } = await params
     const searchParams = request.nextUrl.searchParams
     
     // 获取查询参数

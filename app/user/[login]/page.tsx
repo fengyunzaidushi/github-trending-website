@@ -78,7 +78,7 @@ function RepoCard({ repo }: RepoCardProps) {
   )
 }
 
-export default function UserPage({ params }: { params: { login: string } }) {
+export default function UserPage({ params }: { params: Promise<{ login: string }> }) {
   const [user, setUser] = useState<UserResponse['user'] | null>(null)
   const [repositories, setRepositories] = useState<UserRepository[]>([])
   const [loading, setLoading] = useState(true)
@@ -97,7 +97,8 @@ export default function UserPage({ params }: { params: { login: string } }) {
   const fetchUser = useCallback(async () => {
     try {
       setLoading(true)
-      const response = await fetch(`/api/user/${params.login}`)
+      const { login } = await params
+      const response = await fetch(`/api/user/${login}`)
       
       if (!response.ok) {
         if (response.status === 404) {
@@ -113,12 +114,13 @@ export default function UserPage({ params }: { params: { login: string } }) {
     } finally {
       setLoading(false)
     }
-  }, [params.login])
+  }, [params])
 
   const fetchRepositories = useCallback(async () => {
     try {
       setReposLoading(true)
-      const params = new URLSearchParams({
+      const { login } = await params
+      const searchParams = new URLSearchParams({
         limit: reposLimit.toString(),
         offset: reposOffset.toString(),
         sort: filters.sort,
@@ -127,10 +129,10 @@ export default function UserPage({ params }: { params: { login: string } }) {
       })
       
       if (filters.language) {
-        params.append('language', filters.language)
+        searchParams.append('language', filters.language)
       }
 
-      const response = await fetch(`/api/user/${params.login}/repos?${params}`)
+      const response = await fetch(`/api/user/${login}/repos?${searchParams}`)
       
       if (!response.ok) {
         throw new Error('获取仓库列表失败')
@@ -144,7 +146,7 @@ export default function UserPage({ params }: { params: { login: string } }) {
     } finally {
       setReposLoading(false)
     }
-  }, [params.login, reposLimit, reposOffset, filters])
+  }, [params, reposLimit, reposOffset, filters])
 
   useEffect(() => {
     fetchUser()
