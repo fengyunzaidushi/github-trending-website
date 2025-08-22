@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
+import Avatar from 'boring-avatars'
 import { UserResponse, UserRepositoriesResponse, UserRepository } from '@/types/database'
 
 interface RepoCardProps {
@@ -53,7 +54,8 @@ function RepoCard({ repo }: RepoCardProps) {
           </span>
         </div>
         <div className="text-xs text-gray-500 dark:text-gray-500">
-          更新于 {new Date(repo.updated_at).toLocaleDateString()}
+          <div>创建于 {new Date(repo.created_at).toLocaleDateString()}</div>
+          <div>更新于 {new Date(repo.updated_at).toLocaleDateString()}</div>
         </div>
       </div>
       
@@ -213,14 +215,27 @@ export default function UserPage({ params }: { params: Promise<{ login: string }
         {/* 用户信息卡片 */}
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-8 mb-8">
           <div className="flex items-start space-x-6">
-            <img
-              src={user.avatar_url || '/default-avatar.png'}
-              alt={`${user.login}的头像`}
-              className="w-24 h-24 rounded-full"
-              onError={(e) => {
-                e.currentTarget.src = '/default-avatar.png'
-              }}
-            />
+            {user.avatar_url ? (
+              <img
+                src={user.avatar_url}
+                alt={`${user.login}的头像`}
+                className="w-24 h-24 rounded-full"
+                onError={(e) => {
+                  e.currentTarget.style.display = 'none'
+                  const avatar = document.createElement('div')
+                  avatar.innerHTML = `<svg width="96" height="96" class="rounded-full"></svg>`
+                  e.currentTarget.parentNode?.appendChild(avatar)
+                }}
+              />
+            ) : (
+              <Avatar
+                size={96}
+                name={user.login}
+                variant="beam"
+                colors={["#92A1C6", "#146A7C", "#F0AB3D", "#C271B4", "#C20D90"]}
+                square={false}
+              />
+            )}
             <div className="flex-1">
               <div className="flex items-center space-x-3 mb-2">
                 <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100">

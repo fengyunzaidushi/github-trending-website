@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## 项目概述
 
-这是一个基于 Next.js 13+ App Router 的 GitHub Trending 数据展示平台，使用中文界面显示热门开源项目的实时趋势数据。
+这是一个基于 Next.js 15+ App Router 的 GitHub Trending 数据展示平台，使用中文界面显示热门开源项目的实时趋势数据。
 
 ## 开发命令
 
@@ -121,3 +121,37 @@ SUPABASE_SERVICE_ROLE_KEY=your_service_role_key
 - 使用 Next.js App Router 的服务端渲染
 - API 路由支持分页和条件查询
 - 数据库查询优化（索引、视图、存储过程）
+
+### Next.js 15 动态路由参数处理
+在 Next.js 15 中，动态路由参数（如 `[login]`）现在是 Promise 类型，需要 await 后才能访问：
+
+**页面组件** (`app/user/[login]/page.tsx`):
+```typescript
+export default function UserPage({ params }: { params: Promise<{ login: string }> }) {
+  const fetchUser = useCallback(async () => {
+    const { login } = await params  // 需要 await
+    const response = await fetch(`/api/user/${login}`)
+    // ...
+  }, [params])
+}
+```
+
+**API 路由** (`app/api/user/[login]/route.ts`):
+```typescript
+export async function GET(
+  request: NextRequest,
+  { params }: { params: Promise<{ login: string }> }
+) {
+  try {
+    const { login } = await params  // 需要 await
+    // ...
+  } catch (error) {
+    // ...
+  }
+}
+```
+
+**关键要点**:
+- 参数类型从 `{ login: string }` 改为 `Promise<{ login: string }>`
+- 访问参数前必须使用 `await params`
+- 适用于所有动态路由参数（`[id]`, `[slug]`, `[...path]` 等）

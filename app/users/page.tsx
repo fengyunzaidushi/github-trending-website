@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import Link from 'next/link'
+import Avatar from 'boring-avatars'
 import { User, UserListResponse } from '@/types/database'
 
 interface UserCardProps {
@@ -12,14 +13,27 @@ function UserCard({ user }: UserCardProps) {
   return (
     <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
       <div className="flex items-start space-x-4">
-        <img
-          src={user.avatar_url || '/default-avatar.png'}
-          alt={`${user.login}的头像`}
-          className="w-16 h-16 rounded-full"
-          onError={(e) => {
-            e.currentTarget.src = '/default-avatar.png'
-          }}
-        />
+        {user.avatar_url ? (
+          <img
+            src={user.avatar_url}
+            alt={`${user.login}的头像`}
+            className="w-16 h-16 rounded-full"
+            onError={(e) => {
+              e.currentTarget.style.display = 'none'
+              const avatarContainer = document.createElement('div')
+              avatarContainer.innerHTML = `<svg width="64" height="64" class="rounded-full"></svg>`
+              e.currentTarget.parentNode?.appendChild(avatarContainer)
+            }}
+          />
+        ) : (
+          <Avatar
+            size={64}
+            name={user.login}
+            variant="beam"
+            colors={["#92A1C6", "#146A7C", "#F0AB3D", "#C271B4", "#C20D90"]}
+            square={false}
+          />
+        )}
         <div className="flex-1 min-w-0">
           <div className="flex items-center space-x-2 mb-2">
             <Link 

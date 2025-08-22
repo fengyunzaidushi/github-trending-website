@@ -19,6 +19,7 @@
 	"dependencies": {
 		"@opennextjs/cloudflare": "^1.6.3",
 		"@supabase/supabase-js": "^2.53.0",
+		"boring-avatars": "^2.0.1",
 		"dotenv": "^17.2.1",
 		"next": "15.3.5",
 		"react": "^19.0.0",

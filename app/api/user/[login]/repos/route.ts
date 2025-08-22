@@ -84,16 +84,17 @@ export async function GET(
     }
 
     // 获取总数（用于分页）
-    const { data: totalCount, error: countError } = await supabaseAdmin
+    let countQuery = supabaseAdmin
       .from('user_repositories')
       .select('id', { count: 'exact', head: true })
       .eq('owner', login)
       .gte('stargazers_count', minStars)
-      .modify((query) => {
-        if (language) {
-          query.eq('language', language)
-        }
-      })
+    
+    if (language) {
+      countQuery = countQuery.eq('language', language)
+    }
+    
+    const { data: totalCount, error: countError } = await countQuery
 
     const total = countError ? 0 : totalCount?.count || 0
 
