@@ -41,6 +41,144 @@ export interface Database {
           updated_at?: string
         }
       }
+      // 用户表
+      users: {
+        Row: {
+          id: number
+          github_id: number
+          login: string
+          name: string | null
+          avatar_url: string | null
+          html_url: string
+          type: 'User' | 'Organization'
+          bio: string | null
+          location: string | null
+          email: string | null
+          company: string | null
+          blog: string | null
+          public_repos: number
+          public_gists: number
+          followers: number
+          following: number
+          twitter_username: string | null
+          hireable: boolean | null
+          created_at: string
+          updated_at: string
+          last_scraped_at: string
+          added_at: string
+        }
+        Insert: {
+          id?: number
+          github_id: number
+          login: string
+          name?: string | null
+          avatar_url?: string | null
+          html_url: string
+          type: 'User' | 'Organization'
+          bio?: string | null
+          location?: string | null
+          email?: string | null
+          company?: string | null
+          blog?: string | null
+          public_repos?: number
+          public_gists?: number
+          followers?: number
+          following?: number
+          twitter_username?: string | null
+          hireable?: boolean | null
+          created_at: string
+          updated_at: string
+          last_scraped_at?: string
+          added_at?: string
+        }
+        Update: {
+          id?: number
+          github_id?: number
+          login?: string
+          name?: string | null
+          avatar_url?: string | null
+          html_url?: string
+          type?: 'User' | 'Organization'
+          bio?: string | null
+          location?: string | null
+          email?: string | null
+          company?: string | null
+          blog?: string | null
+          public_repos?: number
+          public_gists?: number
+          followers?: number
+          following?: number
+          twitter_username?: string | null
+          hireable?: boolean | null
+          created_at?: string
+          updated_at?: string
+          last_scraped_at?: string
+          added_at?: string
+        }
+      }
+      // 用户仓库表
+      user_repositories: {
+        Row: {
+          id: number
+          github_id: number
+          user_id: number
+          name: string
+          full_name: string
+          html_url: string
+          description: string | null
+          zh_description: string | null
+          created_at: string
+          updated_at: string
+          pushed_at: string | null
+          size: number
+          stargazers_count: number
+          language: string | null
+          topics: string[]
+          owner: string
+          readme_content: string | null
+          added_at: string
+        }
+        Insert: {
+          id?: number
+          github_id: number
+          user_id: number
+          name: string
+          full_name: string
+          html_url: string
+          description?: string | null
+          zh_description?: string | null
+          created_at: string
+          updated_at: string
+          pushed_at?: string | null
+          size?: number
+          stargazers_count?: number
+          language?: string | null
+          topics?: string[]
+          owner: string
+          readme_content?: string | null
+          added_at?: string
+        }
+        Update: {
+          id?: number
+          github_id?: number
+          user_id?: number
+          name?: string
+          full_name?: string
+          html_url?: string
+          description?: string | null
+          zh_description?: string | null
+          created_at?: string
+          updated_at?: string
+          pushed_at?: string | null
+          size?: number
+          stargazers_count?: number
+          language?: string | null
+          topics?: string[]
+          owner?: string
+          readme_content?: string | null
+          added_at?: string
+        }
+      }
       trending_data: {
         Row: {
           id: string
@@ -262,6 +400,106 @@ export interface Repository {
   repo_name?: string
   created_at: string
   updated_at: string
+}
+
+// 用户相关类型
+export interface User {
+  login: string
+  name?: string
+  avatar_url?: string
+  html_url: string
+  type: 'User' | 'Organization'
+  bio?: string
+  location?: string
+  email?: string
+  company?: string
+  blog?: string
+  twitter_username?: string
+  hireable?: boolean
+  followers: number
+  following: number
+  public_repos: number
+  total_repos_in_db: number
+  total_stars: number
+  avg_stars: number
+  top_language?: string
+  languages_count: number
+  last_repo_update?: string
+  account_created_at: string
+}
+
+export interface UserRepository {
+  id: number
+  github_id: number
+  name: string
+  full_name: string
+  html_url: string
+  description?: string
+  zh_description?: string
+  created_at: string
+  updated_at: string
+  pushed_at?: string
+  size: number
+  stargazers_count: number
+  language?: string
+  topics: string[]
+  owner: string
+  readme_content?: string
+}
+
+export interface LanguageStats {
+  language: string
+  repo_count: number
+  total_stars: number
+  avg_stars: number
+  users_count?: number
+}
+
+export interface UserStats {
+  user_login: string
+  user_name?: string
+  user_type: 'User' | 'Organization'
+  followers: number
+  following: number
+  public_repos: number
+  total_repos_in_db: number
+  total_stars: number
+  avg_stars: number
+  top_language?: string
+  languages_count: number
+  last_repo_update?: string
+  account_created_at: string
+}
+
+// API响应类型
+export interface UserListResponse {
+  users: User[]
+  total: number
+  limit: number
+  offset: number
+  has_more: boolean
+}
+
+export interface UserResponse {
+  user: User & {
+    language_stats: LanguageStats[]
+  }
+}
+
+export interface UserRepositoriesResponse {
+  repositories: UserRepository[]
+  pagination: {
+    total: number
+    limit: number
+    offset: number
+    has_more: boolean
+  }
+  filters: {
+    language?: string
+    min_stars: number
+    sort: string
+    order: string
+  }
 }
 
 export interface TrendingData {
