@@ -1,21 +1,27 @@
 'use client'
 
 import { useState, useEffect, useCallback } from 'react'
+import { useRouter, useSearchParams } from 'next/navigation'
 import Link from 'next/link'
 import Avatar from 'boring-avatars'
+import Pagination from '@/components/Pagination'
 import { UserResponse, UserRepositoriesResponse, UserRepository } from '@/types/database'
 
 interface RepoCardProps {
   repo: UserRepository
+  index: number
 }
 
-function RepoCard({ repo }: RepoCardProps) {
+function RepoCard({ repo, index }: RepoCardProps) {
   return (
     <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
       <div className="flex items-start justify-between mb-3">
         <div className="flex-1 min-w-0">
           <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-1">
-            <a 
+            <span className="inline-block w-8 text-sm text-gray-500 dark:text-gray-400 mr-2">
+              #{index}
+            </span>
+            <a
               href={repo.html_url}
               target="_blank"
               rel="noopener noreferrer"
@@ -34,13 +40,13 @@ function RepoCard({ repo }: RepoCardProps) {
           </span>
         </div>
       </div>
-      
+
       {repo.description && (
         <p className="text-gray-700 dark:text-gray-300 text-sm mb-3 line-clamp-2">
           {repo.description}
         </p>
       )}
-      
+
       <div className="flex items-center justify-between">
         <div className="flex items-center space-x-4 text-sm">
           {repo.language && (
@@ -58,7 +64,7 @@ function RepoCard({ repo }: RepoCardProps) {
           <div>更新于 {new Date(repo.updated_at).toLocaleDateString()}</div>
         </div>
       </div>
-      
+
       {repo.topics && repo.topics.length > 0 && (
         <div className="mt-3 flex flex-wrap gap-2">
           {repo.topics.slice(0, 5).map((topic) => (
@@ -81,13 +87,16 @@ function RepoCard({ repo }: RepoCardProps) {
 }
 
 export default function UserPage({ params }: { params: Promise<{ login: string }> }) {
+  const router = useRouter()
+  const searchParams = useSearchParams()
+
   const [user, setUser] = useState<UserResponse['user'] | null>(null)
   const [repositories, setRepositories] = useState<UserRepository[]>([])
   const [loading, setLoading] = useState(true)
   const [reposLoading, setReposLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const [reposTotal, setReposTotal] = useState(0)
-  const [reposOffset, setReposOffset] = useState(0)
+  const [currentPage, setCurrentPage] = useState(1)
   const [reposLimit] = useState(20)
   const [avatarError, setAvatarError] = useState(false)
   const [filters, setFilters] = useState({
@@ -102,7 +111,7 @@ export default function UserPage({ params }: { params: Promise<{ login: string }
       setLoading(true)
       const { login } = await params
       const response = await fetch(`/api/user/${login}`)
-      
+
       if (!response.ok) {
         if (response.status === 404) {
           throw new Error('用户不存在')
@@ -123,20 +132,20 @@ export default function UserPage({ params }: { params: Promise<{ login: string }
     try {
       setReposLoading(true)
       const { login } = await params
-      const searchParams = new URLSearchParams({
-        limit: reposLimit.toString(),
-        offset: reposOffset.toString(),
+      const apiParams = new URLSearchParams({
+        page: currentPage.toString(),
+        pageSize: reposLimit.toString(),
         sort: filters.sort,
         order: filters.order,
         min_stars: filters.min_stars.toString()
       })
-      
+
       if (filters.language) {
-        searchParams.append('language', filters.language)
+        apiParams.append('language', filters.language)
       }
 
-      const response = await fetch(`/api/user/${login}/repos?${searchParams}`)
-      
+      const response = await fetch(`/api/user/${login}/repos?${apiParams}`)
+
       if (!response.ok) {
         throw new Error('获取仓库列表失败')
       }
@@ -149,7 +158,13 @@ export default function UserPage({ params }: { params: Promise<{ login: string }
     } finally {
       setReposLoading(false)
     }
-  }, [params, reposLimit, reposOffset, filters])
+  }, [params, reposLimit, currentPage, filters])
+
+  useEffect(() => {
+    // 从 URL 参数获取当前页码
+    const page = parseInt(searchParams.get('page') || '1')
+    setCurrentPage(page)
+  }, [searchParams])
 
   useEffect(() => {
     fetchUser()
@@ -163,20 +178,20 @@ export default function UserPage({ params }: { params: Promise<{ login: string }
 
   const handleFilterChange = (newFilters: Partial<typeof filters>) => {
     setFilters(prev => ({ ...prev, ...newFilters }))
-    setReposOffset(0)
+    // 筛选器变更时重置到第一页
+    handlePageChange(1)
   }
 
-  const handlePrevPage = () => {
-    setReposOffset(Math.max(0, reposOffset - reposLimit))
+  const handlePageChange = (page: number) => {
+    setCurrentPage(page)
+    const newUrl = new URL(window.location.href)
+    newUrl.searchParams.set('page', page.toString())
+    router.push(newUrl.pathname + newUrl.search)
+
+    // 滚动到页面顶部
+    window.scrollTo({ top: 0, behavior: 'smooth' })
   }
 
-  const handleNextPage = () => {
-    if (reposOffset + reposLimit < reposTotal) {
-      setReposOffset(reposOffset + reposLimit)
-    }
-  }
-
-  const currentPage = Math.floor(reposOffset / reposLimit) + 1
   const totalPages = Math.ceil(reposTotal / reposLimit)
 
   if (loading) {
@@ -198,7 +213,7 @@ export default function UserPage({ params }: { params: Promise<{ login: string }
         <div className="container mx-auto px-4 py-8">
           <div className="text-center">
             <p className="text-red-600 dark:text-red-400">❌ {error || '用户不存在'}</p>
-            <Link 
+            <Link
               href="/users"
               className="mt-4 inline-block px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
             >
@@ -237,21 +252,20 @@ export default function UserPage({ params }: { params: Promise<{ login: string }
                 <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-100">
                   {user.name || user.login}
                 </h1>
-                <span className={`px-3 py-1 text-sm rounded-full ${
-                  user.type === 'Organization' 
-                    ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200'
-                    : 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200'
-                }`}>
+                <span className={`px-3 py-1 text-sm rounded-full ${user.type === 'Organization'
+                  ? 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200'
+                  : 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200'
+                  }`}>
                   {user.type === 'Organization' ? '组织' : '用户'}
                 </span>
               </div>
-              
+
               <p className="text-xl text-gray-600 dark:text-gray-400 mb-4">@{user.login}</p>
-              
+
               {user.bio && (
                 <p className="text-gray-700 dark:text-gray-300 mb-4">{user.bio}</p>
               )}
-              
+
               <div className="flex flex-wrap gap-4 text-sm text-gray-600 dark:text-gray-400 mb-6">
                 {user.location && (
                   <span className="flex items-center">📍 {user.location}</span>
@@ -260,7 +274,7 @@ export default function UserPage({ params }: { params: Promise<{ login: string }
                   <span className="flex items-center">🏢 {user.company}</span>
                 )}
                 {user.blog && (
-                  <a 
+                  <a
                     href={user.blog.startsWith('http') ? user.blog : `https://${user.blog}`}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -270,7 +284,7 @@ export default function UserPage({ params }: { params: Promise<{ login: string }
                   </a>
                 )}
                 {user.twitter_username && (
-                  <a 
+                  <a
                     href={`https://twitter.com/${user.twitter_username}`}
                     target="_blank"
                     rel="noopener noreferrer"
@@ -280,7 +294,7 @@ export default function UserPage({ params }: { params: Promise<{ login: string }
                   </a>
                 )}
               </div>
-              
+
               <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-gray-900 dark:text-gray-100">
@@ -366,7 +380,7 @@ export default function UserPage({ params }: { params: Promise<{ login: string }
                 ))}
               </select>
             </div>
-            
+
             <div>
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                 最少Stars
@@ -379,7 +393,7 @@ export default function UserPage({ params }: { params: Promise<{ login: string }
                 min="0"
               />
             </div>
-            
+
             <div>
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                 排序
@@ -395,7 +409,7 @@ export default function UserPage({ params }: { params: Promise<{ login: string }
                 <option value="name">名称</option>
               </select>
             </div>
-            
+
             <div>
               <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                 顺序
@@ -420,37 +434,23 @@ export default function UserPage({ params }: { params: Promise<{ login: string }
           ) : (
             <>
               <div className="space-y-4 mb-6">
-                {repositories.map((repo) => (
-                  <RepoCard key={repo.github_id} repo={repo} />
+                {repositories.map((repo, index) => (
+                  <RepoCard
+                    key={repo.github_id}
+                    repo={repo}
+                    index={(currentPage - 1) * reposLimit + index + 1}
+                  />
                 ))}
               </div>
 
               {/* 分页 */}
               {totalPages > 1 && (
-                <div className="flex items-center justify-between pt-4 border-t border-gray-200 dark:border-gray-700">
-                  <div className="text-sm text-gray-600 dark:text-gray-400">
-                    显示第 {reposOffset + 1} - {Math.min(reposOffset + reposLimit, reposTotal)} 条，共 {reposTotal} 条记录
-                  </div>
-                  <div className="flex items-center space-x-2">
-                    <button
-                      onClick={handlePrevPage}
-                      disabled={reposOffset === 0}
-                      className="px-3 py-1 border border-gray-300 dark:border-gray-600 rounded text-sm bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed"
-                    >
-                      上一页
-                    </button>
-                    <span className="px-3 py-1 text-sm text-gray-600 dark:text-gray-400">
-                      第 {currentPage} 页，共 {totalPages} 页
-                    </span>
-                    <button
-                      onClick={handleNextPage}
-                      disabled={reposOffset + reposLimit >= reposTotal}
-                      className="px-3 py-1 border border-gray-300 dark:border-gray-600 rounded text-sm bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed"
-                    >
-                      下一页
-                    </button>
-                  </div>
-                </div>
+                <Pagination
+                  currentPage={currentPage}
+                  totalPages={totalPages}
+                  totalItems={reposTotal}
+                  onPageChange={handlePageChange}
+                />
               )}
             </>
           )}
