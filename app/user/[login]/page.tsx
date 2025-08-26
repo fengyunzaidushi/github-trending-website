@@ -89,6 +89,7 @@ export default function UserPage({ params }: { params: Promise<{ login: string }
   const [reposTotal, setReposTotal] = useState(0)
   const [reposOffset, setReposOffset] = useState(0)
   const [reposLimit] = useState(20)
+  const [avatarError, setAvatarError] = useState(false)
   const [filters, setFilters] = useState({
     language: '',
     min_stars: 0,
@@ -215,17 +216,12 @@ export default function UserPage({ params }: { params: Promise<{ login: string }
         {/* 用户信息卡片 */}
         <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-8 mb-8">
           <div className="flex items-start space-x-6">
-            {user.avatar_url ? (
+            {user.avatar_url && !avatarError ? (
               <img
                 src={user.avatar_url}
                 alt={`${user.login}的头像`}
                 className="w-24 h-24 rounded-full"
-                onError={(e) => {
-                  e.currentTarget.style.display = 'none'
-                  const avatar = document.createElement('div')
-                  avatar.innerHTML = `<svg width="96" height="96" class="rounded-full"></svg>`
-                  e.currentTarget.parentNode?.appendChild(avatar)
-                }}
+                onError={() => setAvatarError(true)}
               />
             ) : (
               <Avatar

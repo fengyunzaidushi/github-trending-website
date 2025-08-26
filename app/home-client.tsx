@@ -253,6 +253,18 @@ export default function HomeClient({ searchParams }: HomeClientProps) {
                     >
                       Claude Code
                     </Link>
+                    <Link 
+                      href="/repos" 
+                      className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors text-sm font-medium"
+                    >
+                      所有仓库
+                    </Link>
+                    <Link 
+                      href="/users" 
+                      className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors text-sm font-medium"
+                    >
+                      用户列表
+                    </Link>
                   </nav>
                 </div>
                 

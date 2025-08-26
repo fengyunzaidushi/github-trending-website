@@ -10,20 +10,17 @@ interface UserCardProps {
 }
 
 function UserCard({ user }: UserCardProps) {
+  const [avatarError, setAvatarError] = useState(false)
+  
   return (
     <div className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
       <div className="flex items-start space-x-4">
-        {user.avatar_url ? (
+        {user.avatar_url && !avatarError ? (
           <img
             src={user.avatar_url}
             alt={`${user.login}的头像`}
             className="w-16 h-16 rounded-full"
-            onError={(e) => {
-              e.currentTarget.style.display = 'none'
-              const avatarContainer = document.createElement('div')
-              avatarContainer.innerHTML = `<svg width="64" height="64" class="rounded-full"></svg>`
-              e.currentTarget.parentNode?.appendChild(avatarContainer)
-            }}
+            onError={() => setAvatarError(true)}
           />
         ) : (
           <Avatar
