@@ -21,6 +21,40 @@ if (!supabaseUrl || !supabaseServiceKey) {
 
 const supabase = createClient(supabaseUrl, supabaseServiceKey);
 
+// 日志相关配置
+const logDir = path.resolve(__dirname, "../data/log");
+let logFilePath = "";
+
+// 确保日志目录存在并初始化日志文件
+function initializeLog() {
+  if (!fs.existsSync(logDir)) {
+    fs.mkdirSync(logDir, { recursive: true });
+  }
+  
+  const timestamp = new Date().toISOString().replace(/[:.]/g, "-");
+  logFilePath = path.join(logDir, `batch-import-${timestamp}.log`);
+  
+  const logHeader = `=== 批量用户数据导入日志 ===
+开始时间: ${new Date().toLocaleString()}
+日志文件: ${logFilePath}
+==========================================\n\n`;
+  
+  fs.writeFileSync(logFilePath, logHeader, "utf-8");
+  console.log(`📝 日志文件已创建: ${logFilePath}`);
+}
+
+// 写入日志函数
+function writeLog(message, type = "INFO") {
+  const timestamp = new Date().toLocaleString();
+  const logMessage = `[${timestamp}] [${type}] ${message}\n`;
+  
+  // 同时写入控制台和日志文件
+  console.log(message);
+  if (logFilePath) {
+    fs.appendFileSync(logFilePath, logMessage, "utf-8");
+  }
+}
+
 // 获取所有文件列表并按编号排序
 function getOrderedFileList(directory) {
   const files = fs
@@ -77,14 +111,14 @@ async function importSingleUser(userInfoPath) {
     });
 
     if (error) {
-      console.error(`❌ 用户 ${userInfo.login} 导入失败:`, error);
+      writeLog(`❌ 用户 ${userInfo.login} 导入失败: ${JSON.stringify(error)}`, "ERROR");
       return { success: false, userLogin: userInfo.login, error };
     } else {
-      console.log(`✅ 用户 ${userInfo.login} 导入成功`);
+      writeLog(`✅ 用户 ${userInfo.login} 导入成功`, "SUCCESS");
       return { success: true, userLogin: userInfo.login, userInfo };
     }
   } catch (error) {
-    console.error(`❌ 导入用户信息过程出现错误: ${userInfoPath}`, error);
+    writeLog(`❌ 导入用户信息过程出现错误: ${userInfoPath} - ${error.message}`, "ERROR");
     return { success: false, userLogin: null, error };
   }
 }
@@ -99,7 +133,7 @@ async function importSingleUserRepositories(repositoriesPath, userLogin) {
     const fileContent = fs.readFileSync(repositoriesPath, "utf-8");
     const repositories = JSON.parse(fileContent);
 
-    console.log(`📊 用户 ${userLogin}: 找到 ${repositories.length} 个仓库记录`);
+    writeLog(`📊 用户 ${userLogin}: 找到 ${repositories.length} 个仓库记录`);
 
     // 获取用户ID
     const { data: userData, error: userError } = await supabase
@@ -153,22 +187,22 @@ async function importSingleUserRepositories(repositoriesPath, userLogin) {
           });
 
         if (error) {
-          console.error(
+          writeLog(
             `❌ 用户 ${userLogin} 批次 ${
               Math.floor(i / batchSize) + 1
-            } 导入失败:`,
-            error
+            } 导入失败: ${JSON.stringify(error)}`,
+            "ERROR"
           );
           errorCount += batch.length;
         } else {
           successCount += batch.length;
         }
       } catch (batchError) {
-        console.error(
+        writeLog(
           `❌ 用户 ${userLogin} 批次 ${
             Math.floor(i / batchSize) + 1
-          } 处理失败:`,
-          batchError
+          } 处理失败: ${batchError.message}`,
+          "ERROR"
         );
         errorCount += batch.length;
       }
@@ -177,12 +211,12 @@ async function importSingleUserRepositories(repositoriesPath, userLogin) {
       await new Promise((resolve) => setTimeout(resolve, 100));
     }
 
-    console.log(
+    writeLog(
       `📈 用户 ${userLogin} 仓库导入统计: ✅ 成功 ${successCount} 条, ❌ 失败 ${errorCount} 条`
     );
     return { successCount, errorCount, total: repositories.length };
   } catch (error) {
-    console.error(`❌ 用户 ${userLogin} 导入仓库数据过程出现错误:`, error);
+    writeLog(`❌ 用户 ${userLogin} 导入仓库数据过程出现错误: ${error.message}`, "ERROR");
     return { successCount: 0, errorCount: 0, total: 0 };
   }
 }
@@ -201,20 +235,20 @@ async function batchImportUsers(
   const userInfoDirectory = userInfoDir || defaultUserInfoDir;
   const repositoriesDirectory = repositoriesDir || defaultRepositoriesDir;
 
-  console.log("🚀 开始批量导入用户数据...");
-  console.log(`📁 用户信息目录: ${userInfoDirectory}`);
-  console.log(`📁 仓库数据目录: ${repositoriesDirectory}`);
+  writeLog("🚀 开始批量导入用户数据...");
+  writeLog(`📁 用户信息目录: ${userInfoDirectory}`);
+  writeLog(`📁 仓库数据目录: ${repositoriesDirectory}`);
 
   // 获取文件列表
   const userInfoFiles = getOrderedFileList(userInfoDirectory);
   const repositoryFiles = getOrderedFileList(repositoriesDirectory);
 
-  console.log(`📊 发现 ${userInfoFiles.length} 个用户信息文件`);
-  console.log(`📊 发现 ${repositoryFiles.length} 个仓库数据文件`);
+  writeLog(`📊 发现 ${userInfoFiles.length} 个用户信息文件`);
+  writeLog(`📊 发现 ${repositoryFiles.length} 个仓库数据文件`);
 
   // 验证文件数量一致
   if (userInfoFiles.length !== repositoryFiles.length) {
-    console.error("❌ 用户信息文件和仓库数据文件数量不匹配");
+    writeLog("❌ 用户信息文件和仓库数据文件数量不匹配", "ERROR");
     process.exit(1);
   }
 
@@ -222,7 +256,7 @@ async function batchImportUsers(
   const actualEndIndex = endIndex || userInfoFiles.length;
   const actualStartIndex = Math.max(1, startIndex);
 
-  console.log(
+  writeLog(
     `📋 导入范围: 第 ${actualStartIndex} 到第 ${actualEndIndex} 个文件`
   );
 
@@ -245,8 +279,8 @@ async function batchImportUsers(
     const repositoryFile = repositoryFiles[i];
 
     const userNumber = i + 1;
-    console.log(
-      `\n🔄 [${userNumber}/${userInfoFiles.length}] 正在处理: ${userInfoFile}`
+    writeLog(
+      `🔄 [${userNumber}/${userInfoFiles.length}] 正在处理: ${userInfoFile}`
     );
 
     // 构建完整路径
@@ -258,7 +292,7 @@ async function batchImportUsers(
     const repoFileNumber = repositoryFile.match(/^(\d+)_/)?.[1];
 
     if (userFileNumber !== repoFileNumber) {
-      console.error(`❌ 文件编号不匹配: ${userInfoFile} vs ${repositoryFile}`);
+      writeLog(`❌ 文件编号不匹配: ${userInfoFile} vs ${repositoryFile}`, "ERROR");
       totalStats.failedUsers++;
       continue;
     }
@@ -266,11 +300,11 @@ async function batchImportUsers(
     totalStats.processedUsers++;
 
     // 1. 导入用户信息
-    console.log(`  📝 步骤1: 导入用户信息`);
+    writeLog(`  📝 步骤1: 导入用户信息`);
     const userResult = await importSingleUser(userInfoPath);
 
     if (!userResult.success) {
-      console.error(`❌ 用户信息导入失败，跳过仓库导入`);
+      writeLog(`❌ 用户信息导入失败，跳过仓库导入`, "ERROR");
       totalStats.failedUsers++;
       continue;
     }
@@ -278,7 +312,7 @@ async function batchImportUsers(
     totalStats.successfulUsers++;
 
     // 2. 导入仓库数据
-    console.log(`  📦 步骤2: 导入仓库数据`);
+    writeLog(`  📦 步骤2: 导入仓库数据`);
     const repoStats = await importSingleUserRepositories(
       repositoriesPath,
       userResult.userLogin
@@ -288,23 +322,23 @@ async function batchImportUsers(
     totalStats.successfulRepos += repoStats.successCount;
     totalStats.failedRepos += repoStats.errorCount;
 
-    console.log(`  ✅ 用户 ${userResult.userLogin} 处理完成`);
+    writeLog(`  ✅ 用户 ${userResult.userLogin} 处理完成`, "SUCCESS");
 
     // 添加延迟避免过载
     await new Promise((resolve) => setTimeout(resolve, 500));
   }
 
   // 显示最终统计
-  console.log("\n🎉 批量导入完成!");
-  console.log("\n📊 最终统计:");
-  console.log(`👥 用户统计:`);
-  console.log(`  📋 处理总数: ${totalStats.processedUsers}`);
-  console.log(`  ✅ 导入成功: ${totalStats.successfulUsers}`);
-  console.log(`  ❌ 导入失败: ${totalStats.failedUsers}`);
-  console.log(`📦 仓库统计:`);
-  console.log(`  📋 仓库总数: ${totalStats.totalRepos}`);
-  console.log(`  ✅ 导入成功: ${totalStats.successfulRepos}`);
-  console.log(`  ❌ 导入失败: ${totalStats.failedRepos}`);
+  writeLog("🎉 批量导入完成!", "SUCCESS");
+  writeLog("📊 最终统计:");
+  writeLog(`👥 用户统计:`);
+  writeLog(`  📋 处理总数: ${totalStats.processedUsers}`);
+  writeLog(`  ✅ 导入成功: ${totalStats.successfulUsers}`);
+  writeLog(`  ❌ 导入失败: ${totalStats.failedUsers}`);
+  writeLog(`📦 仓库统计:`);
+  writeLog(`  📋 仓库总数: ${totalStats.totalRepos}`);
+  writeLog(`  ✅ 导入成功: ${totalStats.successfulRepos}`);
+  writeLog(`  ❌ 导入失败: ${totalStats.failedRepos}`);
 
   const userSuccessRate =
     totalStats.processedUsers > 0
@@ -318,9 +352,9 @@ async function batchImportUsers(
       ? ((totalStats.successfulRepos / totalStats.totalRepos) * 100).toFixed(2)
       : 0;
 
-  console.log(`📈 成功率:`);
-  console.log(`  👥 用户: ${userSuccessRate}%`);
-  console.log(`  📦 仓库: ${repoSuccessRate}%`);
+  writeLog(`📈 成功率:`);
+  writeLog(`  👥 用户: ${userSuccessRate}%`);
+  writeLog(`  📦 仓库: ${repoSuccessRate}%`);
 
   return totalStats;
 }
@@ -378,17 +412,27 @@ async function main() {
     }
   }
 
-  console.log("🚀 批量用户数据导入工具");
-  console.log(
+  // 初始化日志
+  initializeLog();
+  
+  writeLog("🚀 批量用户数据导入工具");
+  writeLog(
     `📋 导入设置: 从第 ${startIndex} 个开始${
       endIndex ? `到第 ${endIndex} 个` : "到最后一个"
     }`
   );
 
   try {
-    await batchImportUsers(startIndex, endIndex, userInfoDir, repositoriesDir);
+    const finalStats = await batchImportUsers(startIndex, endIndex, userInfoDir, repositoriesDir);
+    
+    // 写入最终统计到日志
+    const endTime = new Date().toLocaleString();
+    writeLog(`\n=== 导入任务完成 ===`);
+    writeLog(`结束时间: ${endTime}`);
+    writeLog(`日志文件: ${logFilePath}`);
+    
   } catch (error) {
-    console.error("❌ 批量导入过程出现错误:", error);
+    writeLog(`❌ 批量导入过程出现错误: ${error.message}`, "ERROR");
     process.exit(1);
   }
 }

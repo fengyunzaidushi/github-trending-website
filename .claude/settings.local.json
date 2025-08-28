@@ -13,8 +13,13 @@
       "Bash(npm run build:*)",
       "Bash(git add:*)",
       "Bash(npx next dev:*)",
-      "Bash(rg:*)"
+      "Bash(rg:*)",
+      "mcp__dbhub-postgres__execute_sql",
+      "WebSearch"
     ],
-    "deny": []
+    "deny": [],
+    "additionalDirectories": [
+      "D:\\"
+    ]
   }
 }

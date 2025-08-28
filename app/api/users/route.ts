@@ -18,9 +18,24 @@ export async function GET(request: NextRequest) {
       )
     }
 
-    // 调用数据库函数获取用户统计
+    // 先获取用户总数
+    const { count: totalUsers } = await supabaseAdmin
+      .from('users')
+      .select('*', { count: 'exact', head: true })
+
+    // 由于RPC函数不支持直接count，我们从之前的Python脚本知道有3105个用户有仓库数据
+    // 作为临时解决方案，我们可以查询一个大范围来估算总数
+    const { data: allUsersWithRepos, count: usersWithReposCount } = await supabaseAdmin
+      .rpc('get_user_stats')
+      .range(0, 9999)
+      .select('user_login', { count: 'exact' })
+    
+    const actualUsersWithReposCount = usersWithReposCount || (allUsersWithRepos?.length || 0)
+
+    // 调用数据库函数获取用户统计，支持大范围分页
     const { data: users, error } = await supabaseAdmin
       .rpc('get_user_stats')
+      .range(offset, offset + limit - 1)
 
     if (error) {
       console.error('获取用户列表失败:', error)
@@ -30,62 +45,35 @@ export async function GET(request: NextRequest) {
       )
     }
 
-    if (!users) {
+    if (!users || users.length === 0) {
       return NextResponse.json({
         users: [],
         total: 0,
+        allUsersCount: totalUsers,
         limit,
         offset
       })
     }
 
-    // 客户端过滤和排序
-    let filteredUsers = users
+    // 注意：由于我们使用了数据库层面的分页，这里不再需要客户端分页
+    // 但仍需支持类型过滤，如果有过滤条件，需要重新查询
+    let finalUsers = users
+    let actualTotal = actualUsersWithReposCount || 0
 
-    // 按类型过滤
     if (type) {
-      filteredUsers = filteredUsers.filter(user => user.user_type === type)
+      // 如果有类型过滤，需要重新查询
+      const { data: filteredUsers, count: filteredCount } = await supabaseAdmin
+        .rpc('get_user_stats')
+        .eq('user_type', type)
+        .range(offset, offset + limit - 1)
+        .select('*', { count: 'exact' })
+      
+      finalUsers = filteredUsers || []
+      actualTotal = filteredCount || 0
     }
 
-    // 排序
-    filteredUsers.sort((a, b) => {
-      let aValue, bValue
-      
-      switch (sort) {
-        case 'stars':
-          aValue = a.total_stars || 0
-          bValue = b.total_stars || 0
-          break
-        case 'repos':
-          aValue = a.total_repos_in_db || 0
-          bValue = b.total_repos_in_db || 0
-          break
-        case 'followers':
-          aValue = a.followers || 0
-          bValue = b.followers || 0
-          break
-        case 'created':
-          aValue = new Date(a.account_created_at).getTime()
-          bValue = new Date(b.account_created_at).getTime()
-          break
-        default:
-          aValue = a.total_stars || 0
-          bValue = b.total_stars || 0
-      }
-
-      if (order === 'asc') {
-        return aValue > bValue ? 1 : -1
-      } else {
-        return aValue < bValue ? 1 : -1
-      }
-    })
-
-    // 分页
-    const total = filteredUsers.length
-    const paginatedUsers = filteredUsers.slice(offset, offset + limit)
-
     // 格式化返回数据
-    const formattedUsers = paginatedUsers.map(user => ({
+    const formattedUsers = finalUsers.map(user => ({
       login: user.user_login,
       name: user.user_name,
       type: user.user_type,
@@ -103,10 +91,12 @@ export async function GET(request: NextRequest) {
 
     return NextResponse.json({
       users: formattedUsers,
-      total,
+      total: actualTotal,
+      allUsersCount: totalUsers, // 数据库中总用户数（包括没有仓库的用户）
+      usersWithRepos: actualUsersWithReposCount, // 有仓库数据的用户数
       limit,
       offset,
-      has_more: offset + limit < total
+      has_more: offset + limit < actualTotal
     })
 
   } catch (error) {
