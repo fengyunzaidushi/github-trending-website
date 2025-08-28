@@ -81,7 +81,7 @@ export async function GET(
     // 获取总数（用于分页）
     let countQuery = supabaseAdmin
       .from("user_repositories")
-      .select("*", { count: "exact", head: true })
+      .select("id", { count: "exact", head: true })
       .eq("owner", login)
       .gte("stargazers_count", minStars);
 
