@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://github-trending-website.vercel.app'),
   title: {
     default: "GitHub Trending - 实时追踪热门开源项目",
     template: "%s | GitHub Trending"
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
   keywords: [
     "github trends",
     "github trending",
-    "github trending repositories", 
+    "github trending repositories",
     "github trending repos",
     "github trendings",
     "github trending history",
