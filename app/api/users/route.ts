@@ -6,8 +6,6 @@ export async function GET(request: NextRequest) {
     const searchParams = request.nextUrl.searchParams
     const limit = parseInt(searchParams.get('limit') || '50')
     const offset = parseInt(searchParams.get('offset') || '0')
-    const sort = searchParams.get('sort') || 'stars' // stars, repos, followers, created
-    const order = searchParams.get('order') || 'desc'
     const type = searchParams.get('type') // User, Organization
 
     // 验证参数
