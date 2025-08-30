@@ -152,7 +152,7 @@ export async function GET(request: NextRequest) {
     }
 
     // 转换数据格式
-    const formattedRepos: RepoWithUser[] = (repositories || []).map((repo: any) => ({
+    const formattedRepos: RepoWithUser[] = (repositories || []).map((repo: Database['public']['Tables']['user_repositories']['Row']) => ({
       id: repo.id,
       github_id: repo.github_id,
       user_id: repo.user_id,
