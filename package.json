@@ -26,6 +26,7 @@
 		"react-dom": "^19.0.0"
 	},
 	"devDependencies": {
+		"@browser-echo/next": "^1.0.1",
 		"@eslint/eslintrc": "^3",
 		"@tailwindcss/postcss": "^4",
 		"@types/node": "^20.19.9",
