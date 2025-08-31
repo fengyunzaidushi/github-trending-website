@@ -69,8 +69,22 @@ export async function GET(request: NextRequest) {
       actualTotal = filteredUsers?.length || 0
     }
 
-    // 格式化返回数据
-    const formattedUsers = finalUsers.map((user: Database['public']['Functions']['get_user_stats']['Returns'][0]) => ({
+    // 格式化返回数据  
+    const formattedUsers = finalUsers.map((user: {
+      user_login: string;
+      user_name?: string;
+      user_type: 'User' | 'Organization';
+      followers: number;
+      following: number;
+      public_repos: number;
+      total_repos_in_db: number;
+      total_stars: number;
+      avg_stars: number;
+      top_language?: string;
+      languages_count: number;
+      last_repo_update?: string;
+      account_created_at: string;
+    }) => ({
       login: user.user_login,
       name: user.user_name,
       type: user.user_type,
