@@ -23,10 +23,9 @@ export async function GET(request: NextRequest) {
 
     // 由于RPC函数不支持直接count，我们从之前的Python脚本知道有3105个用户有仓库数据
     // 作为临时解决方案，我们可以查询一个大范围来估算总数
-    const { data: allUsersWithRepos, count: usersWithReposCount } = await supabaseAdmin
+    const { data: allUsersWithRepos } = await supabaseAdmin
       .rpc('get_user_stats')
       .range(0, 9999)
-      .select('user_login', { count: 'exact' })
     
     const actualUsersWithReposCount = usersWithReposCount || (allUsersWithRepos?.length || 0)
 
