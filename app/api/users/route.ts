@@ -27,7 +27,7 @@ export async function GET(request: NextRequest) {
       .rpc('get_user_stats')
       .range(0, 9999)
     
-    const actualUsersWithReposCount = usersWithReposCount || (allUsersWithRepos?.length || 0)
+    const actualUsersWithReposCount = allUsersWithRepos?.length || 0
 
     // 调用数据库函数获取用户统计，支持大范围分页
     const { data: users, error } = await supabaseAdmin
