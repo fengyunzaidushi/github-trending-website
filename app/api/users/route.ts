@@ -59,14 +59,13 @@ export async function GET(request: NextRequest) {
 
     if (type) {
       // 如果有类型过滤，需要重新查询
-      const { data: filteredUsers, count: filteredCount } = await supabaseAdmin
+      const { data: filteredUsers } = await supabaseAdmin
         .rpc('get_user_stats')
         .eq('user_type', type)
         .range(offset, offset + limit - 1)
-        .select('*', { count: 'exact' })
       
       finalUsers = filteredUsers || []
-      actualTotal = filteredCount || 0
+      actualTotal = filteredUsers?.length || 0
     }
 
     // 格式化返回数据
