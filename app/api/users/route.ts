@@ -70,7 +70,7 @@ export async function GET(request: NextRequest) {
     }
 
     // 格式化返回数据
-    const formattedUsers = finalUsers.map(user => ({
+    const formattedUsers = finalUsers.map((user: Database['public']['Functions']['get_user_stats']['Returns'][0]) => ({
       login: user.user_login,
       name: user.user_name,
       type: user.user_type,
