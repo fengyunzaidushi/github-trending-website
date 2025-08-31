@@ -167,16 +167,7 @@ export default function ReposPage() {
       }
 
       const data = await response.json() as {
-        repositories: Array<{
-          id: number;
-          name: string;
-          full_name: string;
-          html_url: string;
-          description: string | null;
-          stargazers_count: number;
-          language: string | null;
-          user: { login: string; name: string | null; avatar_url: string | null };
-        }>;
+        repositories: RepoWithUser[];
         pagination: { total: number };
       }
       setRepositories(data.repositories)
