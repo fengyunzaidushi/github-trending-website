@@ -166,7 +166,10 @@ export default function ReposPage() {
         throw new Error('获取仓库列表失败')
       }
 
-      const data = await response.json()
+      const data = await response.json() as {
+        repositories: any[];
+        pagination: { total: number };
+      }
       setRepositories(data.repositories)
       setTotal(data.pagination.total)
     } catch (err) {
