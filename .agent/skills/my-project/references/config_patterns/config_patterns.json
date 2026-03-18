@@ -213,7 +213,7 @@
         },
         {
           "key": "STRIPE_SECRET_KEY_TEST",
-          "value": "sk_test_51Owd8MFHTNg1QL5c2iG5ZIuYux52wdORSy0LByhhamg0apv9fYaZEGF864v5i3S1tkiPPoNxrYngshIkiPtJC7Xr00NxQZAoo0",
+          "value": "STRIPE_SECRET_KEY_TEST",
           "type": "string",
           "env_var": "STRIPE_SECRET_KEY_TEST",
           "description": ""
