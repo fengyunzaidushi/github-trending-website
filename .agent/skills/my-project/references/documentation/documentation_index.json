@@ -1,0 +1,4115 @@
+{
+  "total_files": 30,
+  "categories": {
+    "overview": [
+      "API_STATUS.md",
+      "CLAUDE.md",
+      "README.md",
+      "RECOVERY_REPORT.md",
+      "SEARCH_GUIDE.md",
+      "STATIC_VERSION_README.md"
+    ],
+    "api": [
+      "output\\my-project\\api_reference\\cloudflare-env.d.md",
+      "output\\my-project\\api_reference\\DatePicker.md",
+      "output\\my-project\\api_reference\\global-error.md",
+      "output\\my-project\\api_reference\\home-client.md",
+      "output\\my-project\\api_reference\\import-data.md",
+      "output\\my-project\\api_reference\\LanguageTabs.md",
+      "output\\my-project\\api_reference\\layout.md",
+      "output\\my-project\\api_reference\\manifest.md",
+      "output\\my-project\\api_reference\\metadata.md",
+      "output\\my-project\\api_reference\\page.md",
+      "output\\my-project\\api_reference\\Pagination.md",
+      "output\\my-project\\api_reference\\PeriodSelector.md",
+      "output\\my-project\\api_reference\\RepoCard.md",
+      "output\\my-project\\api_reference\\robots.md",
+      "output\\my-project\\api_reference\\route.md",
+      "output\\my-project\\api_reference\\SearchComponent.md",
+      "output\\my-project\\api_reference\\SEOHead.md",
+      "output\\my-project\\api_reference\\setup-database.md",
+      "output\\my-project\\api_reference\\sitemap.md",
+      "output\\my-project\\api_reference\\StructuredData.md",
+      "output\\my-project\\api_reference\\test.md",
+      "output\\my-project\\api_reference\\TopicNavigation.md"
+    ],
+    "other": [
+      "output\\my-project\\config_patterns\\config_patterns.md",
+      "reports\\data-missing-analysis.md"
+    ]
+  },
+  "files": [
+    {
+      "path": "API_STATUS.md",
+      "filename": "API_STATUS.md",
+      "category": "overview",
+      "size_bytes": 1983,
+      "title": "API \u72b6\u6001\u8bf4\u660e",
+      "structure": {
+        "title": "API \u72b6\u6001\u8bf4\u660e",
+        "headers": [
+          {
+            "level": 1,
+            "text": "API \u72b6\u6001\u8bf4\u660e",
+            "line": 1
+          },
+          {
+            "level": 2,
+            "text": "\ud83d\udd27 \u5f53\u524d\u4f7f\u7528\u9759\u6001\u6570\u636e + \u6309\u9700API\u8c03\u7528",
+            "line": 3
+          },
+          {
+            "level": 3,
+            "text": "\ud83d\udcca \u6570\u636e\u52a0\u8f7d\u7b56\u7565",
+            "line": 5
+          },
+          {
+            "level": 3,
+            "text": "\u53ef\u7528\u7aef\u70b9",
+            "line": 17
+          },
+          {
+            "level": 3,
+            "text": "\u9ed8\u8ba4\u663e\u793a\u6570\u636e",
+            "line": 26
+          },
+          {
+            "level": 3,
+            "text": "\u7528\u6237\u4f53\u9a8c\u7279\u70b9",
+            "line": 37
+          },
+          {
+            "level": 3,
+            "text": "\u641c\u7d22\u529f\u80fd\u6d4b\u8bd5",
+            "line": 44
+          },
+          {
+            "level": 3,
+            "text": "\u8bed\u8a00\u7b5b\u9009\u6d4b\u8bd5",
+            "line": 52
+          },
+          {
+            "level": 2,
+            "text": "\ud83c\udfaf API \u9519\u8bef\u89e3\u51b3\u65b9\u6848",
+            "line": 57
+          }
+        ],
+        "code_blocks": [],
+        "tables": 0,
+        "images": 0,
+        "links": 0,
+        "word_count": 27,
+        "line_count": 69
+      },
+      "summary": "**API \u72b6\u6001\u8bf4\u660e**\nSections: \ud83d\udd27 \u5f53\u524d\u4f7f\u7528\u9759\u6001\u6570\u636e + \u6309\u9700API\u8c03\u7528, \ud83d\udcca \u6570\u636e\u52a0\u8f7d\u7b56\u7565, \u53ef\u7528\u7aef\u70b9, \u9ed8\u8ba4\u663e\u793a\u6570\u636e, \u7528\u6237\u4f53\u9a8c\u7279\u70b9\n**\u521d\u59cb\u72b6\u6001**: - \u2705 \u9875\u9762\u52a0\u8f7d\u65f6\u663e\u793a\u9759\u6001\u6f14\u793a\u6570\u636e - \u2705 \u4e0d\u8fdb\u884c\u4efb\u4f55\u81ea\u52a8API\u8c03\u7528 - \u2705 \u96f6\u7f51\u7edc\u8bf7\u6c42\uff0c\u96f6\u9519\u8bef\u98ce\u9669\n(27 words, 0 code blocks)",
+      "content": null,
+      "_enhanced": true,
+      "parsed_data": {
+        "tables": 0,
+        "cross_references": 0,
+        "code_blocks": 0,
+        "images": 0,
+        "quality_scores": {
+          "avg_code_quality": 0
+        }
+      }
+    },
+    {
+      "path": "CLAUDE.md",
+      "filename": "CLAUDE.md",
+      "category": "overview",
+      "size_bytes": 3392,
+      "title": "CLAUDE.md",
+      "structure": {
+        "title": "CLAUDE.md",
+        "headers": [
+          {
+            "level": 1,
+            "text": "CLAUDE.md",
+            "line": 1
+          },
+          {
+            "level": 2,
+            "text": "\u9879\u76ee\u6982\u8ff0",
+            "line": 5
+          },
+          {
+            "level": 2,
+            "text": "\u5f00\u53d1\u547d\u4ee4",
+            "line": 9
+          },
+          {
+            "level": 2,
+            "text": "\u6838\u5fc3\u67b6\u6784",
+            "line": 41
+          },
+          {
+            "level": 3,
+            "text": "\u6280\u672f\u6808",
+            "line": 43
+          },
+          {
+            "level": 3,
+            "text": "\u6570\u636e\u5e93\u67b6\u6784",
+            "line": 49
+          },
+          {
+            "level": 3,
+            "text": "API \u8def\u7531\u7ed3\u6784",
+            "line": 63
+          },
+          {
+            "level": 3,
+            "text": "\u7ec4\u4ef6\u67b6\u6784",
+            "line": 71
+          },
+          {
+            "level": 3,
+            "text": "\u7c7b\u578b\u7cfb\u7edf",
+            "line": 77
+          },
+          {
+            "level": 3,
+            "text": "\u6570\u636e\u5904\u7406\u811a\u672c",
+            "line": 83
+          },
+          {
+            "level": 3,
+            "text": "\u90e8\u7f72\u914d\u7f6e",
+            "line": 90
+          },
+          {
+            "level": 2,
+            "text": "\u73af\u5883\u53d8\u91cf\u8981\u6c42",
+            "line": 95
+          },
+          {
+            "level": 2,
+            "text": "\u5f00\u53d1\u6ce8\u610f\u4e8b\u9879",
+            "line": 104
+          },
+          {
+            "level": 3,
+            "text": "\u6570\u636e\u5e93\u8fde\u63a5",
+            "line": 106
+          },
+          {
+            "level": 3,
+            "text": "\u56fd\u9645\u5316\u7279\u6027",
+            "line": 110
+          },
+          {
+            "level": 3,
+            "text": "\u54cd\u5e94\u5f0f\u8bbe\u8ba1",
+            "line": 115
+          },
+          {
+            "level": 3,
+            "text": "\u6027\u80fd\u4f18\u5316",
+            "line": 120
+          }
+        ],
+        "code_blocks": [
+          {
+            "language": "bash",
+            "code": "# \u5f00\u53d1\u670d\u52a1\u5668\nnpm run dev\n\n# \u6784\u5efa\u9879\u76ee\nnpm run build\n\n# \u751f\u4ea7\u6a21\u5f0f\u542f\u52a8\nnpm start\n\n# \u4ee3\u7801\u68c0\u67e5\nnpm run lint\n\n# Cloudflare \u90e8\u7f72\nnpm run deploy\n\n# Cloudflare \u9884\u89c8\u90e8\u7f72\nnpm run preview\n\n# \u751f\u6210 Cloudflare \u7c7b\u578b\u5b9a\u4e49\nnpm run cf-typegen\n\n# \u6570\u636e\u5e93\u8bbe\u7f6e\nnpm run db:setup\n\n# \u5bfc\u5165\u8d8b\u52bf\u6570\u636e\nnpm run import-data\nnpm run import-data:mjs"
+          },
+          {
+            "language": "bash",
+            "code": "# Supabase \u914d\u7f6e\nNEXT_PUBLIC_SUPABASE_URL=your_supabase_url\nNEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key\nSUPABASE_SERVICE_ROLE_KEY=your_service_role_key"
+          }
+        ],
+        "tables": 0,
+        "images": 0,
+        "links": 0,
+        "word_count": 40,
+        "line_count": 123
+      },
+      "summary": "**CLAUDE.md**\nSections: \u9879\u76ee\u6982\u8ff0, \u5f00\u53d1\u547d\u4ee4, \u6838\u5fc3\u67b6\u6784, \u6280\u672f\u6808, \u6570\u636e\u5e93\u67b6\u6784\nThis file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.\n(40 words, 2 code blocks)",
+      "content": null,
+      "_enhanced": true,
+      "parsed_data": {
+        "tables": 0,
+        "cross_references": 0,
+        "code_blocks": 2,
+        "images": 0,
+        "quality_scores": {
+          "avg_code_quality": 8.75
+        }
+      }
+    },
+    {
+      "path": "output\\my-project\\api_reference\\cloudflare-env.d.md",
+      "filename": "cloudflare-env.d.md",
+      "category": "api",
+      "size_bytes": 38739,
+      "title": "API Reference: cloudflare-env.d.ts",
+      "structure": {
+        "title": "API Reference: cloudflare-env.d.ts",
+        "headers": [
+          {
+            "level": 1,
+            "text": "API Reference: cloudflare-env.d.ts",
+            "line": 1
+          },
+          {
+            "level": 2,
+            "text": "Classes",
+            "line": 9
+          },
+          {
+            "level": 3,
+            "text": "DOMException",
+            "line": 11
+          },
+          {
+            "level": 4,
+            "text": "Methods",
+            "line": 15
+          },
+          {
+            "level": 5,
+            "text": "constructor(message?: string, name?: string)",
+            "line": 17
+          },
+          {
+            "level": 5,
+            "text": "stack()",
+            "line": 27
+          },
+          {
+            "level": 5,
+            "text": "stack(value: any)",
+            "line": 30
+          },
+          {
+            "level": 3,
+            "text": "CompileError",
+            "line": 41
+          },
+          {
+            "level": 4,
+            "text": "Methods",
+            "line": 45
+          },
+          {
+            "level": 5,
+            "text": "constructor(message?: string)",
+            "line": 47
+          },
+          {
+            "level": 3,
+            "text": "RuntimeError",
+            "line": 58
+          },
+          {
+            "level": 4,
+            "text": "Methods",
+            "line": 62
+          },
+          {
+            "level": 5,
+            "text": "constructor(message?: string)",
+            "line": 64
+          },
+          {
+            "level": 3,
+            "text": "Global",
+            "line": 75
+          },
+          {
+            "level": 4,
+            "text": "Methods",
+            "line": 79
+          },
+          {
+            "level": 5,
+            "text": "constructor(descriptor: GlobalDescriptor, value?: any)",
+            "line": 81
+          },
+          {
+            "level": 5,
+            "text": "valueOf()",
+            "line": 91
+          },
+          {
+            "level": 3,
+            "text": "Instance",
+            "line": 96
+          },
+          {
+            "level": 4,
+            "text": "Methods",
+            "line": 100
+          },
+          {
+            "level": 5,
+            "text": "constructor(module: Module, imports?: Imports)",
+            "line": 102
+          },
+          {
+            "level": 3,
+            "text": "Memory",
+            "line": 114
+          },
+          {
+            "level": 4,
+            "text": "Methods",
+            "line": 118
+          },
+          {
+            "level": 5,
+            "text": "constructor(descriptor: MemoryDescriptor)",
+            "line": 120
+          },
+          {
+            "level": 5,
+            "text": "grow(delta: number)",
+            "line": 129
+          },
+          {
+            "level": 3,
+            "text": "Module",
+            "line": 140
+          },
+          {
+            "level": 4,
+            "text": "Methods",
+            "line": 144
+          },
+          {
+            "level": 5,
+            "text": "customSections(module: Module, sectionName: string)",
+            "line": 146
+          },
+          {
+            "level": 5,
+            "text": "exports(module: Module)",
+            "line": 156
+          },
+          {
+            "level": 5,
+            "text": "imports(module: Module)",
+            "line": 165
+          },
+          {
+            "level": 3,
+            "text": "Table",
+            "line": 176
+          },
+          {
+            "level": 4,
+            "text": "Methods",
+            "line": 180
+          },
+          {
+            "level": 5,
+            "text": "constructor(descriptor: TableDescriptor, value?: any)",
+            "line": 182
+          },
+          {
+            "level": 5,
+            "text": "get(index: number)",
+            "line": 192
+          },
+          {
+            "level": 5,
+            "text": "grow(delta: number, value?: any)",
+            "line": 201
+          },
+          {
+            "level": 5,
+            "text": "set(index: number, value?: any)",
+            "line": 211
+          },
+          {
+            "level": 3,
+            "text": "PromiseRejectionEvent",
+            "line": 223
+          },
+          {
+            "level": 3,
+            "text": "Navigator",
+            "line": 229
+          },
+          {
+            "level": 4,
+            "text": "Methods",
+            "line": 233
+          },
+          {
+            "level": 5,
+            "text": "sendBeacon(url: string, body?: (ReadableStream | string | (ArrayBuffer | ArrayBufferView)",
+            "line": 235
+          },
+          {
+            "level": 3,
+            "text": "WebSocketRequestResponsePair",
+            "line": 247
+          },
+          {
+            "level": 4,
+            "text": "Methods",
+            "line": 251
+          },
+          {
+            "level": 5,
+            "text": "constructor(request: string, response: string)",
+            "line": 253
+          },
+          {
+            "level": 5,
+            "text": "request()",
+            "line": 263
+          },
+          {
+            "level": 5,
+            "text": "response()",
+            "line": 266
+          },
+          {
+            "level": 3,
+            "text": "Event",
+            "line": 271
+          },
+          {
+            "level": 4,
+            "text": "Methods",
+            "line": 275
+          },
+          {
+            "level": 5,
+            "text": "constructor(type: string, init?: EventInit)",
+            "line": 277
+          },
+          {
+            "level": 5,
+            "text": "type()",
+            "line": 287
+          },
+          {
+            "level": 5,
+            "text": "eventPhase()",
+            "line": 290
+          },
+          {
+            "level": 5,
+            "text": "composed()",
+            "line": 293
+          },
+          {
+            "level": 5,
+            "text": "bubbles()",
+            "line": 296
+          },
+          {
+            "level": 5,
+            "text": "preventDefault()",
+            "line": 299
+          },
+          {
+            "level": 5,
+            "text": "cancelable()",
+            "line": 302
+          },
+          {
+            "level": 5,
+            "text": "preventDefault()",
+            "line": 305
+          },
+          {
+            "level": 5,
+            "text": "defaultPrevented()",
+            "line": 308
+          },
+          {
+            "level": 5,
+            "text": "returnValue()",
+            "line": 311
+          },
+          {
+            "level": 5,
+            "text": "currentTarget()",
+            "line": 314
+          },
+          {
+            "level": 5,
+            "text": "dispatched(its target)",
+            "line": 317
+          },
+          {
+            "level": 5,
+            "text": "target()",
+            "line": 326
+          },
+          {
+            "level": 5,
+            "text": "srcElement()",
+            "line": 329
+          },
+          {
+            "level": 5,
+            "text": "timeStamp()",
+            "line": 332
+          },
+          {
+            "level": 5,
+            "text": "isTrusted()",
+            "line": 335
+          },
+          {
+            "level": 5,
+            "text": "cancelBubble()",
+            "line": 338
+          },
+          {
+            "level": 5,
+            "text": "cancelBubble(value: boolean)",
+            "line": 341
+          },
+          {
+            "level": 5,
+            "text": "stopImmediatePropagation()",
+            "line": 350
+          },
+          {
+            "level": 5,
+            "text": "preventDefault()",
+            "line": 353
+          },
+          {
+            "level": 5,
+            "text": "stopPropagation()",
+            "line": 356
+          },
+          {
+            "level": 5,
+            "text": "path(objects on which listeners will be invoked)",
+            "line": 359
+          },
+          {
+            "level": 5,
+            "text": "composedPath()",
+            "line": 368
+          },
+          {
+            "level": 3,
+            "text": "AbortController",
+            "line": 373
+          },
+          {
+            "level": 4,
+            "text": "Methods",
+            "line": 377
+          },
+          {
+            "level": 5,
+            "text": "constructor()",
+            "line": 379
+          },
+          {
+            "level": 5,
+            "text": "signal()",
+            "line": 382
+          },
+          {
+            "level": 5,
+            "text": "abort(reason?: any)",
+            "line": 385
+          },
+          {
+            "level": 3,
+            "text": "AbortSignal",
+            "line": 396
+          },
+          {
+            "level": 4,
+            "text": "Methods",
+            "line": 400
+          },
+          {
+            "level": 5,
+            "text": "abort(reason?: any)",
+            "line": 402
+          },
+          {
+            "level": 5,
+            "text": "timeout(delay: number)",
+            "line": 411
+          },
+          {
+            "level": 5,
+            "text": "any(signals: AbortSignal[])",
+            "line": 420
+          },
+          {
+            "level": 5,
+            "text": "aborted()",
+            "line": 429
+          },
+          {
+            "level": 5,
+            "text": "reason()",
+            "line": 432
+          },
+          {
+            "level": 5,
+            "text": "onabort()",
+            "line": 435
+          },
+          {
+            "level": 5,
+            "text": "onabort(value: any | null)",
+            "line": 438
+          },
+          {
+            "level": 5,
+            "text": "throwIfAborted()",
+            "line": 447
+          },
+          {
+            "level": 3,
+            "text": "ExtendableEvent",
+            "line": 452
+          },
+          {
+            "level": 4,
+            "text": "Methods",
+            "line": 456
+          },
+          {
+            "level": 5,
+            "text": "waitUntil(promise: Promise<any>)",
+            "line": 458
+          },
+          {
+            "level": 3,
+            "text": "Blob",
+            "line": 469
+          },
+          {
+            "level": 4,
+            "text": "Methods",
+            "line": 473
+          },
+          {
+            "level": 5,
+            "text": "constructor(type?: ((ArrayBuffer | ArrayBufferView)",
+            "line": 475
+          },
+          {
+            "level": 5,
+            "text": "size()",
+            "line": 484
+          },
+          {
+            "level": 5,
+            "text": "type()",
+            "line": 487
+          },
+          {
+            "level": 5,
+            "text": "slice(start?: number, end?: number, type?: string)",
+            "line": 490
+          },
+          {
+            "level": 5,
+            "text": "arrayBuffer()",
+            "line": 501
+          },
+          {
+            "level": 5,
+            "text": "bytes()",
+            "line": 504
+          },
+          {
+            "level": 5,
+            "text": "text()",
+            "line": 507
+          },
+          {
+            "level": 5,
+            "text": "stream()",
+            "line": 510
+          },
+          {
+            "level": 3,
+            "text": "File",
+            "line": 515
+          },
+          {
+            "level": 4,
+            "text": "Methods",
+            "line": 519
+          },
+          {
+            "level": 5,
+            "text": "constructor(bits: ((ArrayBuffer | ArrayBufferView)",
+            "line": 521
+          },
+          {
+            "level": 5,
+            "text": "name()",
+            "line": 530
+          },
+          {
+            "level": 5,
+            "text": "lastModified()",
+            "line": 533
+          },
+          {
+            "level": 3,
+            "text": "CacheStorage",
+            "line": 538
+          },
+          {
+            "level": 4,
+            "text": "Methods",
+            "line": 542
+          },
+          {
+            "level": 5,
+            "text": "open(cacheName: string)",
+            "line": 544
+          },
+          {
+            "level": 3,
+            "text": "Cache",
+            "line": 555
+          },
+          {
+            "level": 4,
+            "text": "Methods",
+            "line": 559
+          },
+          {
+            "level": 5,
+            "text": "delete(request: RequestInfo | URL, options?: CacheQueryOptions)",
+            "line": 561
+          },
+          {
+            "level": 5,
+            "text": "match(request: RequestInfo | URL, options?: CacheQueryOptions)",
+            "line": 571
+          },
+          {
+            "level": 5,
+            "text": "put(request: RequestInfo | URL, response: Response)",
+            "line": 581
+          },
+          {
+            "level": 3,
+            "text": "Crypto",
+            "line": 593
+          },
+          {
+            "level": 4,
+            "text": "Methods",
+            "line": 597
+          },
+          {
+            "level": 5,
+            "text": "subtle()",
+            "line": 599
+          },
+          {
+            "level": 5,
+            "text": "randomUUID()",
+            "line": 602
+          },
+          {
+            "level": 3,
+            "text": "SubtleCrypto",
+            "line": 607
+          },
+          {
+            "level": 4,
+            "text": "Methods",
+            "line": 611
+          },
+          {
+            "level": 5,
+            "text": "encrypt(algorithm: string | SubtleCryptoEncryptAlgorithm, key: CryptoKey, plainText: ArrayBuffer | ArrayBufferView)",
+            "line": 613
+          },
+          {
+            "level": 5,
+            "text": "decrypt(algorithm: string | SubtleCryptoEncryptAlgorithm, key: CryptoKey, cipherText: ArrayBuffer | ArrayBufferView)",
+            "line": 624
+          },
+          {
+            "level": 5,
+            "text": "sign(algorithm: string | SubtleCryptoSignAlgorithm, key: CryptoKey, data: ArrayBuffer | ArrayBufferView)",
+            "line": 635
+          },
+          {
+            "level": 5,
+            "text": "verify(algorithm: string | SubtleCryptoSignAlgorithm, key: CryptoKey, signature: ArrayBuffer | ArrayBufferView, data: ArrayBuffer | ArrayBufferView)",
+            "line": 646
+          },
+          {
+            "level": 5,
+            "text": "digest(algorithm: string | SubtleCryptoHashAlgorithm, data: ArrayBuffer | ArrayBufferView)",
+            "line": 658
+          },
+          {
+            "level": 5,
+            "text": "generateKey(algorithm: string | SubtleCryptoGenerateKeyAlgorithm, extractable: boolean, keyUsages: string[])",
+            "line": 668
+          },
+          {
+            "level": 5,
+            "text": "deriveKey(algorithm: string | SubtleCryptoDeriveKeyAlgorithm, baseKey: CryptoKey, derivedKeyAlgorithm: string | SubtleCryptoImportKeyAlgorithm, extractable: boolean, keyUsages: string[])",
+            "line": 679
+          },
+          {
+            "level": 5,
+            "text": "deriveBits(algorithm: string | SubtleCryptoDeriveKeyAlgorithm, baseKey: CryptoKey, length?: number | null)",
+            "line": 692
+          },
+          {
+            "level": 5,
+            "text": "importKey(format: string, keyData: (ArrayBuffer | ArrayBufferView)",
+            "line": 703
+          },
+          {
+            "level": 5,
+            "text": "exportKey(format: string, key: CryptoKey)",
+            "line": 713
+          },
+          {
+            "level": 5,
+            "text": "wrapKey(format: string, key: CryptoKey, wrappingKey: CryptoKey, wrapAlgorithm: string | SubtleCryptoEncryptAlgorithm)",
+            "line": 723
+          },
+          {
+            "level": 5,
+            "text": "unwrapKey(format: string, wrappedKey: ArrayBuffer | ArrayBufferView, unwrappingKey: CryptoKey, unwrapAlgorithm: string | SubtleCryptoEncryptAlgorithm, unwrappedKeyAlgorithm: string | SubtleCryptoImportKeyAlgorithm, extractable: boolean, keyUsages: string[])",
+            "line": 735
+          },
+          {
+            "level": 5,
+            "text": "timingSafeEqual(a: ArrayBuffer | ArrayBufferView, b: ArrayBuffer | ArrayBufferView)",
+            "line": 750
+          },
+          {
+            "level": 3,
+            "text": "CryptoKey",
+            "line": 762
+          },
+          {
+            "level": 3,
+            "text": "TextDecoder",
+            "line": 768
+          },
+          {
+            "level": 4,
+            "text": "Methods",
+            "line": 772
+          },
+          {
+            "level": 5,
+            "text": "constructor(label?: string, options?: TextDecoderConstructorOptions)",
+            "line": 774
+          },
+          {
+            "level": 5,
+            "text": "stream(or set to false)",
+            "line": 784
+          },
+          {
+            "level": 5,
+            "text": "stream(or set to false)",
+            "line": 793
+          },
+          {
+            "level": 5,
+            "text": "TextDecoder(encoding)",
+            "line": 802
+          },
+          {
+            "level": 3,
+            "text": "TextEncoder",
+            "line": 813
+          },
+          {
+            "level": 4,
+            "text": "Methods",
+            "line": 817
+          },
+          {
+            "level": 5,
+            "text": "constructor()",
+            "line": 819
+          },
+          {
+            "level": 5,
+            "text": "encode(input?: string)",
+            "line": 822
+          },
+          {
+            "level": 5,
+            "text": "encodeInto(input: string, buffer: ArrayBuffer | ArrayBufferView)",
+            "line": 831
+          },
+          {
+            "level": 5,
+            "text": "encoding()",
+            "line": 841
+          },
+          {
+            "level": 3,
+            "text": "ErrorEvent",
+            "line": 846
+          },
+          {
+            "level": 4,
+            "text": "Methods",
+            "line": 850
+          },
+          {
+            "level": 5,
+            "text": "constructor(type: string, init?: ErrorEventErrorEventInit)",
+            "line": 852
+          },
+          {
+            "level": 5,
+            "text": "filename()",
+            "line": 862
+          },
+          {
+            "level": 5,
+            "text": "message()",
+            "line": 865
+          },
+          {
+            "level": 5,
+            "text": "lineno()",
+            "line": 868
+          },
+          {
+            "level": 5,
+            "text": "colno()",
+            "line": 871
+          },
+          {
+            "level": 5,
+            "text": "error()",
+            "line": 874
+          },
+          {
+            "level": 3,
+            "text": "MessageEvent",
+            "line": 879
+          },
+          {
+            "level": 4,
+            "text": "Methods",
+            "line": 883
+          },
+          {
+            "level": 5,
+            "text": "constructor(type: string, initializer: MessageEventInit)",
+            "line": 885
+          },
+          {
+            "level": 3,
+            "text": "FormData",
+            "line": 897
+          },
+          {
+            "level": 4,
+            "text": "Methods",
+            "line": 901
+          },
+          {
+            "level": 5,
+            "text": "constructor()",
+            "line": 903
+          },
+          {
+            "level": 5,
+            "text": "append(name: string, value: string)",
+            "line": 906
+          },
+          {
+            "level": 5,
+            "text": "append(name: string, value: Blob, filename?: string)",
+            "line": 916
+          },
+          {
+            "level": 5,
+            "text": "delete(name: string)",
+            "line": 927
+          },
+          {
+            "level": 5,
+            "text": "get(name: string)",
+            "line": 936
+          },
+          {
+            "level": 5,
+            "text": "getAll(name: string)",
+            "line": 945
+          },
+          {
+            "level": 5,
+            "text": "has(name: string)",
+            "line": 954
+          },
+          {
+            "level": 5,
+            "text": "set(name: string, value: string)",
+            "line": 963
+          },
+          {
+            "level": 5,
+            "text": "set(name: string, value: Blob, filename?: string)",
+            "line": 973
+          },
+          {
+            "level": 5,
+            "text": "entries()",
+            "line": 984
+          },
+          {
+            "level": 5,
+            "text": "keys()",
+            "line": 987
+          },
+          {
+            "level": 5,
+            "text": "values()",
+            "line": 990
+          },
+          {
+            "level": 3,
+            "text": "HTMLRewriter",
+            "line": 995
+          },
+          {
+            "level": 4,
+            "text": "Methods",
+            "line": 999
+          },
+          {
+            "level": 5,
+            "text": "constructor()",
+            "line": 1001
+          },
+          {
+            "level": 5,
+            "text": "on(selector: string, handlers: HTMLRewriterElementContentHandlers)",
+            "line": 1004
+          },
+          {
+            "level": 5,
+            "text": "onDocument(handlers: HTMLRewriterDocumentContentHandlers)",
+            "line": 1014
+          },
+          {
+            "level": 5,
+            "text": "transform(response: Response)",
+            "line": 1023
+          },
+          {
+            "level": 3,
+            "text": "FetchEvent",
+            "line": 1034
+          },
+          {
+            "level": 4,
+            "text": "Methods",
+            "line": 1038
+          },
+          {
+            "level": 5,
+            "text": "respondWith(promise: Response | Promise<Response>)",
+            "line": 1040
+          },
+          {
+            "level": 5,
+            "text": "passThroughOnException()",
+            "line": 1049
+          },
+          {
+            "level": 3,
+            "text": "Headers",
+            "line": 1054
+          },
+          {
+            "level": 4,
+            "text": "Methods",
+            "line": 1058
+          },
+          {
+            "level": 5,
+            "text": "constructor(init?: HeadersInit)",
+            "line": 1060
+          },
+          {
+            "level": 5,
+            "text": "get(name: string)",
+            "line": 1069
+          },
+          {
+            "level": 5,
+            "text": "getAll(name: string)",
+            "line": 1078
+          },
+          {
+            "level": 5,
+            "text": "getSetCookie()",
+            "line": 1087
+          },
+          {
+            "level": 5,
+            "text": "has(name: string)",
+            "line": 1090
+          },
+          {
+            "level": 5,
+            "text": "set(name: string, value: string)",
+            "line": 1099
+          },
+          {
+            "level": 5,
+            "text": "append(name: string, value: string)",
+            "line": 1109
+          },
+          {
+            "level": 5,
+            "text": "delete(name: string)",
+            "line": 1119
+          },
+          {
+            "level": 5,
+            "text": "entries()",
+            "line": 1128
+          },
+          {
+            "level": 5,
+            "text": "keys()",
+            "line": 1131
+          },
+          {
+            "level": 5,
+            "text": "values()",
+            "line": 1134
+          },
+          {
+            "level": 3,
+            "text": "Body",
+            "line": 1139
+          },
+          {
+            "level": 4,
+            "text": "Methods",
+            "line": 1143
+          },
+          {
+            "level": 5,
+            "text": "body()",
+            "line": 1145
+          },
+          {
+            "level": 5,
+            "text": "bodyUsed()",
+            "line": 1148
+          },
+          {
+            "level": 5,
+            "text": "arrayBuffer()",
+            "line": 1151
+          },
+          {
+            "level": 5,
+            "text": "bytes()",
+            "line": 1154
+          },
+          {
+            "level": 5,
+            "text": "text()",
+            "line": 1157
+          },
+          {
+            "level": 5,
+            "text": "formData()",
+            "line": 1160
+          },
+          {
+            "level": 5,
+            "text": "blob()",
+            "line": 1163
+          },
+          {
+            "level": 3,
+            "text": "R2Bucket",
+            "line": 1168
+          },
+          {
+            "level": 4,
+            "text": "Methods",
+            "line": 1172
+          },
+          {
+            "level": 5,
+            "text": "head(key: string)",
+            "line": 1174
+          },
+          {
+            "level": 3,
+            "text": "R2Object",
+            "line": 1185
+          },
+          {
+            "level": 4,
+            "text": "Methods",
+            "line": 1189
+          },
+          {
+            "level": 5,
+            "text": "writeHttpMetadata(headers: Headers)",
+            "line": 1191
+          },
+          {
+            "level": 3,
+            "text": "ScheduledEvent",
+            "line": 1202
+          },
+          {
+            "level": 4,
+            "text": "Methods",
+            "line": 1206
+          },
+          {
+            "level": 5,
+            "text": "noRetry()",
+            "line": 1208
+          },
+          {
+            "level": 3,
+            "text": "ReadableStreamBYOBReader",
+            "line": 1213
+          },
+          {
+            "level": 4,
+            "text": "Methods",
+            "line": 1217
+          },
+          {
+            "level": 5,
+            "text": "constructor(stream: ReadableStream)",
+            "line": 1219
+          },
+          {
+            "level": 5,
+            "text": "closed()",
+            "line": 1228
+          },
+          {
+            "level": 5,
+            "text": "cancel(reason?: any)",
+            "line": 1231
+          },
+          {
+            "level": 5,
+            "text": "releaseLock()",
+            "line": 1240
+          },
+          {
+            "level": 3,
+            "text": "ReadableStreamBYOBRequest",
+            "line": 1245
+          },
+          {
+            "level": 4,
+            "text": "Methods",
+            "line": 1249
+          },
+          {
+            "level": 5,
+            "text": "view()",
+            "line": 1251
+          },
+          {
+            "level": 5,
+            "text": "respond(bytesWritten: number)",
+            "line": 1254
+          },
+          {
+            "level": 5,
+            "text": "respondWithNewView(view: ArrayBuffer | ArrayBufferView)",
+            "line": 1263
+          },
+          {
+            "level": 5,
+            "text": "atLeast()",
+            "line": 1272
+          },
+          {
+            "level": 3,
+            "text": "ReadableByteStreamController",
+            "line": 1277
+          },
+          {
+            "level": 4,
+            "text": "Methods",
+            "line": 1281
+          },
+          {
+            "level": 5,
+            "text": "byobRequest()",
+            "line": 1283
+          },
+          {
+            "level": 5,
+            "text": "desiredSize()",
+            "line": 1286
+          },
+          {
+            "level": 5,
+            "text": "close()",
+            "line": 1289
+          },
+          {
+            "level": 5,
+            "text": "enqueue(chunk: ArrayBuffer | ArrayBufferView)",
+            "line": 1292
+          },
+          {
+            "level": 5,
+            "text": "error(reason: any)",
+            "line": 1301
+          },
+          {
+            "level": 3,
+            "text": "WritableStreamDefaultController",
+            "line": 1312
+          },
+          {
+            "level": 4,
+            "text": "Methods",
+            "line": 1316
+          },
+          {
+            "level": 5,
+            "text": "signal()",
+            "line": 1318
+          },
+          {
+            "level": 5,
+            "text": "error(reason?: any)",
+            "line": 1321
+          },
+          {
+            "level": 3,
+            "text": "FixedLengthStream",
+            "line": 1332
+          },
+          {
+            "level": 4,
+            "text": "Methods",
+            "line": 1336
+          },
+          {
+            "level": 5,
+            "text": "constructor(expectedLength: number | bigint, queuingStrategy?: IdentityTransformStreamQueuingStrategy)",
+            "line": 1338
+          },
+          {
+            "level": 3,
+            "text": "TailEvent",
+            "line": 1350
+          },
+          {
+            "level": 3,
+            "text": "URL",
+            "line": 1356
+          },
+          {
+            "level": 4,
+            "text": "Methods",
+            "line": 1360
+          },
+          {
+            "level": 5,
+            "text": "constructor(url: string | URL, base?: string | URL)",
+            "line": 1362
+          },
+          {
+            "level": 5,
+            "text": "origin()",
+            "line": 1372
+          },
+          {
+            "level": 5,
+            "text": "href()",
+            "line": 1375
+          },
+          {
+            "level": 5,
+            "text": "href(value: string)",
+            "line": 1378
+          },
+          {
+            "level": 5,
+            "text": "protocol()",
+            "line": 1387
+          },
+          {
+            "level": 5,
+            "text": "protocol(value: string)",
+            "line": 1390
+          },
+          {
+            "level": 5,
+            "text": "username()",
+            "line": 1399
+          },
+          {
+            "level": 5,
+            "text": "username(value: string)",
+            "line": 1402
+          },
+          {
+            "level": 5,
+            "text": "password()",
+            "line": 1411
+          },
+          {
+            "level": 5,
+            "text": "password(value: string)",
+            "line": 1414
+          },
+          {
+            "level": 5,
+            "text": "host()",
+            "line": 1423
+          },
+          {
+            "level": 5,
+            "text": "host(value: string)",
+            "line": 1426
+          },
+          {
+            "level": 5,
+            "text": "hostname()",
+            "line": 1435
+          },
+          {
+            "level": 5,
+            "text": "hostname(value: string)",
+            "line": 1438
+          },
+          {
+            "level": 5,
+            "text": "port()",
+            "line": 1447
+          },
+          {
+            "level": 5,
+            "text": "port(value: string)",
+            "line": 1450
+          },
+          {
+            "level": 5,
+            "text": "pathname()",
+            "line": 1459
+          },
+          {
+            "level": 5,
+            "text": "pathname(value: string)",
+            "line": 1462
+          },
+          {
+            "level": 5,
+            "text": "search()",
+            "line": 1471
+          },
+          {
+            "level": 5,
+            "text": "search(value: string)",
+            "line": 1474
+          },
+          {
+            "level": 5,
+            "text": "hash()",
+            "line": 1483
+          },
+          {
+            "level": 5,
+            "text": "hash(value: string)",
+            "line": 1486
+          },
+          {
+            "level": 5,
+            "text": "searchParams()",
+            "line": 1495
+          },
+          {
+            "level": 5,
+            "text": "toJSON()",
+            "line": 1498
+          },
+          {
+            "level": 5,
+            "text": "toString()",
+            "line": 1501
+          },
+          {
+            "level": 3,
+            "text": "URLSearchParams",
+            "line": 1506
+          },
+          {
+            "level": 4,
+            "text": "Methods",
+            "line": 1510
+          },
+          {
+            "level": 5,
+            "text": "constructor(init?: (Iterable<Iterable<string>> | Record<string, string> | string)",
+            "line": 1512
+          },
+          {
+            "level": 5,
+            "text": "size()",
+            "line": 1522
+          },
+          {
+            "level": 5,
+            "text": "append(name: string, value: string)",
+            "line": 1525
+          },
+          {
+            "level": 5,
+            "text": "delete(name: string, value?: string)",
+            "line": 1535
+          },
+          {
+            "level": 5,
+            "text": "get(name: string)",
+            "line": 1545
+          },
+          {
+            "level": 5,
+            "text": "getAll(name: string)",
+            "line": 1554
+          },
+          {
+            "level": 5,
+            "text": "has(name: string, value?: string)",
+            "line": 1563
+          },
+          {
+            "level": 5,
+            "text": "set(name: string, value: string)",
+            "line": 1573
+          },
+          {
+            "level": 5,
+            "text": "sort()",
+            "line": 1583
+          },
+          {
+            "level": 5,
+            "text": "entries()",
+            "line": 1586
+          },
+          {
+            "level": 5,
+            "text": "keys()",
+            "line": 1589
+          },
+          {
+            "level": 5,
+            "text": "values()",
+            "line": 1592
+          },
+          {
+            "level": 5,
+            "text": "toString()",
+            "line": 1595
+          },
+          {
+            "level": 3,
+            "text": "URLPattern",
+            "line": 1600
+          },
+          {
+            "level": 4,
+            "text": "Methods",
+            "line": 1604
+          },
+          {
+            "level": 5,
+            "text": "constructor(input?: (string | URLPatternInit)",
+            "line": 1606
+          },
+          {
+            "level": 5,
+            "text": "protocol()",
+            "line": 1615
+          },
+          {
+            "level": 5,
+            "text": "username()",
+            "line": 1618
+          },
+          {
+            "level": 5,
+            "text": "password()",
+            "line": 1621
+          },
+          {
+            "level": 5,
+            "text": "hostname()",
+            "line": 1624
+          },
+          {
+            "level": 5,
+            "text": "port()",
+            "line": 1627
+          },
+          {
+            "level": 5,
+            "text": "pathname()",
+            "line": 1630
+          },
+          {
+            "level": 5,
+            "text": "search()",
+            "line": 1633
+          },
+          {
+            "level": 5,
+            "text": "hash()",
+            "line": 1636
+          },
+          {
+            "level": 5,
+            "text": "test(input?: (string | URLPatternInit)",
+            "line": 1639
+          },
+          {
+            "level": 5,
+            "text": "exec(input?: (string | URLPatternInit)",
+            "line": 1648
+          },
+          {
+            "level": 3,
+            "text": "CloseEvent",
+            "line": 1659
+          },
+          {
+            "level": 4,
+            "text": "Methods",
+            "line": 1663
+          },
+          {
+            "level": 5,
+            "text": "constructor(type: string, initializer?: CloseEventInit)",
+            "line": 1665
+          },
+          {
+            "level": 3,
+            "text": "SqlStorageStatement",
+            "line": 1677
+          },
+          {
+            "level": 3,
+            "text": "EventSource",
+            "line": 1683
+          },
+          {
+            "level": 4,
+            "text": "Methods",
+            "line": 1687
+          },
+          {
+            "level": 5,
+            "text": "constructor(url: string, init?: EventSourceEventSourceInit)",
+            "line": 1689
+          },
+          {
+            "level": 5,
+            "text": "close()",
+            "line": 1699
+          },
+          {
+            "level": 5,
+            "text": "url()",
+            "line": 1702
+          },
+          {
+            "level": 5,
+            "text": "withCredentials()",
+            "line": 1705
+          },
+          {
+            "level": 5,
+            "text": "readyState()",
+            "line": 1708
+          },
+          {
+            "level": 5,
+            "text": "onopen()",
+            "line": 1711
+          },
+          {
+            "level": 5,
+            "text": "onopen(value: any | null)",
+            "line": 1714
+          },
+          {
+            "level": 5,
+            "text": "onmessage()",
+            "line": 1723
+          },
+          {
+            "level": 5,
+            "text": "onmessage(value: any | null)",
+            "line": 1726
+          },
+          {
+            "level": 5,
+            "text": "onerror()",
+            "line": 1735
+          },
+          {
+            "level": 5,
+            "text": "onerror(value: any | null)",
+            "line": 1738
+          },
+          {
+            "level": 5,
+            "text": "from(stream: ReadableStream)",
+            "line": 1747
+          },
+          {
+            "level": 3,
+            "text": "BaseAiImageClassification",
+            "line": 1758
+          },
+          {
+            "level": 3,
+            "text": "BaseAiImageToText",
+            "line": 1764
+          },
+          {
+            "level": 3,
+            "text": "BaseAiImageTextToText",
+            "line": 1770
+          },
+          {
+            "level": 3,
+            "text": "BaseAiObjectDetection",
+            "line": 1776
+          },
+          {
+            "level": 3,
+            "text": "BaseAiSentenceSimilarity",
+            "line": 1782
+          },
+          {
+            "level": 3,
+            "text": "BaseAiAutomaticSpeechRecognition",
+            "line": 1788
+          },
+          {
+            "level": 3,
+            "text": "BaseAiSummarization",
+            "line": 1794
+          },
+          {
+            "level": 3,
+            "text": "BaseAiTextClassification",
+            "line": 1800
+          },
+          {
+            "level": 3,
+            "text": "BaseAiTextEmbeddings",
+            "line": 1806
+          },
+          {
+            "level": 3,
+            "text": "BaseAiTextGeneration",
+            "line": 1812
+          },
+          {
+            "level": 3,
+            "text": "BaseAiTextToSpeech",
+            "line": 1818
+          },
+          {
+            "level": 3,
+            "text": "BaseAiTextToImage",
+            "line": 1824
+          },
+          {
+            "level": 3,
+            "text": "BaseAiTranslation",
+            "line": 1830
+          },
+          {
+            "level": 3,
+            "text": "Base_Ai_Cf_Baai_Bge_Base_En_V1_5",
+            "line": 1836
+          },
+          {
+            "level": 3,
+            "text": "Base_Ai_Cf_Openai_Whisper",
+            "line": 1842
+          },
+          {
+            "level": 3,
+            "text": "Base_Ai_Cf_Meta_M2M100_1_2B",
+            "line": 1848
+          },
+          {
+            "level": 3,
+            "text": "Base_Ai_Cf_Baai_Bge_Small_En_V1_5",
+            "line": 1854
+          },
+          {
+            "level": 3,
+            "text": "Base_Ai_Cf_Baai_Bge_Large_En_V1_5",
+            "line": 1860
+          },
+          {
+            "level": 3,
+            "text": "Base_Ai_Cf_Unum_Uform_Gen2_Qwen_500M",
+            "line": 1866
+          },
+          {
+            "level": 3,
+            "text": "Base_Ai_Cf_Openai_Whisper_Tiny_En",
+            "line": 1872
+          },
+          {
+            "level": 3,
+            "text": "Base_Ai_Cf_Openai_Whisper_Large_V3_Turbo",
+            "line": 1878
+          },
+          {
+            "level": 3,
+            "text": "Base_Ai_Cf_Baai_Bge_M3",
+            "line": 1884
+          },
+          {
+            "level": 3,
+            "text": "Base_Ai_Cf_Black_Forest_Labs_Flux_1_Schnell",
+            "line": 1890
+          },
+          {
+            "level": 3,
+            "text": "Base_Ai_Cf_Meta_Llama_3_2_11B_Vision_Instruct",
+            "line": 1896
+          },
+          {
+            "level": 3,
+            "text": "Base_Ai_Cf_Meta_Llama_3_3_70B_Instruct_Fp8_Fast",
+            "line": 1902
+          },
+          {
+            "level": 3,
+            "text": "Base_Ai_Cf_Meta_Llama_Guard_3_8B",
+            "line": 1908
+          },
+          {
+            "level": 3,
+            "text": "Base_Ai_Cf_Baai_Bge_Reranker_Base",
+            "line": 1914
+          },
+          {
+            "level": 3,
+            "text": "Base_Ai_Cf_Qwen_Qwen2_5_Coder_32B_Instruct",
+            "line": 1920
+          },
+          {
+            "level": 3,
+            "text": "Base_Ai_Cf_Qwen_Qwq_32B",
+            "line": 1926
+          },
+          {
+            "level": 3,
+            "text": "Base_Ai_Cf_Mistralai_Mistral_Small_3_1_24B_Instruct",
+            "line": 1932
+          },
+          {
+            "level": 3,
+            "text": "Base_Ai_Cf_Google_Gemma_3_12B_It",
+            "line": 1938
+          },
+          {
+            "level": 3,
+            "text": "Base_Ai_Cf_Meta_Llama_4_Scout_17B_16E_Instruct",
+            "line": 1944
+          },
+          {
+            "level": 3,
+            "text": "AiGateway",
+            "line": 1950
+          },
+          {
+            "level": 4,
+            "text": "Methods",
+            "line": 1954
+          },
+          {
+            "level": 5,
+            "text": "patchLog(logId: string, data: AiGatewayPatchLog)",
+            "line": 1956
+          },
+          {
+            "level": 5,
+            "text": "getLog(logId: string)",
+            "line": 1966
+          },
+          {
+            "level": 3,
+            "text": "AutoRAG",
+            "line": 1977
+          },
+          {
+            "level": 4,
+            "text": "Methods",
+            "line": 1981
+          },
+          {
+            "level": 5,
+            "text": "list()",
+            "line": 1983
+          },
+          {
+            "level": 5,
+            "text": "search(params: AutoRagSearchRequest)",
+            "line": 1986
+          },
+          {
+            "level": 5,
+            "text": "aiSearch(params: AutoRagAiSearchRequestStreaming)",
+            "line": 1995
+          },
+          {
+            "level": 5,
+            "text": "aiSearch(params: AutoRagAiSearchRequest)",
+            "line": 2004
+          },
+          {
+            "level": 5,
+            "text": "aiSearch(params: AutoRagAiSearchRequest)",
+            "line": 2013
+          },
+          {
+            "level": 3,
+            "text": "D1Database",
+            "line": 2024
+          },
+          {
+            "level": 4,
+            "text": "Methods",
+            "line": 2028
+          },
+          {
+            "level": 5,
+            "text": "prepare(query: string)",
+            "line": 2030
+          },
+          {
+            "level": 5,
+            "text": "exec(query: string)",
+            "line": 2039
+          },
+          {
+            "level": 5,
+            "text": "withSession(constraintOrBookmark?: D1SessionBookmark | D1SessionConstraint)",
+            "line": 2048
+          },
+          {
+            "level": 5,
+            "text": "dump()",
+            "line": 2057
+          },
+          {
+            "level": 5,
+            "text": "dump()",
+            "line": 2060
+          },
+          {
+            "level": 3,
+            "text": "D1DatabaseSession",
+            "line": 2065
+          },
+          {
+            "level": 4,
+            "text": "Methods",
+            "line": 2069
+          },
+          {
+            "level": 5,
+            "text": "prepare(query: string)",
+            "line": 2071
+          },
+          {
+            "level": 5,
+            "text": "getBookmark()",
+            "line": 2080
+          },
+          {
+            "level": 3,
+            "text": "D1PreparedStatement",
+            "line": 2085
+          },
+          {
+            "level": 4,
+            "text": "Methods",
+            "line": 2089
+          },
+          {
+            "level": 5,
+            "text": "bind(...values: unknown[])",
+            "line": 2091
+          },
+          {
+            "level": 3,
+            "text": "EmailEvent",
+            "line": 2102
+          },
+          {
+            "level": 3,
+            "text": "WorkflowStep",
+            "line": 2108
+          },
+          {
+            "level": 3,
+            "text": "VectorizeIndex",
+            "line": 2114
+          },
+          {
+            "level": 4,
+            "text": "Methods",
+            "line": 2118
+          },
+          {
+            "level": 5,
+            "text": "describe()",
+            "line": 2120
+          },
+          {
+            "level": 5,
+            "text": "query(vector: VectorFloatArray | number[], options?: VectorizeQueryOptions)",
+            "line": 2123
+          },
+          {
+            "level": 5,
+            "text": "insert(vectors: VectorizeVector[])",
+            "line": 2133
+          },
+          {
+            "level": 5,
+            "text": "upsert(vectors: VectorizeVector[])",
+            "line": 2142
+          },
+          {
+            "level": 5,
+            "text": "processed(and thus deleted)",
+            "line": 2151
+          },
+          {
+            "level": 5,
+            "text": "deleteByIds(ids: string[])",
+            "line": 2160
+          },
+          {
+            "level": 5,
+            "text": "getByIds(ids: string[])",
+            "line": 2169
+          },
+          {
+            "level": 3,
+            "text": "Vectorize",
+            "line": 2180
+          },
+          {
+            "level": 4,
+            "text": "Methods",
+            "line": 2184
+          },
+          {
+            "level": 5,
+            "text": "describe()",
+            "line": 2186
+          },
+          {
+            "level": 5,
+            "text": "query(vector: VectorFloatArray | number[], options?: VectorizeQueryOptions)",
+            "line": 2189
+          },
+          {
+            "level": 5,
+            "text": "queryById(vectorId: string, options?: VectorizeQueryOptions)",
+            "line": 2199
+          },
+          {
+            "level": 5,
+            "text": "insert(vectors: VectorizeVector[])",
+            "line": 2209
+          },
+          {
+            "level": 5,
+            "text": "upsert(vectors: VectorizeVector[])",
+            "line": 2218
+          },
+          {
+            "level": 5,
+            "text": "deleteByIds(ids: string[])",
+            "line": 2227
+          },
+          {
+            "level": 5,
+            "text": "getByIds(ids: string[])",
+            "line": 2236
+          },
+          {
+            "level": 3,
+            "text": "NonRetryableError",
+            "line": 2247
+          },
+          {
+            "level": 4,
+            "text": "Methods",
+            "line": 2251
+          },
+          {
+            "level": 5,
+            "text": "constructor(message: string, name?: string)",
+            "line": 2253
+          },
+          {
+            "level": 3,
+            "text": "WorkflowInstance",
+            "line": 2265
+          },
+          {
+            "level": 4,
+            "text": "Methods",
+            "line": 2269
+          },
+          {
+            "level": 5,
+            "text": "pause()",
+            "line": 2271
+          },
+          {
+            "level": 5,
+            "text": "resume()",
+            "line": 2274
+          },
+          {
+            "level": 5,
+            "text": "terminate()",
+            "line": 2277
+          },
+          {
+            "level": 5,
+            "text": "restart()",
+            "line": 2280
+          },
+          {
+            "level": 5,
+            "text": "status()",
+            "line": 2283
+          },
+          {
+            "level": 2,
+            "text": "Functions",
+            "line": 2288
+          },
+          {
+            "level": 3,
+            "text": "instantiate(module: Module, imports?: Imports)",
+            "line": 2290
+          },
+          {
+            "level": 3,
+            "text": "validate(bytes: BufferSource)",
+            "line": 2303
+          },
+          {
+            "level": 3,
+            "text": "dispatchEvent(event: WorkerGlobalScopeEventMap[keyof WorkerGlobalScopeEventMap])",
+            "line": 2315
+          },
+          {
+            "level": 3,
+            "text": "btoa(data: string)",
+            "line": 2327
+          },
+          {
+            "level": 3,
+            "text": "atob(data: string)",
+            "line": 2339
+          },
+          {
+            "level": 3,
+            "text": "setTimeout(callback: (...args: any[])",
+            "line": 2351
+          },
+          {
+            "level": 3,
+            "text": "clearTimeout(timeoutId: number | null)",
+            "line": 2363
+          },
+          {
+            "level": 3,
+            "text": "setInterval(callback: (...args: any[])",
+            "line": 2375
+          },
+          {
+            "level": 3,
+            "text": "clearInterval(timeoutId: number | null)",
+            "line": 2387
+          },
+          {
+            "level": 3,
+            "text": "queueMicrotask(task: Function)",
+            "line": 2399
+          },
+          {
+            "level": 3,
+            "text": "reportError(error: any)",
+            "line": 2411
+          },
+          {
+            "level": 3,
+            "text": "fetch(input: RequestInfo | URL, init?: RequestInit<RequestInitCfProperties>)",
+            "line": 2423
+          },
+          {
+            "level": 3,
+            "text": "toString()",
+            "line": 2436
+          },
+          {
+            "level": 3,
+            "text": "toString()",
+            "line": 2442
+          },
+          {
+            "level": 3,
+            "text": "waitUntil(promise: Promise<unknown>)",
+            "line": 2448
+          },
+          {
+            "level": 3,
+            "text": "_connect(address: string | SocketAddress, options?: SocketOptions)",
+            "line": 2460
+          }
+        ],
+        "code_blocks": [],
+        "tables": 149,
+        "images": 0,
+        "links": 0,
+        "word_count": 818,
+        "line_count": 2472
+      },
+      "summary": "**API Reference: cloudflare-env.d.ts**\nSections: Classes, DOMException, CompileError, RuntimeError, Global\n**Language**: TypeScript\n(818 words, 0 code blocks)",
+      "content": null,
+      "_enhanced": true,
+      "parsed_data": {
+        "tables": 149,
+        "cross_references": 0,
+        "code_blocks": 0,
+        "images": 0,
+        "quality_scores": {
+          "avg_code_quality": 0
+        }
+      }
+    },
+    {
+      "path": "output\\my-project\\api_reference\\DatePicker.md",
+      "filename": "DatePicker.md",
+      "category": "api",
+      "size_bytes": 433,
+      "title": "API Reference: DatePicker.tsx",
+      "structure": {
+        "title": "API Reference: DatePicker.tsx",
+        "headers": [
+          {
+            "level": 1,
+            "text": "API Reference: DatePicker.tsx",
+            "line": 1
+          },
+          {
+            "level": 2,
+            "text": "Functions",
+            "line": 9
+          },
+          {
+            "level": 3,
+            "text": "DatePicker({ selectedDate, onDateChange }: DatePickerProps)",
+            "line": 11
+          },
+          {
+            "level": 3,
+            "text": "generateDateOptions()",
+            "line": 24
+          }
+        ],
+        "code_blocks": [],
+        "tables": 1,
+        "images": 0,
+        "links": 0,
+        "word_count": 11,
+        "line_count": 29
+      },
+      "summary": "**API Reference: DatePicker.tsx**\nSections: Functions, DatePicker({ selectedDate, onDateChange }: DatePickerProps), generateDateOptions()\n**Language**: TypeScript\n(11 words, 0 code blocks)",
+      "content": null,
+      "_enhanced": true,
+      "parsed_data": {
+        "tables": 1,
+        "cross_references": 0,
+        "code_blocks": 0,
+        "images": 0,
+        "quality_scores": {
+          "avg_code_quality": 0
+        }
+      }
+    },
+    {
+      "path": "output\\my-project\\api_reference\\global-error.md",
+      "filename": "global-error.md",
+      "category": "api",
+      "size_bytes": 445,
+      "title": "API Reference: global-error.tsx",
+      "structure": {
+        "title": "API Reference: global-error.tsx",
+        "headers": [
+          {
+            "level": 1,
+            "text": "API Reference: global-error.tsx",
+            "line": 1
+          },
+          {
+            "level": 2,
+            "text": "Functions",
+            "line": 9
+          },
+          {
+            "level": 3,
+            "text": "GlobalError({",
+            "line": 11
+          }
+        ],
+        "code_blocks": [],
+        "tables": 1,
+        "images": 0,
+        "links": 0,
+        "word_count": 11,
+        "line_count": 30
+      },
+      "summary": "**API Reference: global-error.tsx**\nSections: Functions, GlobalError({\n**Language**: TypeScript\n(11 words, 0 code blocks)",
+      "content": null,
+      "_enhanced": true,
+      "parsed_data": {
+        "tables": 1,
+        "cross_references": 0,
+        "code_blocks": 0,
+        "images": 0,
+        "quality_scores": {
+          "avg_code_quality": 0
+        }
+      }
+    },
+    {
+      "path": "output\\my-project\\api_reference\\home-client.md",
+      "filename": "home-client.md",
+      "category": "api",
+      "size_bytes": 1213,
+      "title": "API Reference: home-client.tsx",
+      "structure": {
+        "title": "API Reference: home-client.tsx",
+        "headers": [
+          {
+            "level": 1,
+            "text": "API Reference: home-client.tsx",
+            "line": 1
+          },
+          {
+            "level": 2,
+            "text": "Functions",
+            "line": 9
+          },
+          {
+            "level": 3,
+            "text": "HomeClient({ searchParams }: HomeClientProps)",
+            "line": 11
+          },
+          {
+            "level": 3,
+            "text": "handleSearch(searchParams: SearchParams)",
+            "line": 23
+          },
+          {
+            "level": 3,
+            "text": "handleBackToTrending()",
+            "line": 37
+          },
+          {
+            "level": 3,
+            "text": "handleCategoryChange(category: TrendingCategory)",
+            "line": 43
+          },
+          {
+            "level": 3,
+            "text": "handlePeriodChange(period: TrendingPeriod)",
+            "line": 55
+          },
+          {
+            "level": 3,
+            "text": "handleDateChange(date: string)",
+            "line": 67
+          }
+        ],
+        "code_blocks": [],
+        "tables": 5,
+        "images": 0,
+        "links": 0,
+        "word_count": 28,
+        "line_count": 78
+      },
+      "summary": "**API Reference: home-client.tsx**\nSections: Functions, HomeClient({ searchParams }: HomeClientProps), handleSearch(searchParams: SearchParams), handleBackToTrending(), handleCategoryChange(category: TrendingCategory)\n**Language**: TypeScript\n(28 words, 0 code blocks)",
+      "content": null,
+      "_enhanced": true,
+      "parsed_data": {
+        "tables": 5,
+        "cross_references": 0,
+        "code_blocks": 0,
+        "images": 0,
+        "quality_scores": {
+          "avg_code_quality": 0
+        }
+      }
+    },
+    {
+      "path": "output\\my-project\\api_reference\\import-data.md",
+      "filename": "import-data.md",
+      "category": "api",
+      "size_bytes": 2466,
+      "title": "API Reference: import-data.ts",
+      "structure": {
+        "title": "API Reference: import-data.ts",
+        "headers": [
+          {
+            "level": 1,
+            "text": "API Reference: import-data.ts",
+            "line": 1
+          },
+          {
+            "level": 2,
+            "text": "Functions",
+            "line": 9
+          },
+          {
+            "level": 3,
+            "text": "parseStarsNumber(starsStr: string)",
+            "line": 11
+          },
+          {
+            "level": 3,
+            "text": "parseStarsToday(starsTodayStr: string)",
+            "line": 23
+          },
+          {
+            "level": 3,
+            "text": "parseRepoName(fullName: string)",
+            "line": 35
+          },
+          {
+            "level": 3,
+            "text": "parseChineseDate(dateStr: string)",
+            "line": 47
+          },
+          {
+            "level": 3,
+            "text": "readJsonlFile(filePath: string)",
+            "line": 59
+          },
+          {
+            "level": 3,
+            "text": "upsertRepository(repoData: {",
+            "line": 71
+          },
+          {
+            "level": 3,
+            "text": "insertTrendingData(trendingData: {",
+            "line": 101
+          },
+          {
+            "level": 3,
+            "text": "processFile(filePath: string, category: TrendingCategory, period: TrendingPeriod)",
+            "line": 133
+          },
+          {
+            "level": 3,
+            "text": "main()",
+            "line": 149
+          }
+        ],
+        "code_blocks": [],
+        "tables": 8,
+        "images": 0,
+        "links": 0,
+        "word_count": 47,
+        "line_count": 156
+      },
+      "summary": "**API Reference: import-data.ts**\nSections: Functions, parseStarsNumber(starsStr: string), parseStarsToday(starsTodayStr: string), parseRepoName(fullName: string), parseChineseDate(dateStr: string)\n**Language**: TypeScript\n(47 words, 0 code blocks)",
+      "content": null,
+      "_enhanced": true,
+      "parsed_data": {
+        "tables": 8,
+        "cross_references": 0,
+        "code_blocks": 0,
+        "images": 0,
+        "quality_scores": {
+          "avg_code_quality": 0
+        }
+      }
+    },
+    {
+      "path": "output\\my-project\\api_reference\\LanguageTabs.md",
+      "filename": "LanguageTabs.md",
+      "category": "api",
+      "size_bytes": 866,
+      "title": "API Reference: LanguageTabs.tsx",
+      "structure": {
+        "title": "API Reference: LanguageTabs.tsx",
+        "headers": [
+          {
+            "level": 1,
+            "text": "API Reference: LanguageTabs.tsx",
+            "line": 1
+          },
+          {
+            "level": 2,
+            "text": "Functions",
+            "line": 9
+          },
+          {
+            "level": 3,
+            "text": "LanguageTabs({",
+            "line": 11
+          },
+          {
+            "level": 3,
+            "text": "getStatsForCategory(category: TrendingCategory)",
+            "line": 29
+          },
+          {
+            "level": 3,
+            "text": "formatNumber(num: number)",
+            "line": 41
+          }
+        ],
+        "code_blocks": [],
+        "tables": 3,
+        "images": 0,
+        "links": 0,
+        "word_count": 18,
+        "line_count": 52
+      },
+      "summary": "**API Reference: LanguageTabs.tsx**\nSections: Functions, LanguageTabs({, getStatsForCategory(category: TrendingCategory), formatNumber(num: number)\n**Language**: TypeScript\n(18 words, 0 code blocks)",
+      "content": null,
+      "_enhanced": true,
+      "parsed_data": {
+        "tables": 3,
+        "cross_references": 0,
+        "code_blocks": 0,
+        "images": 0,
+        "quality_scores": {
+          "avg_code_quality": 0
+        }
+      }
+    },
+    {
+      "path": "output\\my-project\\api_reference\\layout.md",
+      "filename": "layout.md",
+      "category": "api",
+      "size_bytes": 392,
+      "title": "API Reference: layout.tsx",
+      "structure": {
+        "title": "API Reference: layout.tsx",
+        "headers": [
+          {
+            "level": 1,
+            "text": "API Reference: layout.tsx",
+            "line": 1
+          },
+          {
+            "level": 2,
+            "text": "Functions",
+            "line": 9
+          },
+          {
+            "level": 3,
+            "text": "RootLayout({",
+            "line": 11
+          }
+        ],
+        "code_blocks": [],
+        "tables": 1,
+        "images": 0,
+        "links": 0,
+        "word_count": 11,
+        "line_count": 29
+      },
+      "summary": "**API Reference: layout.tsx**\nSections: Functions, RootLayout({\n**Language**: TypeScript\n(11 words, 0 code blocks)",
+      "content": null,
+      "_enhanced": true,
+      "parsed_data": {
+        "tables": 1,
+        "cross_references": 0,
+        "code_blocks": 0,
+        "images": 0,
+        "quality_scores": {
+          "avg_code_quality": 0
+        }
+      }
+    },
+    {
+      "path": "output\\my-project\\api_reference\\manifest.md",
+      "filename": "manifest.md",
+      "category": "api",
+      "size_bytes": 144,
+      "title": "API Reference: manifest.ts",
+      "structure": {
+        "title": "API Reference: manifest.ts",
+        "headers": [
+          {
+            "level": 1,
+            "text": "API Reference: manifest.ts",
+            "line": 1
+          },
+          {
+            "level": 2,
+            "text": "Functions",
+            "line": 9
+          },
+          {
+            "level": 3,
+            "text": "manifest()",
+            "line": 11
+          }
+        ],
+        "code_blocks": [],
+        "tables": 0,
+        "images": 0,
+        "links": 0,
+        "word_count": 7,
+        "line_count": 16
+      },
+      "summary": "**API Reference: manifest.ts**\nSections: Functions, manifest()\n**Language**: TypeScript\n(7 words, 0 code blocks)",
+      "content": null,
+      "_enhanced": true,
+      "parsed_data": {
+        "tables": 0,
+        "cross_references": 0,
+        "code_blocks": 0,
+        "images": 0,
+        "quality_scores": {
+          "avg_code_quality": 0
+        }
+      }
+    },
+    {
+      "path": "output\\my-project\\api_reference\\metadata.md",
+      "filename": "metadata.md",
+      "category": "api",
+      "size_bytes": 362,
+      "title": "API Reference: metadata.ts",
+      "structure": {
+        "title": "API Reference: metadata.ts",
+        "headers": [
+          {
+            "level": 1,
+            "text": "API Reference: metadata.ts",
+            "line": 1
+          },
+          {
+            "level": 2,
+            "text": "Functions",
+            "line": 9
+          },
+          {
+            "level": 3,
+            "text": "generateMetadata({ searchParams }: GenerateMetadataProps)",
+            "line": 11
+          }
+        ],
+        "code_blocks": [],
+        "tables": 1,
+        "images": 0,
+        "links": 0,
+        "word_count": 10,
+        "line_count": 24
+      },
+      "summary": "**API Reference: metadata.ts**\nSections: Functions, generateMetadata({ searchParams }: GenerateMetadataProps)\n**Language**: TypeScript\n(10 words, 0 code blocks)",
+      "content": null,
+      "_enhanced": true,
+      "parsed_data": {
+        "tables": 1,
+        "cross_references": 0,
+        "code_blocks": 0,
+        "images": 0,
+        "quality_scores": {
+          "avg_code_quality": 0
+        }
+      }
+    },
+    {
+      "path": "output\\my-project\\api_reference\\page.md",
+      "filename": "page.md",
+      "category": "api",
+      "size_bytes": 150,
+      "title": "API Reference: page.tsx",
+      "structure": {
+        "title": "API Reference: page.tsx",
+        "headers": [
+          {
+            "level": 1,
+            "text": "API Reference: page.tsx",
+            "line": 1
+          },
+          {
+            "level": 2,
+            "text": "Functions",
+            "line": 9
+          },
+          {
+            "level": 3,
+            "text": "TopicsPage()",
+            "line": 11
+          }
+        ],
+        "code_blocks": [],
+        "tables": 0,
+        "images": 0,
+        "links": 0,
+        "word_count": 7,
+        "line_count": 16
+      },
+      "summary": "**API Reference: page.tsx**\nSections: Functions, TopicsPage()\n**Language**: TypeScript\n(7 words, 0 code blocks)",
+      "content": null,
+      "_enhanced": true,
+      "parsed_data": {
+        "tables": 0,
+        "cross_references": 0,
+        "code_blocks": 0,
+        "images": 0,
+        "quality_scores": {
+          "avg_code_quality": 0
+        }
+      }
+    },
+    {
+      "path": "output\\my-project\\api_reference\\Pagination.md",
+      "filename": "Pagination.md",
+      "category": "api",
+      "size_bytes": 510,
+      "title": "API Reference: Pagination.tsx",
+      "structure": {
+        "title": "API Reference: Pagination.tsx",
+        "headers": [
+          {
+            "level": 1,
+            "text": "API Reference: Pagination.tsx",
+            "line": 1
+          },
+          {
+            "level": 2,
+            "text": "Functions",
+            "line": 9
+          },
+          {
+            "level": 3,
+            "text": "Pagination({ currentPage, totalPages, totalItems, onPageChange }: PaginationProps)",
+            "line": 11
+          },
+          {
+            "level": 3,
+            "text": "getPageNumbers()",
+            "line": 26
+          }
+        ],
+        "code_blocks": [],
+        "tables": 1,
+        "images": 0,
+        "links": 0,
+        "word_count": 11,
+        "line_count": 31
+      },
+      "summary": "**API Reference: Pagination.tsx**\nSections: Functions, Pagination({ currentPage, totalPages, totalItems, onPageChange }: PaginationProps), getPageNumbers()\n**Language**: TypeScript\n(11 words, 0 code blocks)",
+      "content": null,
+      "_enhanced": true,
+      "parsed_data": {
+        "tables": 1,
+        "cross_references": 0,
+        "code_blocks": 0,
+        "images": 0,
+        "quality_scores": {
+          "avg_code_quality": 0
+        }
+      }
+    },
+    {
+      "path": "output\\my-project\\api_reference\\PeriodSelector.md",
+      "filename": "PeriodSelector.md",
+      "category": "api",
+      "size_bytes": 409,
+      "title": "API Reference: PeriodSelector.tsx",
+      "structure": {
+        "title": "API Reference: PeriodSelector.tsx",
+        "headers": [
+          {
+            "level": 1,
+            "text": "API Reference: PeriodSelector.tsx",
+            "line": 1
+          },
+          {
+            "level": 2,
+            "text": "Functions",
+            "line": 9
+          },
+          {
+            "level": 3,
+            "text": "PeriodSelector({ currentPeriod, onPeriodChange }: PeriodSelectorProps)",
+            "line": 11
+          }
+        ],
+        "code_blocks": [],
+        "tables": 1,
+        "images": 0,
+        "links": 0,
+        "word_count": 9,
+        "line_count": 23
+      },
+      "summary": "**API Reference: PeriodSelector.tsx**\nSections: Functions, PeriodSelector({ currentPeriod, onPeriodChange }: PeriodSelectorProps)\n**Language**: TypeScript\n(9 words, 0 code blocks)",
+      "content": null,
+      "_enhanced": true,
+      "parsed_data": {
+        "tables": 1,
+        "cross_references": 0,
+        "code_blocks": 0,
+        "images": 0,
+        "quality_scores": {
+          "avg_code_quality": 0
+        }
+      }
+    },
+    {
+      "path": "output\\my-project\\api_reference\\RepoCard.md",
+      "filename": "RepoCard.md",
+      "category": "api",
+      "size_bytes": 733,
+      "title": "API Reference: RepoCard.tsx",
+      "structure": {
+        "title": "API Reference: RepoCard.tsx",
+        "headers": [
+          {
+            "level": 1,
+            "text": "API Reference: RepoCard.tsx",
+            "line": 1
+          },
+          {
+            "level": 2,
+            "text": "Functions",
+            "line": 9
+          },
+          {
+            "level": 3,
+            "text": "RepoCard({ repo, showRank = true }: RepoCardProps)",
+            "line": 11
+          },
+          {
+            "level": 3,
+            "text": "formatNumber(num: number)",
+            "line": 24
+          },
+          {
+            "level": 3,
+            "text": "getLanguageColor(language: string)",
+            "line": 36
+          }
+        ],
+        "code_blocks": [],
+        "tables": 3,
+        "images": 0,
+        "links": 0,
+        "word_count": 17,
+        "line_count": 47
+      },
+      "summary": "**API Reference: RepoCard.tsx**\nSections: Functions, RepoCard({ repo, showRank = true }: RepoCardProps), formatNumber(num: number), getLanguageColor(language: string)\n**Language**: TypeScript\n(17 words, 0 code blocks)",
+      "content": null,
+      "_enhanced": true,
+      "parsed_data": {
+        "tables": 3,
+        "cross_references": 0,
+        "code_blocks": 0,
+        "images": 0,
+        "quality_scores": {
+          "avg_code_quality": 0
+        }
+      }
+    },
+    {
+      "path": "output\\my-project\\api_reference\\robots.md",
+      "filename": "robots.md",
+      "category": "api",
+      "size_bytes": 138,
+      "title": "API Reference: robots.ts",
+      "structure": {
+        "title": "API Reference: robots.ts",
+        "headers": [
+          {
+            "level": 1,
+            "text": "API Reference: robots.ts",
+            "line": 1
+          },
+          {
+            "level": 2,
+            "text": "Functions",
+            "line": 9
+          },
+          {
+            "level": 3,
+            "text": "robots()",
+            "line": 11
+          }
+        ],
+        "code_blocks": [],
+        "tables": 0,
+        "images": 0,
+        "links": 0,
+        "word_count": 7,
+        "line_count": 16
+      },
+      "summary": "**API Reference: robots.ts**\nSections: Functions, robots()\n**Language**: TypeScript\n(7 words, 0 code blocks)",
+      "content": null,
+      "_enhanced": true,
+      "parsed_data": {
+        "tables": 0,
+        "cross_references": 0,
+        "code_blocks": 0,
+        "images": 0,
+        "quality_scores": {
+          "avg_code_quality": 0
+        }
+      }
+    },
+    {
+      "path": "output\\my-project\\api_reference\\route.md",
+      "filename": "route.md",
+      "category": "api",
+      "size_bytes": 318,
+      "title": "API Reference: route.ts",
+      "structure": {
+        "title": "API Reference: route.ts",
+        "headers": [
+          {
+            "level": 1,
+            "text": "API Reference: route.ts",
+            "line": 1
+          },
+          {
+            "level": 2,
+            "text": "Functions",
+            "line": 9
+          },
+          {
+            "level": 3,
+            "text": "GET(request: NextRequest)",
+            "line": 11
+          }
+        ],
+        "code_blocks": [],
+        "tables": 1,
+        "images": 0,
+        "links": 0,
+        "word_count": 10,
+        "line_count": 24
+      },
+      "summary": "**API Reference: route.ts**\nSections: Functions, GET(request: NextRequest)\n**Language**: TypeScript\n(10 words, 0 code blocks)",
+      "content": null,
+      "_enhanced": true,
+      "parsed_data": {
+        "tables": 1,
+        "cross_references": 0,
+        "code_blocks": 0,
+        "images": 0,
+        "quality_scores": {
+          "avg_code_quality": 0
+        }
+      }
+    },
+    {
+      "path": "output\\my-project\\api_reference\\SearchComponent.md",
+      "filename": "SearchComponent.md",
+      "category": "api",
+      "size_bytes": 735,
+      "title": "API Reference: SearchComponent.tsx",
+      "structure": {
+        "title": "API Reference: SearchComponent.tsx",
+        "headers": [
+          {
+            "level": 1,
+            "text": "API Reference: SearchComponent.tsx",
+            "line": 1
+          },
+          {
+            "level": 2,
+            "text": "Functions",
+            "line": 9
+          },
+          {
+            "level": 3,
+            "text": "SearchComponent({",
+            "line": 11
+          },
+          {
+            "level": 3,
+            "text": "handleSearch(e: React.FormEvent)",
+            "line": 30
+          },
+          {
+            "level": 3,
+            "text": "handleReset()",
+            "line": 42
+          }
+        ],
+        "code_blocks": [],
+        "tables": 2,
+        "images": 0,
+        "links": 0,
+        "word_count": 16,
+        "line_count": 47
+      },
+      "summary": "**API Reference: SearchComponent.tsx**\nSections: Functions, SearchComponent({, handleSearch(e: React.FormEvent), handleReset()\n**Language**: TypeScript\n(16 words, 0 code blocks)",
+      "content": null,
+      "_enhanced": true,
+      "parsed_data": {
+        "tables": 2,
+        "cross_references": 0,
+        "code_blocks": 0,
+        "images": 0,
+        "quality_scores": {
+          "avg_code_quality": 0
+        }
+      }
+    },
+    {
+      "path": "output\\my-project\\api_reference\\SEOHead.md",
+      "filename": "SEOHead.md",
+      "category": "api",
+      "size_bytes": 1014,
+      "title": "API Reference: SEOHead.tsx",
+      "structure": {
+        "title": "API Reference: SEOHead.tsx",
+        "headers": [
+          {
+            "level": 1,
+            "text": "API Reference: SEOHead.tsx",
+            "line": 1
+          },
+          {
+            "level": 2,
+            "text": "Functions",
+            "line": 9
+          },
+          {
+            "level": 3,
+            "text": "SEOHead({",
+            "line": 11
+          }
+        ],
+        "code_blocks": [],
+        "tables": 1,
+        "images": 0,
+        "links": 0,
+        "word_count": 10,
+        "line_count": 32
+      },
+      "summary": "**API Reference: SEOHead.tsx**\nSections: Functions, SEOHead({\n**Language**: TypeScript\n(10 words, 0 code blocks)",
+      "content": null,
+      "_enhanced": true,
+      "parsed_data": {
+        "tables": 1,
+        "cross_references": 0,
+        "code_blocks": 0,
+        "images": 0,
+        "quality_scores": {
+          "avg_code_quality": 0
+        }
+      }
+    },
+    {
+      "path": "output\\my-project\\api_reference\\setup-database.md",
+      "filename": "setup-database.md",
+      "category": "api",
+      "size_bytes": 256,
+      "title": "API Reference: setup-database.ts",
+      "structure": {
+        "title": "API Reference: setup-database.ts",
+        "headers": [
+          {
+            "level": 1,
+            "text": "API Reference: setup-database.ts",
+            "line": 1
+          },
+          {
+            "level": 2,
+            "text": "Functions",
+            "line": 9
+          },
+          {
+            "level": 3,
+            "text": "setupDatabase()",
+            "line": 11
+          },
+          {
+            "level": 3,
+            "text": "createTablesManually()",
+            "line": 19
+          }
+        ],
+        "code_blocks": [],
+        "tables": 0,
+        "images": 0,
+        "links": 0,
+        "word_count": 11,
+        "line_count": 26
+      },
+      "summary": "**API Reference: setup-database.ts**\nSections: Functions, setupDatabase(), createTablesManually()\n**Language**: TypeScript\n(11 words, 0 code blocks)",
+      "content": null,
+      "_enhanced": true,
+      "parsed_data": {
+        "tables": 0,
+        "cross_references": 0,
+        "code_blocks": 0,
+        "images": 0,
+        "quality_scores": {
+          "avg_code_quality": 0
+        }
+      }
+    },
+    {
+      "path": "output\\my-project\\api_reference\\sitemap.md",
+      "filename": "sitemap.md",
+      "category": "api",
+      "size_bytes": 141,
+      "title": "API Reference: sitemap.ts",
+      "structure": {
+        "title": "API Reference: sitemap.ts",
+        "headers": [
+          {
+            "level": 1,
+            "text": "API Reference: sitemap.ts",
+            "line": 1
+          },
+          {
+            "level": 2,
+            "text": "Functions",
+            "line": 9
+          },
+          {
+            "level": 3,
+            "text": "sitemap()",
+            "line": 11
+          }
+        ],
+        "code_blocks": [],
+        "tables": 0,
+        "images": 0,
+        "links": 0,
+        "word_count": 7,
+        "line_count": 16
+      },
+      "summary": "**API Reference: sitemap.ts**\nSections: Functions, sitemap()\n**Language**: TypeScript\n(7 words, 0 code blocks)",
+      "content": null,
+      "_enhanced": true,
+      "parsed_data": {
+        "tables": 0,
+        "cross_references": 0,
+        "code_blocks": 0,
+        "images": 0,
+        "quality_scores": {
+          "avg_code_quality": 0
+        }
+      }
+    },
+    {
+      "path": "output\\my-project\\api_reference\\StructuredData.md",
+      "filename": "StructuredData.md",
+      "category": "api",
+      "size_bytes": 429,
+      "title": "API Reference: StructuredData.tsx",
+      "structure": {
+        "title": "API Reference: StructuredData.tsx",
+        "headers": [
+          {
+            "level": 1,
+            "text": "API Reference: StructuredData.tsx",
+            "line": 1
+          },
+          {
+            "level": 2,
+            "text": "Functions",
+            "line": 9
+          },
+          {
+            "level": 3,
+            "text": "StructuredData({ repos, date, category, period }: JsonLdProps)",
+            "line": 11
+          }
+        ],
+        "code_blocks": [],
+        "tables": 1,
+        "images": 0,
+        "links": 0,
+        "word_count": 9,
+        "line_count": 25
+      },
+      "summary": "**API Reference: StructuredData.tsx**\nSections: Functions, StructuredData({ repos, date, category, period }: JsonLdProps)\n**Language**: TypeScript\n(9 words, 0 code blocks)",
+      "content": null,
+      "_enhanced": true,
+      "parsed_data": {
+        "tables": 1,
+        "cross_references": 0,
+        "code_blocks": 0,
+        "images": 0,
+        "quality_scores": {
+          "avg_code_quality": 0
+        }
+      }
+    },
+    {
+      "path": "output\\my-project\\api_reference\\test.md",
+      "filename": "test.md",
+      "category": "api",
+      "size_bytes": 216,
+      "title": "API Reference: test.tsx",
+      "structure": {
+        "title": "API Reference: test.tsx",
+        "headers": [
+          {
+            "level": 1,
+            "text": "API Reference: test.tsx",
+            "line": 1
+          },
+          {
+            "level": 2,
+            "text": "Functions",
+            "line": 9
+          },
+          {
+            "level": 3,
+            "text": "TestPage()",
+            "line": 11
+          },
+          {
+            "level": 3,
+            "text": "fetchData()",
+            "line": 17
+          }
+        ],
+        "code_blocks": [],
+        "tables": 0,
+        "images": 0,
+        "links": 0,
+        "word_count": 10,
+        "line_count": 24
+      },
+      "summary": "**API Reference: test.tsx**\nSections: Functions, TestPage(), fetchData()\n**Language**: TypeScript\n(10 words, 0 code blocks)",
+      "content": null,
+      "_enhanced": true,
+      "parsed_data": {
+        "tables": 0,
+        "cross_references": 0,
+        "code_blocks": 0,
+        "images": 0,
+        "quality_scores": {
+          "avg_code_quality": 0
+        }
+      }
+    },
+    {
+      "path": "output\\my-project\\api_reference\\TopicNavigation.md",
+      "filename": "TopicNavigation.md",
+      "category": "api",
+      "size_bytes": 353,
+      "title": "API Reference: TopicNavigation.tsx",
+      "structure": {
+        "title": "API Reference: TopicNavigation.tsx",
+        "headers": [
+          {
+            "level": 1,
+            "text": "API Reference: TopicNavigation.tsx",
+            "line": 1
+          },
+          {
+            "level": 2,
+            "text": "Functions",
+            "line": 9
+          },
+          {
+            "level": 3,
+            "text": "TopicNavigation()",
+            "line": 11
+          },
+          {
+            "level": 3,
+            "text": "isActiveLink(href: string)",
+            "line": 17
+          }
+        ],
+        "code_blocks": [],
+        "tables": 1,
+        "images": 0,
+        "links": 0,
+        "word_count": 11,
+        "line_count": 28
+      },
+      "summary": "**API Reference: TopicNavigation.tsx**\nSections: Functions, TopicNavigation(), isActiveLink(href: string)\n**Language**: TypeScript\n(11 words, 0 code blocks)",
+      "content": null,
+      "_enhanced": true,
+      "parsed_data": {
+        "tables": 1,
+        "cross_references": 0,
+        "code_blocks": 0,
+        "images": 0,
+        "quality_scores": {
+          "avg_code_quality": 0
+        }
+      }
+    },
+    {
+      "path": "output\\my-project\\config_patterns\\config_patterns.md",
+      "filename": "config_patterns.md",
+      "category": "other",
+      "size_bytes": 3165,
+      "title": "Configuration Extraction Report",
+      "structure": {
+        "title": "Configuration Extraction Report",
+        "headers": [
+          {
+            "level": 1,
+            "text": "Configuration Extraction Report",
+            "line": 1
+          },
+          {
+            "level": 2,
+            "text": "Configuration Files",
+            "line": 7
+          },
+          {
+            "level": 3,
+            "text": ".env.example",
+            "line": 9
+          },
+          {
+            "level": 3,
+            "text": ".env.local",
+            "line": 15
+          },
+          {
+            "level": 3,
+            "text": "next.config.js",
+            "line": 21
+          },
+          {
+            "level": 3,
+            "text": "open-next.config.ts",
+            "line": 27
+          },
+          {
+            "level": 3,
+            "text": "package-lock.json",
+            "line": 33
+          },
+          {
+            "level": 3,
+            "text": "package.json",
+            "line": 39
+          },
+          {
+            "level": 3,
+            "text": "tsconfig.json",
+            "line": 45
+          },
+          {
+            "level": 3,
+            "text": ".claude\\settings.local.json",
+            "line": 51
+          },
+          {
+            "level": 3,
+            "text": ".next\\app-build-manifest.json",
+            "line": 57
+          },
+          {
+            "level": 3,
+            "text": ".next\\build-manifest.json",
+            "line": 63
+          },
+          {
+            "level": 3,
+            "text": ".next\\package.json",
+            "line": 69
+          },
+          {
+            "level": 3,
+            "text": ".next\\react-loadable-manifest.json",
+            "line": 75
+          },
+          {
+            "level": 3,
+            "text": ".vscode\\settings.json",
+            "line": 81
+          },
+          {
+            "level": 3,
+            "text": "docs\\claude code_2025-07-24_created_2025-07-22..2025-07-24_topic_claude_code_6.json",
+            "line": 87
+          },
+          {
+            "level": 3,
+            "text": ".next\\server\\app-paths-manifest.json",
+            "line": 93
+          },
+          {
+            "level": 3,
+            "text": ".next\\server\\middleware-manifest.json",
+            "line": 99
+          },
+          {
+            "level": 3,
+            "text": ".next\\server\\next-font-manifest.json",
+            "line": 105
+          },
+          {
+            "level": 3,
+            "text": ".next\\server\\pages-manifest.json",
+            "line": 111
+          },
+          {
+            "level": 3,
+            "text": ".next\\server\\server-reference-manifest.json",
+            "line": 117
+          },
+          {
+            "level": 3,
+            "text": ".next\\types\\package.json",
+            "line": 123
+          },
+          {
+            "level": 3,
+            "text": "output\\my-project\\code_analysis.json",
+            "line": 129
+          },
+          {
+            "level": 3,
+            "text": "output\\my-project\\dependencies\\dependency_graph.json",
+            "line": 135
+          },
+          {
+            "level": 3,
+            "text": "output\\my-project\\dependencies\\statistics.json",
+            "line": 141
+          },
+          {
+            "level": 3,
+            "text": "output\\my-project\\patterns\\all_patterns.json",
+            "line": 147
+          },
+          {
+            "level": 3,
+            "text": "output\\my-project\\patterns\\critical_patterns.json",
+            "line": 153
+          },
+          {
+            "level": 3,
+            "text": "output\\my-project\\patterns\\high_confidence_patterns.json",
+            "line": 159
+          },
+          {
+            "level": 3,
+            "text": "output\\my-project\\patterns\\summary.json",
+            "line": 165
+          }
+        ],
+        "code_blocks": [],
+        "tables": 0,
+        "images": 0,
+        "links": 0,
+        "word_count": 57,
+        "line_count": 171
+      },
+      "summary": "**Configuration Extraction Report**\nSections: Configuration Files, .env.example, .env.local, next.config.js, open-next.config.ts\n**Total Files:** 27 **Total Settings:** 10071 **Detected Patterns:** None\n(57 words, 0 code blocks)",
+      "content": null,
+      "_enhanced": true,
+      "parsed_data": {
+        "tables": 0,
+        "cross_references": 0,
+        "code_blocks": 0,
+        "images": 0,
+        "quality_scores": {
+          "avg_code_quality": 0
+        }
+      }
+    },
+    {
+      "path": "README.md",
+      "filename": "README.md",
+      "category": "overview",
+      "size_bytes": 1450,
+      "title": "README",
+      "structure": {
+        "title": "",
+        "headers": [
+          {
+            "level": 2,
+            "text": "Getting Started",
+            "line": 3
+          },
+          {
+            "level": 2,
+            "text": "Learn More",
+            "line": 23
+          },
+          {
+            "level": 2,
+            "text": "Deploy on Vercel",
+            "line": 32
+          }
+        ],
+        "code_blocks": [
+          {
+            "language": "bash",
+            "code": "npm run dev\n# or\nyarn dev\n# or\npnpm dev\n# or\nbun dev"
+          }
+        ],
+        "tables": 0,
+        "images": 0,
+        "links": 8,
+        "word_count": 14,
+        "line_count": 37
+      },
+      "summary": "Sections: Getting Started, Learn More, Deploy on Vercel\nThis is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).\n(14 words, 1 code blocks)",
+      "content": null,
+      "_enhanced": true,
+      "parsed_data": {
+        "tables": 0,
+        "cross_references": 0,
+        "code_blocks": 1,
+        "images": 0,
+        "quality_scores": {
+          "avg_code_quality": 8.0
+        }
+      }
+    },
+    {
+      "path": "RECOVERY_REPORT.md",
+      "filename": "RECOVERY_REPORT.md",
+      "category": "overview",
+      "size_bytes": 2869,
+      "title": "\ud83c\udf89 \u529f\u80fd\u6062\u590d\u5b8c\u6210\u62a5\u544a",
+      "structure": {
+        "title": "\ud83c\udf89 \u529f\u80fd\u6062\u590d\u5b8c\u6210\u62a5\u544a",
+        "headers": [
+          {
+            "level": 1,
+            "text": "\ud83c\udf89 \u529f\u80fd\u6062\u590d\u5b8c\u6210\u62a5\u544a",
+            "line": 1
+          },
+          {
+            "level": 2,
+            "text": "\u2705 \u5df2\u6062\u590d\u7684\u529f\u80fd",
+            "line": 3
+          },
+          {
+            "level": 3,
+            "text": "\ud83d\udd27 API \u7aef\u70b9",
+            "line": 5
+          },
+          {
+            "level": 3,
+            "text": "\ud83c\udfe0 \u9996\u9875\u529f\u80fd",
+            "line": 28
+          },
+          {
+            "level": 3,
+            "text": "\ud83d\udd0d \u641c\u7d22\u529f\u80fd",
+            "line": 37
+          },
+          {
+            "level": 2,
+            "text": "\ud83c\udfaf \u6838\u5fc3\u7279\u6027",
+            "line": 48
+          },
+          {
+            "level": 3,
+            "text": "\ud83d\udcca \u6570\u636e\u663e\u793a",
+            "line": 50
+          },
+          {
+            "level": 3,
+            "text": "\ud83d\udee0\ufe0f \u6280\u672f\u7279\u6027",
+            "line": 56
+          },
+          {
+            "level": 2,
+            "text": "\ud83d\ude80 \u4f7f\u7528\u65b9\u6cd5",
+            "line": 63
+          },
+          {
+            "level": 2,
+            "text": "\ud83d\udd25 \u6062\u590d\u72b6\u6001",
+            "line": 71
+          }
+        ],
+        "code_blocks": [],
+        "tables": 1,
+        "images": 0,
+        "links": 0,
+        "word_count": 21,
+        "line_count": 82
+      },
+      "summary": "**\ud83c\udf89 \u529f\u80fd\u6062\u590d\u5b8c\u6210\u62a5\u544a**\nSections: \u2705 \u5df2\u6062\u590d\u7684\u529f\u80fd, \ud83d\udd27 API \u7aef\u70b9, \ud83c\udfe0 \u9996\u9875\u529f\u80fd, \ud83d\udd0d \u641c\u7d22\u529f\u80fd, \ud83c\udfaf \u6838\u5fc3\u7279\u6027\n\u6240\u6709API\u7aef\u70b9\u5df2\u6062\u590d\u4e3a\u5b8c\u6574\u7684\u6570\u636e\u5e93\u67e5\u8be2\u7248\u672c\uff1a\n(21 words, 0 code blocks)",
+      "content": null,
+      "_enhanced": true,
+      "parsed_data": {
+        "tables": 1,
+        "cross_references": 0,
+        "code_blocks": 0,
+        "images": 0,
+        "quality_scores": {
+          "avg_code_quality": 0
+        }
+      }
+    },
+    {
+      "path": "reports\\data-missing-analysis.md",
+      "filename": "data-missing-analysis.md",
+      "category": "other",
+      "size_bytes": 3482,
+      "title": "GitHub Trending \u6570\u636e\u5e93\u6570\u636e\u7f3a\u5931\u5206\u6790\u62a5\u544a",
+      "structure": {
+        "title": "GitHub Trending \u6570\u636e\u5e93\u6570\u636e\u7f3a\u5931\u5206\u6790\u62a5\u544a",
+        "headers": [
+          {
+            "level": 1,
+            "text": "GitHub Trending \u6570\u636e\u5e93\u6570\u636e\u7f3a\u5931\u5206\u6790\u62a5\u544a",
+            "line": 1
+          },
+          {
+            "level": 2,
+            "text": "\ud83d\udd0d \u95ee\u9898\u53d1\u73b0",
+            "line": 3
+          },
+          {
+            "level": 3,
+            "text": "1. \u6570\u636e\u91cf\u4e25\u91cd\u4e0d\u8db3",
+            "line": 7
+          },
+          {
+            "level": 3,
+            "text": "2. \u5177\u4f53\u7684\u6570\u636e\u7f3a\u5931\u60c5\u51b5",
+            "line": 12
+          },
+          {
+            "level": 4,
+            "text": "2.1 \u65e5\u671f\u7f3a\u5931\u6a21\u5f0f",
+            "line": 14
+          },
+          {
+            "level": 4,
+            "text": "2.2 8\u6708\u4efd\u6570\u636e\u95ee\u9898",
+            "line": 29
+          },
+          {
+            "level": 3,
+            "text": "3. \u6570\u636e\u7ed3\u6784\u95ee\u9898",
+            "line": 34
+          },
+          {
+            "level": 4,
+            "text": "3.1 \u7c7b\u522b\u8986\u76d6\u4e0d\u5b8c\u6574",
+            "line": 36
+          },
+          {
+            "level": 4,
+            "text": "3.2 \u5468\u671f\u8986\u76d6\u4e0d\u5b8c\u6574",
+            "line": 40
+          },
+          {
+            "level": 2,
+            "text": "\ud83d\udcca \u7406\u8bba\u6570\u636e\u91cf vs \u5b9e\u9645\u6570\u636e\u91cf",
+            "line": 44
+          },
+          {
+            "level": 3,
+            "text": "\u9884\u671f\u6570\u636e\u7ed3\u6784",
+            "line": 46
+          },
+          {
+            "level": 3,
+            "text": "\u5b9e\u9645\u6570\u636e\u7ed3\u6784",
+            "line": 53
+          },
+          {
+            "level": 2,
+            "text": "\ud83d\udea8 \u6839\u672c\u539f\u56e0\u5206\u6790",
+            "line": 58
+          },
+          {
+            "level": 3,
+            "text": "1. \u5bfc\u5165\u811a\u672c\u95ee\u9898",
+            "line": 60
+          },
+          {
+            "level": 3,
+            "text": "2. \u6570\u636e\u6e90\u95ee\u9898",
+            "line": 66
+          },
+          {
+            "level": 3,
+            "text": "3. \u5bfc\u5165\u8fc7\u7a0b\u95ee\u9898",
+            "line": 71
+          },
+          {
+            "level": 2,
+            "text": "\ud83d\udca1 \u89e3\u51b3\u65b9\u6848\u5efa\u8bae",
+            "line": 76
+          },
+          {
+            "level": 3,
+            "text": "1. \u7acb\u5373\u884c\u52a8 (\u9ad8\u4f18\u5148\u7ea7)",
+            "line": 78
+          },
+          {
+            "level": 3,
+            "text": "2. \u6570\u636e\u5b8c\u6574\u6027\u4fee\u590d (\u4e2d\u4f18\u5148\u7ea7)",
+            "line": 91
+          },
+          {
+            "level": 3,
+            "text": "3. \u957f\u671f\u6539\u8fdb (\u4f4e\u4f18\u5148\u7ea7)",
+            "line": 103
+          },
+          {
+            "level": 2,
+            "text": "\ud83d\udcdd \u4e0b\u4e00\u6b65\u884c\u52a8\u8ba1\u5212",
+            "line": 108
+          }
+        ],
+        "code_blocks": [
+          {
+            "language": "text",
+            "code": "\u274c 2023-12-30: 48 \u6761\u8bb0\u5f55   (\u9884\u671f: ~450\u6761)\n\u26a0\ufe0f 2023-12-29: 150 \u6761\u8bb0\u5f55  (\u9884\u671f: ~450\u6761)\n\u274c 2023-12-28: 19 \u6761\u8bb0\u5f55   (\u9884\u671f: ~450\u6761)\n\u26a0\ufe0f 2023-12-27: 150 \u6761\u8bb0\u5f55  (\u9884\u671f: ~450\u6761)\n\u274c 2023-12-26: 50 \u6761\u8bb0\u5f55   (\u9884\u671f: ~450\u6761)\n\u26a0\ufe0f 2023-12-25: 100 \u6761\u8bb0\u5f55  (\u9884\u671f: ~450\u6761)\n\u274c 2023-12-24: 50 \u6761\u8bb0\u5f55   (\u9884\u671f: ~450\u6761)\n\u274c 2023-12-23: 50 \u6761\u8bb0\u5f55   (\u9884\u671f: ~450\u6761)\n\u274c 2023-12-22: 83 \u6761\u8bb0\u5f55   (\u9884\u671f: ~450\u6761)\n\u26a0\ufe0f 2023-12-21: 150 \u6761\u8bb0\u5f55  (\u9884\u671f: ~450\u6761)\n\u26a0\ufe0f 2023-12-20: 150 \u6761\u8bb0\u5f55  (\u9884\u671f: ~450\u6761)"
+          },
+          {
+            "language": "bash",
+            "code": "# 1. \u68c0\u67e5\u5e76\u62c9\u53d6Git LFS\u6587\u4ef6\ngit lfs pull\n\n# 2. \u9a8c\u8bc1\u6570\u636e\u6587\u4ef6\u5b8c\u6574\u6027\nls -la data/github/\nhead -n 5 data/github/00_alldaily_data.jsonl\n\n# 3. \u91cd\u65b0\u8fd0\u884c\u5bfc\u5165\u811a\u672c (\u4f7f\u7528\u6539\u8fdb\u7248\u672c)\npython import_merge_0612_0804.py --verify --verbose"
+          },
+          {
+            "language": "bash",
+            "code": "# 1. \u8fd0\u884c\u5b8c\u6574\u7684\u6570\u636e\u68c0\u67e5\nnpm run check-dates\n\n# 2. \u751f\u6210\u7f3a\u5931\u6570\u636e\u62a5\u544a  \nnpm run analyze-data --with-sql\n\n# 3. \u4fee\u590d\u7279\u5b9a\u65e5\u671f\u7684\u6570\u636e\n# (\u9700\u8981\u91cd\u65b0\u6293\u53d6\u6216\u4ece\u5907\u4efd\u6062\u590d)"
+          }
+        ],
+        "tables": 0,
+        "images": 0,
+        "links": 0,
+        "word_count": 40,
+        "line_count": 119
+      },
+      "summary": "**GitHub Trending \u6570\u636e\u5e93\u6570\u636e\u7f3a\u5931\u5206\u6790\u62a5\u544a**\nSections: \ud83d\udd0d \u95ee\u9898\u53d1\u73b0, 1. \u6570\u636e\u91cf\u4e25\u91cd\u4e0d\u8db3, 2. \u5177\u4f53\u7684\u6570\u636e\u7f3a\u5931\u60c5\u51b5, 3. \u6570\u636e\u7ed3\u6784\u95ee\u9898, \ud83d\udcca \u7406\u8bba\u6570\u636e\u91cf vs \u5b9e\u9645\u6570\u636e\u91cf\n\u7ecf\u8fc7\u8be6\u7ec6\u5206\u6790\uff0c\u53d1\u73b0\u6570\u636e\u5e93\u4e2d\u5b58\u5728\u4ee5\u4e0b\u95ee\u9898\uff1a\n(40 words, 3 code blocks)",
+      "content": null,
+      "_enhanced": true,
+      "parsed_data": {
+        "tables": 0,
+        "cross_references": 0,
+        "code_blocks": 3,
+        "images": 0,
+        "quality_scores": {
+          "avg_code_quality": 8.0
+        }
+      }
+    },
+    {
+      "path": "SEARCH_GUIDE.md",
+      "filename": "SEARCH_GUIDE.md",
+      "category": "overview",
+      "size_bytes": 5189,
+      "title": "GitHub Trending \u641c\u7d22\u529f\u80fd\u64cd\u4f5c\u6307\u5357",
+      "structure": {
+        "title": "GitHub Trending \u641c\u7d22\u529f\u80fd\u64cd\u4f5c\u6307\u5357",
+        "headers": [
+          {
+            "level": 1,
+            "text": "GitHub Trending \u641c\u7d22\u529f\u80fd\u64cd\u4f5c\u6307\u5357",
+            "line": 1
+          },
+          {
+            "level": 2,
+            "text": "\ud83d\udd0d \u641c\u7d22\u529f\u80fd\u6982\u89c8",
+            "line": 3
+          },
+          {
+            "level": 2,
+            "text": "\ud83d\udccb \u57fa\u7840\u641c\u7d22",
+            "line": 7
+          },
+          {
+            "level": 3,
+            "text": "1. \u5feb\u901f\u641c\u7d22",
+            "line": 9
+          },
+          {
+            "level": 3,
+            "text": "2. \u641c\u7d22\u7ed3\u679c\u663e\u793a",
+            "line": 14
+          },
+          {
+            "level": 2,
+            "text": "\u2699\ufe0f \u9ad8\u7ea7\u641c\u7d22\u9009\u9879",
+            "line": 19
+          },
+          {
+            "level": 3,
+            "text": "\u5c55\u5f00\u9ad8\u7ea7\u9009\u9879",
+            "line": 21
+          },
+          {
+            "level": 3,
+            "text": "1. \u641c\u7d22\u8303\u56f4\u9009\u62e9",
+            "line": 24
+          },
+          {
+            "level": 3,
+            "text": "2. \u7f16\u7a0b\u8bed\u8a00\u7b5b\u9009",
+            "line": 36
+          },
+          {
+            "level": 3,
+            "text": "3. \u6700\u5c0f\u661f\u6807\u6570\u7b5b\u9009",
+            "line": 44
+          },
+          {
+            "level": 3,
+            "text": "4. \u5feb\u6377\u7b5b\u9009\u6807\u7b7e",
+            "line": 50
+          },
+          {
+            "level": 2,
+            "text": "\ud83c\udfaf \u641c\u7d22\u6280\u5de7",
+            "line": 58
+          },
+          {
+            "level": 3,
+            "text": "1. \u5173\u952e\u8bcd\u9009\u62e9",
+            "line": 60
+          },
+          {
+            "level": 3,
+            "text": "2. \u7ec4\u5408\u7b5b\u9009",
+            "line": 71
+          },
+          {
+            "level": 3,
+            "text": "3. \u5b57\u6bb5\u7279\u5b9a\u641c\u7d22",
+            "line": 76
+          },
+          {
+            "level": 2,
+            "text": "\ud83d\udd04 \u641c\u7d22\u6a21\u5f0f\u64cd\u4f5c",
+            "line": 82
+          },
+          {
+            "level": 3,
+            "text": "\u5207\u6362\u6a21\u5f0f",
+            "line": 84
+          },
+          {
+            "level": 3,
+            "text": "\u91cd\u65b0\u641c\u7d22",
+            "line": 93
+          },
+          {
+            "level": 2,
+            "text": "\ud83d\udcca \u641c\u7d22\u7ed3\u679c\u89e3\u8bfb",
+            "line": 99
+          },
+          {
+            "level": 3,
+            "text": "\u7ed3\u679c\u4fe1\u606f",
+            "line": 101
+          },
+          {
+            "level": 3,
+            "text": "\u9879\u76ee\u5361\u7247\u4fe1\u606f",
+            "line": 106
+          },
+          {
+            "level": 2,
+            "text": "\u26a1 \u5feb\u6377\u64cd\u4f5c",
+            "line": 113
+          },
+          {
+            "level": 3,
+            "text": "\u91cd\u7f6e\u641c\u7d22\u6761\u4ef6",
+            "line": 115
+          },
+          {
+            "level": 3,
+            "text": "\u5feb\u901f\u7b5b\u9009\u70ed\u95e8\u9879\u76ee",
+            "line": 118
+          },
+          {
+            "level": 3,
+            "text": "\u67e5\u627e\u7279\u5b9a\u4f5c\u8005\u9879\u76ee",
+            "line": 123
+          },
+          {
+            "level": 2,
+            "text": "\ud83d\udea8 \u5e38\u89c1\u95ee\u9898",
+            "line": 128
+          },
+          {
+            "level": 3,
+            "text": "Q: \u641c\u7d22\u65e0\u7ed3\u679c\u600e\u4e48\u529e\uff1f",
+            "line": 130
+          },
+          {
+            "level": 3,
+            "text": "Q: \u641c\u7d22\u7ed3\u679c\u592a\u591a\uff1f",
+            "line": 137
+          },
+          {
+            "level": 3,
+            "text": "Q: \u5982\u4f55\u627e\u5230\u6700\u65b0\u7684\u70ed\u95e8\u9879\u76ee\uff1f",
+            "line": 144
+          },
+          {
+            "level": 2,
+            "text": "\ud83d\udca1 \u9ad8\u6548\u641c\u7d22\u7b56\u7565",
+            "line": 151
+          },
+          {
+            "level": 3,
+            "text": "1. \u5206\u5c42\u641c\u7d22\u6cd5",
+            "line": 153
+          },
+          {
+            "level": 3,
+            "text": "2. \u5bf9\u6bd4\u641c\u7d22\u6cd5",
+            "line": 158
+          },
+          {
+            "level": 3,
+            "text": "3. \u8d8b\u52bf\u7ed3\u5408\u6cd5",
+            "line": 163
+          }
+        ],
+        "code_blocks": [],
+        "tables": 0,
+        "images": 0,
+        "links": 0,
+        "word_count": 78,
+        "line_count": 170
+      },
+      "summary": "**GitHub Trending \u641c\u7d22\u529f\u80fd\u64cd\u4f5c\u6307\u5357**\nSections: \ud83d\udd0d \u641c\u7d22\u529f\u80fd\u6982\u89c8, \ud83d\udccb \u57fa\u7840\u641c\u7d22, 1. \u5feb\u901f\u641c\u7d22, 2. \u641c\u7d22\u7ed3\u679c\u663e\u793a, \u2699\ufe0f \u9ad8\u7ea7\u641c\u7d22\u9009\u9879\nGitHub Trending \u641c\u7d22\u529f\u80fd\u8ba9\u60a8\u53ef\u4ee5\u5feb\u901f\u627e\u5230\u611f\u5174\u8da3\u7684\u5f00\u6e90\u9879\u76ee\uff0c\u652f\u6301\u591a\u79cd\u641c\u7d22\u65b9\u5f0f\u548c\u7cbe\u786e\u7b5b\u9009\u3002\n(78 words, 0 code blocks)",
+      "content": null,
+      "_enhanced": true,
+      "parsed_data": {
+        "tables": 0,
+        "cross_references": 0,
+        "code_blocks": 0,
+        "images": 0,
+        "quality_scores": {
+          "avg_code_quality": 0
+        }
+      }
+    },
+    {
+      "path": "STATIC_VERSION_README.md",
+      "filename": "STATIC_VERSION_README.md",
+      "category": "overview",
+      "size_bytes": 2154,
+      "title": "\ud83d\udd12 \u5b8c\u5168\u9759\u6001\u7248\u672c - \u96f6\u7f51\u7edc\u8bf7\u6c42",
+      "structure": {
+        "title": "\ud83d\udd12 \u5b8c\u5168\u9759\u6001\u7248\u672c - \u96f6\u7f51\u7edc\u8bf7\u6c42",
+        "headers": [
+          {
+            "level": 1,
+            "text": "\ud83d\udd12 \u5b8c\u5168\u9759\u6001\u7248\u672c - \u96f6\u7f51\u7edc\u8bf7\u6c42",
+            "line": 1
+          },
+          {
+            "level": 2,
+            "text": "\u2705 \u5f7b\u5e95\u89e3\u51b3API\u9519\u8bef",
+            "line": 3
+          },
+          {
+            "level": 3,
+            "text": "\ud83d\udcca \u5f53\u524d\u72b6\u6001",
+            "line": 7
+          },
+          {
+            "level": 3,
+            "text": "\ud83c\udfd7\ufe0f \u6280\u672f\u5b9e\u73b0",
+            "line": 15
+          },
+          {
+            "level": 3,
+            "text": "\ud83c\udfaf \u95ee\u9898\u89e3\u51b3",
+            "line": 28
+          },
+          {
+            "level": 3,
+            "text": "\ud83d\udcf1 \u7528\u6237\u4f53\u9a8c",
+            "line": 39
+          },
+          {
+            "level": 3,
+            "text": "\ud83d\udd0d \u6d4b\u8bd5\u9a8c\u8bc1",
+            "line": 54
+          },
+          {
+            "level": 2,
+            "text": "\u26a0\ufe0f \u91cd\u8981\u8bf4\u660e",
+            "line": 71
+          }
+        ],
+        "code_blocks": [],
+        "tables": 0,
+        "images": 0,
+        "links": 0,
+        "word_count": 32,
+        "line_count": 84
+      },
+      "summary": "**\ud83d\udd12 \u5b8c\u5168\u9759\u6001\u7248\u672c - \u96f6\u7f51\u7edc\u8bf7\u6c42**\nSections: \u2705 \u5f7b\u5e95\u89e3\u51b3API\u9519\u8bef, \ud83d\udcca \u5f53\u524d\u72b6\u6001, \ud83c\udfd7\ufe0f \u6280\u672f\u5b9e\u73b0, \ud83c\udfaf \u95ee\u9898\u89e3\u51b3, \ud83d\udcf1 \u7528\u6237\u4f53\u9a8c\n\u6b64\u7248\u672c\u5df2\u5b8c\u5168\u6d88\u9664\u4efb\u4f55\u53ef\u80fd\u7684API\u9519\u8bef\u6e90\uff1a\n(32 words, 0 code blocks)",
+      "content": null,
+      "_enhanced": true,
+      "parsed_data": {
+        "tables": 0,
+        "cross_references": 0,
+        "code_blocks": 0,
+        "images": 0,
+        "quality_scores": {
+          "avg_code_quality": 0
+        }
+      }
+    }
+  ]
+}

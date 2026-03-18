@@ -1,0 +1,110 @@
+[
+  {
+    "pattern_type": "Strategy",
+    "category": "Behavioral",
+    "confidence": 1.0,
+    "location": "D:\\github\\2015\\08\\github-trending-website\\cloudflare-env.d.ts",
+    "class_name": "ExtendableEvent",
+    "method_name": null,
+    "line_number": 755,
+    "evidence": [
+      "Part of strategy family with: PromiseRejectionEvent, ErrorEvent, MessageEvent",
+      "Strategy base with implementations: FetchEvent, ScheduledEvent, TailEvent",
+      "Strategy interface method: waitUntil",
+      "EventEmitter pattern detected"
+    ],
+    "related_classes": [
+      "Event",
+      "FetchEvent",
+      "ScheduledEvent",
+      "TailEvent",
+      "EmailEvent"
+    ],
+    "file_path": "D:\\github\\2015\\08\\github-trending-website\\cloudflare-env.d.ts"
+  },
+  {
+    "pattern_type": "Factory",
+    "category": "Creational",
+    "confidence": 0.9,
+    "location": "D:\\github\\2015\\08\\github-trending-website\\cloudflare-env.d.ts",
+    "class_name": "Table",
+    "method_name": null,
+    "line_number": 186,
+    "evidence": [
+      "Parameterized factory method: constructor",
+      "Factory method: get",
+      "Multiple factory methods: constructor, get"
+    ],
+    "related_classes": [],
+    "file_path": "D:\\github\\2015\\08\\github-trending-website\\cloudflare-env.d.ts"
+  },
+  {
+    "pattern_type": "Factory",
+    "category": "Creational",
+    "confidence": 0.9,
+    "location": "D:\\github\\2015\\08\\github-trending-website\\cloudflare-env.d.ts",
+    "class_name": "Event",
+    "method_name": null,
+    "line_number": 522,
+    "evidence": [
+      "Parameterized factory method: constructor",
+      "Factory method: currentTarget",
+      "Factory method: target",
+      "Multiple factory methods: constructor, currentTarget, target"
+    ],
+    "related_classes": [],
+    "file_path": "D:\\github\\2015\\08\\github-trending-website\\cloudflare-env.d.ts"
+  },
+  {
+    "pattern_type": "Factory",
+    "category": "Creational",
+    "confidence": 0.9,
+    "location": "D:\\github\\2015\\08\\github-trending-website\\cloudflare-env.d.ts",
+    "class_name": "FormData",
+    "method_name": null,
+    "line_number": 1149,
+    "evidence": [
+      "Factory method: constructor",
+      "Factory method: get",
+      "Factory method: getAll",
+      "Multiple factory methods: constructor, get, getAll"
+    ],
+    "related_classes": [],
+    "file_path": "D:\\github\\2015\\08\\github-trending-website\\cloudflare-env.d.ts"
+  },
+  {
+    "pattern_type": "Factory",
+    "category": "Creational",
+    "confidence": 0.9,
+    "location": "D:\\github\\2015\\08\\github-trending-website\\cloudflare-env.d.ts",
+    "class_name": "Headers",
+    "method_name": null,
+    "line_number": 1270,
+    "evidence": [
+      "Factory method: constructor",
+      "Factory method: get",
+      "Factory method: getAll",
+      "Factory method: getSetCookie",
+      "Multiple factory methods: constructor, get, getAll"
+    ],
+    "related_classes": [],
+    "file_path": "D:\\github\\2015\\08\\github-trending-website\\cloudflare-env.d.ts"
+  },
+  {
+    "pattern_type": "Factory",
+    "category": "Creational",
+    "confidence": 0.9,
+    "location": "D:\\github\\2015\\08\\github-trending-website\\cloudflare-env.d.ts",
+    "class_name": "URLSearchParams",
+    "method_name": null,
+    "line_number": 2193,
+    "evidence": [
+      "Parameterized factory method: constructor",
+      "Factory method: get",
+      "Factory method: getAll",
+      "Multiple factory methods: constructor, get, getAll"
+    ],
+    "related_classes": [],
+    "file_path": "D:\\github\\2015\\08\\github-trending-website\\cloudflare-env.d.ts"
+  }
+]

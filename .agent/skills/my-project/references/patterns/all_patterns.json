@@ -1,0 +1,636 @@
+[
+  {
+    "file_path": "D:\\github\\2015\\08\\github-trending-website\\cloudflare-env.d.ts",
+    "language": "TypeScript",
+    "patterns": [
+      {
+        "pattern_type": "Factory",
+        "category": "Creational",
+        "confidence": 0.6,
+        "location": "D:\\github\\2015\\08\\github-trending-website\\cloudflare-env.d.ts",
+        "class_name": "DOMException",
+        "method_name": null,
+        "line_number": 35,
+        "evidence": [
+          "Parameterized factory method: constructor",
+          "Inherits from: Error"
+        ],
+        "related_classes": [
+          "Error"
+        ]
+      },
+      {
+        "pattern_type": "Adapter",
+        "category": "Structural",
+        "confidence": 0.5,
+        "location": "D:\\github\\2015\\08\\github-trending-website\\cloudflare-env.d.ts",
+        "class_name": "DOMException",
+        "method_name": null,
+        "line_number": 35,
+        "evidence": [
+          "Implements interface: Error",
+          "Has 3 interface methods"
+        ],
+        "related_classes": []
+      },
+      {
+        "pattern_type": "Strategy",
+        "category": "Behavioral",
+        "confidence": 0.5,
+        "location": "D:\\github\\2015\\08\\github-trending-website\\cloudflare-env.d.ts",
+        "class_name": "DOMException",
+        "method_name": null,
+        "line_number": 35,
+        "evidence": [
+          "Part of strategy family with: CompileError, RuntimeError, NonRetryableError"
+        ],
+        "related_classes": [
+          "Error"
+        ]
+      },
+      {
+        "pattern_type": "Strategy",
+        "category": "Behavioral",
+        "confidence": 0.7,
+        "location": "D:\\github\\2015\\08\\github-trending-website\\cloudflare-env.d.ts",
+        "class_name": "CompileError",
+        "method_name": null,
+        "line_number": 130,
+        "evidence": [
+          "Part of strategy family with: DOMException, RuntimeError, NonRetryableError",
+          "Strategy interface method: constructor"
+        ],
+        "related_classes": [
+          "Error"
+        ]
+      },
+      {
+        "pattern_type": "Strategy",
+        "category": "Behavioral",
+        "confidence": 0.7,
+        "location": "D:\\github\\2015\\08\\github-trending-website\\cloudflare-env.d.ts",
+        "class_name": "RuntimeError",
+        "method_name": null,
+        "line_number": 133,
+        "evidence": [
+          "Part of strategy family with: DOMException, CompileError, NonRetryableError",
+          "Strategy interface method: constructor"
+        ],
+        "related_classes": [
+          "Error"
+        ]
+      },
+      {
+        "pattern_type": "Factory",
+        "category": "Creational",
+        "confidence": 0.5,
+        "location": "D:\\github\\2015\\08\\github-trending-website\\cloudflare-env.d.ts",
+        "class_name": "Global",
+        "method_name": null,
+        "line_number": 141,
+        "evidence": [
+          "Parameterized factory method: constructor"
+        ],
+        "related_classes": []
+      },
+      {
+        "pattern_type": "Factory",
+        "category": "Creational",
+        "confidence": 0.5,
+        "location": "D:\\github\\2015\\08\\github-trending-website\\cloudflare-env.d.ts",
+        "class_name": "Instance",
+        "method_name": null,
+        "line_number": 151,
+        "evidence": [
+          "Parameterized factory method: constructor"
+        ],
+        "related_classes": []
+      },
+      {
+        "pattern_type": "Factory",
+        "category": "Creational",
+        "confidence": 0.9,
+        "location": "D:\\github\\2015\\08\\github-trending-website\\cloudflare-env.d.ts",
+        "class_name": "Table",
+        "method_name": null,
+        "line_number": 186,
+        "evidence": [
+          "Parameterized factory method: constructor",
+          "Factory method: get",
+          "Multiple factory methods: constructor, get"
+        ],
+        "related_classes": []
+      },
+      {
+        "pattern_type": "Strategy",
+        "category": "Behavioral",
+        "confidence": 0.6,
+        "location": "D:\\github\\2015\\08\\github-trending-website\\cloudflare-env.d.ts",
+        "class_name": "PromiseRejectionEvent",
+        "method_name": null,
+        "line_number": 368,
+        "evidence": [
+          "Part of strategy family with: ExtendableEvent, ErrorEvent, MessageEvent",
+          "EventEmitter pattern detected"
+        ],
+        "related_classes": [
+          "Event"
+        ]
+      },
+      {
+        "pattern_type": "Factory",
+        "category": "Creational",
+        "confidence": 0.5,
+        "location": "D:\\github\\2015\\08\\github-trending-website\\cloudflare-env.d.ts",
+        "class_name": "WebSocketRequestResponsePair",
+        "method_name": null,
+        "line_number": 504,
+        "evidence": [
+          "Parameterized factory method: constructor"
+        ],
+        "related_classes": []
+      },
+      {
+        "pattern_type": "Factory",
+        "category": "Creational",
+        "confidence": 0.9,
+        "location": "D:\\github\\2015\\08\\github-trending-website\\cloudflare-env.d.ts",
+        "class_name": "Event",
+        "method_name": null,
+        "line_number": 522,
+        "evidence": [
+          "Parameterized factory method: constructor",
+          "Factory method: currentTarget",
+          "Factory method: target",
+          "Multiple factory methods: constructor, currentTarget, target"
+        ],
+        "related_classes": []
+      },
+      {
+        "pattern_type": "Strategy",
+        "category": "Behavioral",
+        "confidence": 0.7,
+        "location": "D:\\github\\2015\\08\\github-trending-website\\cloudflare-env.d.ts",
+        "class_name": "Event",
+        "method_name": null,
+        "line_number": 522,
+        "evidence": [
+          "Strategy base with implementations: PromiseRejectionEvent, ExtendableEvent, ErrorEvent",
+          "EventEmitter pattern detected"
+        ],
+        "related_classes": [
+          "PromiseRejectionEvent",
+          "ExtendableEvent",
+          "ErrorEvent",
+          "MessageEvent",
+          "CloseEvent"
+        ]
+      },
+      {
+        "pattern_type": "TemplateMethod",
+        "category": "Behavioral",
+        "confidence": 0.7999999999999999,
+        "location": "D:\\github\\2015\\08\\github-trending-website\\cloudflare-env.d.ts",
+        "class_name": "Event",
+        "method_name": null,
+        "line_number": 522,
+        "evidence": [
+          "Base class with 5 implementations",
+          "Has hook methods: preventDefault, preventDefault, defaultPrevented",
+          "EventEmitter pattern detected"
+        ],
+        "related_classes": [
+          "PromiseRejectionEvent",
+          "ExtendableEvent",
+          "ErrorEvent",
+          "MessageEvent",
+          "CloseEvent"
+        ]
+      },
+      {
+        "pattern_type": "Adapter",
+        "category": "Structural",
+        "confidence": 0.6,
+        "location": "D:\\github\\2015\\08\\github-trending-website\\cloudflare-env.d.ts",
+        "class_name": "AbortSignal",
+        "method_name": null,
+        "line_number": 722,
+        "evidence": [
+          "Implements interface: EventTarget",
+          "Has 8 interface methods",
+          "EventEmitter pattern detected"
+        ],
+        "related_classes": []
+      },
+      {
+        "pattern_type": "Strategy",
+        "category": "Behavioral",
+        "confidence": 0.6,
+        "location": "D:\\github\\2015\\08\\github-trending-website\\cloudflare-env.d.ts",
+        "class_name": "AbortSignal",
+        "method_name": null,
+        "line_number": 722,
+        "evidence": [
+          "Part of strategy family with: EventSource",
+          "EventEmitter pattern detected"
+        ],
+        "related_classes": [
+          "EventTarget"
+        ]
+      },
+      {
+        "pattern_type": "Strategy",
+        "category": "Behavioral",
+        "confidence": 1.0,
+        "location": "D:\\github\\2015\\08\\github-trending-website\\cloudflare-env.d.ts",
+        "class_name": "ExtendableEvent",
+        "method_name": null,
+        "line_number": 755,
+        "evidence": [
+          "Part of strategy family with: PromiseRejectionEvent, ErrorEvent, MessageEvent",
+          "Strategy base with implementations: FetchEvent, ScheduledEvent, TailEvent",
+          "Strategy interface method: waitUntil",
+          "EventEmitter pattern detected"
+        ],
+        "related_classes": [
+          "Event",
+          "FetchEvent",
+          "ScheduledEvent",
+          "TailEvent",
+          "EmailEvent"
+        ]
+      },
+      {
+        "pattern_type": "Adapter",
+        "category": "Structural",
+        "confidence": 0.5,
+        "location": "D:\\github\\2015\\08\\github-trending-website\\cloudflare-env.d.ts",
+        "class_name": "File",
+        "method_name": null,
+        "line_number": 805,
+        "evidence": [
+          "Implements interface: Blob",
+          "Has 3 interface methods"
+        ],
+        "related_classes": []
+      },
+      {
+        "pattern_type": "Factory",
+        "category": "Creational",
+        "confidence": 0.5,
+        "location": "D:\\github\\2015\\08\\github-trending-website\\cloudflare-env.d.ts",
+        "class_name": "TextDecoder",
+        "method_name": null,
+        "line_number": 1024,
+        "evidence": [
+          "Parameterized factory method: constructor"
+        ],
+        "related_classes": []
+      },
+      {
+        "pattern_type": "Factory",
+        "category": "Creational",
+        "confidence": 0.6,
+        "location": "D:\\github\\2015\\08\\github-trending-website\\cloudflare-env.d.ts",
+        "class_name": "ErrorEvent",
+        "method_name": null,
+        "line_number": 1083,
+        "evidence": [
+          "Parameterized factory method: constructor",
+          "Inherits from: Event"
+        ],
+        "related_classes": [
+          "Event"
+        ]
+      },
+      {
+        "pattern_type": "Adapter",
+        "category": "Structural",
+        "confidence": 0.6,
+        "location": "D:\\github\\2015\\08\\github-trending-website\\cloudflare-env.d.ts",
+        "class_name": "ErrorEvent",
+        "method_name": null,
+        "line_number": 1083,
+        "evidence": [
+          "Implements interface: Event",
+          "Has 6 interface methods",
+          "EventEmitter pattern detected"
+        ],
+        "related_classes": []
+      },
+      {
+        "pattern_type": "Strategy",
+        "category": "Behavioral",
+        "confidence": 0.6,
+        "location": "D:\\github\\2015\\08\\github-trending-website\\cloudflare-env.d.ts",
+        "class_name": "ErrorEvent",
+        "method_name": null,
+        "line_number": 1083,
+        "evidence": [
+          "Part of strategy family with: PromiseRejectionEvent, ExtendableEvent, MessageEvent",
+          "EventEmitter pattern detected"
+        ],
+        "related_classes": [
+          "Event"
+        ]
+      },
+      {
+        "pattern_type": "Factory",
+        "category": "Creational",
+        "confidence": 0.6,
+        "location": "D:\\github\\2015\\08\\github-trending-website\\cloudflare-env.d.ts",
+        "class_name": "MessageEvent",
+        "method_name": null,
+        "line_number": 1108,
+        "evidence": [
+          "Parameterized factory method: constructor",
+          "Inherits from: Event"
+        ],
+        "related_classes": [
+          "Event"
+        ]
+      },
+      {
+        "pattern_type": "Strategy",
+        "category": "Behavioral",
+        "confidence": 0.7999999999999999,
+        "location": "D:\\github\\2015\\08\\github-trending-website\\cloudflare-env.d.ts",
+        "class_name": "MessageEvent",
+        "method_name": null,
+        "line_number": 1108,
+        "evidence": [
+          "Part of strategy family with: PromiseRejectionEvent, ExtendableEvent, ErrorEvent",
+          "Strategy interface method: constructor",
+          "EventEmitter pattern detected"
+        ],
+        "related_classes": [
+          "Event"
+        ]
+      },
+      {
+        "pattern_type": "Factory",
+        "category": "Creational",
+        "confidence": 0.9,
+        "location": "D:\\github\\2015\\08\\github-trending-website\\cloudflare-env.d.ts",
+        "class_name": "FormData",
+        "method_name": null,
+        "line_number": 1149,
+        "evidence": [
+          "Factory method: constructor",
+          "Factory method: get",
+          "Factory method: getAll",
+          "Multiple factory methods: constructor, get, getAll"
+        ],
+        "related_classes": []
+      },
+      {
+        "pattern_type": "Strategy",
+        "category": "Behavioral",
+        "confidence": 0.7999999999999999,
+        "location": "D:\\github\\2015\\08\\github-trending-website\\cloudflare-env.d.ts",
+        "class_name": "FetchEvent",
+        "method_name": null,
+        "line_number": 1257,
+        "evidence": [
+          "Part of strategy family with: ScheduledEvent, TailEvent, EmailEvent",
+          "Strategy interface method: respondWith",
+          "EventEmitter pattern detected"
+        ],
+        "related_classes": [
+          "ExtendableEvent"
+        ]
+      },
+      {
+        "pattern_type": "Factory",
+        "category": "Creational",
+        "confidence": 0.9,
+        "location": "D:\\github\\2015\\08\\github-trending-website\\cloudflare-env.d.ts",
+        "class_name": "Headers",
+        "method_name": null,
+        "line_number": 1270,
+        "evidence": [
+          "Factory method: constructor",
+          "Factory method: get",
+          "Factory method: getAll",
+          "Factory method: getSetCookie",
+          "Multiple factory methods: constructor, get, getAll"
+        ],
+        "related_classes": []
+      },
+      {
+        "pattern_type": "Strategy",
+        "category": "Behavioral",
+        "confidence": 0.7999999999999999,
+        "location": "D:\\github\\2015\\08\\github-trending-website\\cloudflare-env.d.ts",
+        "class_name": "ScheduledEvent",
+        "method_name": null,
+        "line_number": 1703,
+        "evidence": [
+          "Part of strategy family with: FetchEvent, TailEvent, EmailEvent",
+          "Strategy interface method: noRetry",
+          "EventEmitter pattern detected"
+        ],
+        "related_classes": [
+          "ExtendableEvent"
+        ]
+      },
+      {
+        "pattern_type": "Factory",
+        "category": "Creational",
+        "confidence": 0.6,
+        "location": "D:\\github\\2015\\08\\github-trending-website\\cloudflare-env.d.ts",
+        "class_name": "FixedLengthStream",
+        "method_name": null,
+        "line_number": 1956,
+        "evidence": [
+          "Parameterized factory method: constructor",
+          "Inherits from: IdentityTransformStream"
+        ],
+        "related_classes": [
+          "IdentityTransformStream"
+        ]
+      },
+      {
+        "pattern_type": "Strategy",
+        "category": "Behavioral",
+        "confidence": 0.6,
+        "location": "D:\\github\\2015\\08\\github-trending-website\\cloudflare-env.d.ts",
+        "class_name": "TailEvent",
+        "method_name": null,
+        "line_number": 2029,
+        "evidence": [
+          "Part of strategy family with: FetchEvent, ScheduledEvent, EmailEvent",
+          "EventEmitter pattern detected"
+        ],
+        "related_classes": [
+          "ExtendableEvent"
+        ]
+      },
+      {
+        "pattern_type": "Factory",
+        "category": "Creational",
+        "confidence": 0.5,
+        "location": "D:\\github\\2015\\08\\github-trending-website\\cloudflare-env.d.ts",
+        "class_name": "URL",
+        "method_name": null,
+        "line_number": 2133,
+        "evidence": [
+          "Parameterized factory method: constructor"
+        ],
+        "related_classes": []
+      },
+      {
+        "pattern_type": "Factory",
+        "category": "Creational",
+        "confidence": 0.9,
+        "location": "D:\\github\\2015\\08\\github-trending-website\\cloudflare-env.d.ts",
+        "class_name": "URLSearchParams",
+        "method_name": null,
+        "line_number": 2193,
+        "evidence": [
+          "Parameterized factory method: constructor",
+          "Factory method: get",
+          "Factory method: getAll",
+          "Multiple factory methods: constructor, get, getAll"
+        ],
+        "related_classes": []
+      },
+      {
+        "pattern_type": "Factory",
+        "category": "Creational",
+        "confidence": 0.6,
+        "location": "D:\\github\\2015\\08\\github-trending-website\\cloudflare-env.d.ts",
+        "class_name": "CloseEvent",
+        "method_name": null,
+        "line_number": 2299,
+        "evidence": [
+          "Parameterized factory method: constructor",
+          "Inherits from: Event"
+        ],
+        "related_classes": [
+          "Event"
+        ]
+      },
+      {
+        "pattern_type": "Strategy",
+        "category": "Behavioral",
+        "confidence": 0.7999999999999999,
+        "location": "D:\\github\\2015\\08\\github-trending-website\\cloudflare-env.d.ts",
+        "class_name": "CloseEvent",
+        "method_name": null,
+        "line_number": 2299,
+        "evidence": [
+          "Part of strategy family with: PromiseRejectionEvent, ExtendableEvent, ErrorEvent",
+          "Strategy interface method: constructor",
+          "EventEmitter pattern detected"
+        ],
+        "related_classes": [
+          "Event"
+        ]
+      },
+      {
+        "pattern_type": "Factory",
+        "category": "Creational",
+        "confidence": 0.6,
+        "location": "D:\\github\\2015\\08\\github-trending-website\\cloudflare-env.d.ts",
+        "class_name": "EventSource",
+        "method_name": null,
+        "line_number": 2452,
+        "evidence": [
+          "Parameterized factory method: constructor",
+          "Inherits from: EventTarget"
+        ],
+        "related_classes": [
+          "EventTarget"
+        ]
+      },
+      {
+        "pattern_type": "Adapter",
+        "category": "Structural",
+        "confidence": 0.6,
+        "location": "D:\\github\\2015\\08\\github-trending-website\\cloudflare-env.d.ts",
+        "class_name": "EventSource",
+        "method_name": null,
+        "line_number": 2452,
+        "evidence": [
+          "Implements interface: EventTarget",
+          "Has 12 interface methods",
+          "EventEmitter pattern detected"
+        ],
+        "related_classes": []
+      },
+      {
+        "pattern_type": "Strategy",
+        "category": "Behavioral",
+        "confidence": 0.5,
+        "location": "D:\\github\\2015\\08\\github-trending-website\\cloudflare-env.d.ts",
+        "class_name": "EventSource",
+        "method_name": null,
+        "line_number": 2452,
+        "evidence": [
+          "Part of strategy family with: AbortSignal"
+        ],
+        "related_classes": [
+          "EventTarget"
+        ]
+      },
+      {
+        "pattern_type": "Strategy",
+        "category": "Behavioral",
+        "confidence": 0.6,
+        "location": "D:\\github\\2015\\08\\github-trending-website\\cloudflare-env.d.ts",
+        "class_name": "EmailEvent",
+        "method_name": null,
+        "line_number": 6378,
+        "evidence": [
+          "Part of strategy family with: FetchEvent, ScheduledEvent, TailEvent",
+          "EventEmitter pattern detected"
+        ],
+        "related_classes": [
+          "ExtendableEvent"
+        ]
+      },
+      {
+        "pattern_type": "Factory",
+        "category": "Creational",
+        "confidence": 0.6,
+        "location": "D:\\github\\2015\\08\\github-trending-website\\cloudflare-env.d.ts",
+        "class_name": "NonRetryableError",
+        "method_name": null,
+        "line_number": 7331,
+        "evidence": [
+          "Parameterized factory method: constructor",
+          "Inherits from: Error"
+        ],
+        "related_classes": [
+          "Error"
+        ]
+      },
+      {
+        "pattern_type": "Strategy",
+        "category": "Behavioral",
+        "confidence": 0.7,
+        "location": "D:\\github\\2015\\08\\github-trending-website\\cloudflare-env.d.ts",
+        "class_name": "NonRetryableError",
+        "method_name": null,
+        "line_number": 7331,
+        "evidence": [
+          "Part of strategy family with: DOMException, CompileError, RuntimeError",
+          "Strategy interface method: constructor"
+        ],
+        "related_classes": [
+          "Error"
+        ]
+      }
+    ],
+    "total_classes": 89,
+    "total_functions": 16,
+    "analysis_depth": "deep",
+    "pattern_summary": {
+      "Factory": 17,
+      "Adapter": 5,
+      "Strategy": 16,
+      "TemplateMethod": 1
+    }
+  }
+]

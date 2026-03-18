@@ -1,0 +1,177 @@
+{
+  "nodes": [
+    {
+      "file": "app\\api\\date-stats\\route.ts",
+      "language": "TypeScript"
+    },
+    {
+      "file": "app\\api\\db-info\\route.ts",
+      "language": "TypeScript"
+    },
+    {
+      "file": "app\\api\\languages\\route.ts",
+      "language": "TypeScript"
+    },
+    {
+      "file": "app\\api\\readme\\route.ts",
+      "language": "TypeScript"
+    },
+    {
+      "file": "app\\api\\search\\route.ts",
+      "language": "TypeScript"
+    },
+    {
+      "file": "app\\api\\test\\route.ts",
+      "language": "TypeScript"
+    },
+    {
+      "file": "app\\api\\test-db\\route.ts",
+      "language": "TypeScript"
+    },
+    {
+      "file": "app\\api\\test-topics\\route.ts",
+      "language": "TypeScript"
+    },
+    {
+      "file": "app\\api\\topics\\[topic]\\route.ts",
+      "language": "TypeScript"
+    },
+    {
+      "file": "app\\api\\topics\\route.ts",
+      "language": "TypeScript"
+    },
+    {
+      "file": "app\\api\\topics-simple\\[topic]\\route.ts",
+      "language": "TypeScript"
+    },
+    {
+      "file": "app\\api\\topicstar\\[topic]\\route.ts",
+      "language": "TypeScript"
+    },
+    {
+      "file": "app\\api\\topicstar\\route.ts",
+      "language": "TypeScript"
+    },
+    {
+      "file": "app\\api\\trending\\route.ts",
+      "language": "TypeScript"
+    },
+    {
+      "file": "app\\global-error.tsx",
+      "language": "TypeScript"
+    },
+    {
+      "file": "app\\home-client.tsx",
+      "language": "TypeScript"
+    },
+    {
+      "file": "app\\layout.tsx",
+      "language": "TypeScript"
+    },
+    {
+      "file": "app\\manifest.ts",
+      "language": "TypeScript"
+    },
+    {
+      "file": "app\\metadata.ts",
+      "language": "TypeScript"
+    },
+    {
+      "file": "app\\page.tsx",
+      "language": "TypeScript"
+    },
+    {
+      "file": "app\\robots.ts",
+      "language": "TypeScript"
+    },
+    {
+      "file": "app\\sitemap.ts",
+      "language": "TypeScript"
+    },
+    {
+      "file": "app\\topic\\[topic]\\page.tsx",
+      "language": "TypeScript"
+    },
+    {
+      "file": "app\\topic\\[topic]\\test.tsx",
+      "language": "TypeScript"
+    },
+    {
+      "file": "app\\topic\\page.tsx",
+      "language": "TypeScript"
+    },
+    {
+      "file": "app\\topicstar\\[topic]\\page.tsx",
+      "language": "TypeScript"
+    },
+    {
+      "file": "app\\topicstar\\[topic]\\test.tsx",
+      "language": "TypeScript"
+    },
+    {
+      "file": "app\\topicstar\\page.tsx",
+      "language": "TypeScript"
+    },
+    {
+      "file": "cloudflare-env.d.ts",
+      "language": "TypeScript"
+    },
+    {
+      "file": "components\\DatePicker.tsx",
+      "language": "TypeScript"
+    },
+    {
+      "file": "components\\LanguageTabs.tsx",
+      "language": "TypeScript"
+    },
+    {
+      "file": "components\\Pagination.tsx",
+      "language": "TypeScript"
+    },
+    {
+      "file": "components\\PeriodSelector.tsx",
+      "language": "TypeScript"
+    },
+    {
+      "file": "components\\RepoCard.tsx",
+      "language": "TypeScript"
+    },
+    {
+      "file": "components\\SearchComponent.tsx",
+      "language": "TypeScript"
+    },
+    {
+      "file": "components\\SEOHead.tsx",
+      "language": "TypeScript"
+    },
+    {
+      "file": "components\\StructuredData.tsx",
+      "language": "TypeScript"
+    },
+    {
+      "file": "components\\TopicNavigation.tsx",
+      "language": "TypeScript"
+    },
+    {
+      "file": "lib\\supabase.ts",
+      "language": "TypeScript"
+    },
+    {
+      "file": "open-next.config.ts",
+      "language": "TypeScript"
+    },
+    {
+      "file": "scripts\\import-data.ts",
+      "language": "TypeScript"
+    },
+    {
+      "file": "scripts\\setup-database.ts",
+      "language": "TypeScript"
+    },
+    {
+      "file": "types\\database.ts",
+      "language": "TypeScript"
+    }
+  ],
+  "edges": []
+}

@@ -1,0 +1,9 @@
+{
+  "total_files": 43,
+  "total_dependencies": 0,
+  "circular_dependencies": 0,
+  "strongly_connected_components": 43,
+  "avg_dependencies_per_file": 0.0,
+  "files_with_no_dependencies": 43,
+  "files_not_imported": 43
+}
