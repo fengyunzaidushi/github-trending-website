@@ -1,0 +1,8 @@
+interface:
+  display_name: "GitHub Trending Report"
+  short_description: "Analyze GitHub Trending from Supabase snapshots."
+  default_prompt: "Use $github-trending-report to summarize the latest GitHub Trending data for this project."
+
+policy:
+  allow_implicit_invocation: true
+
