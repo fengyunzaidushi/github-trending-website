@@ -260,6 +260,7 @@ export interface Repository {
   language?: string
   owner?: string
   repo_name?: string
+  overview?: string
   created_at: string
   updated_at: string
 }

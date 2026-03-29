@@ -50,8 +50,8 @@ export default function RepoCard({ repo, showRank = true }: RepoCardProps) {
             </span>
           )}
           <div>
-            <Link 
-              href={repo.url} 
+            <Link
+              href={repo.url}
               target="_blank"
               rel="noopener noreferrer"
               className="text-lg font-semibold text-blue-600 dark:text-blue-400 hover:underline"
@@ -60,7 +60,7 @@ export default function RepoCard({ repo, showRank = true }: RepoCardProps) {
             </Link>
             {repo.language && (
               <div className="flex items-center gap-2 mt-1">
-                <span 
+                <span
                   className={`w-3 h-3 rounded-full ${getLanguageColor(repo.language)}`}
                 ></span>
                 <span className="text-sm text-gray-600 dark:text-gray-400">
@@ -70,7 +70,7 @@ export default function RepoCard({ repo, showRank = true }: RepoCardProps) {
             )}
           </div>
         </div>
-        
+
         <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400">
           <div className="flex items-center gap-1">
             <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
@@ -78,14 +78,14 @@ export default function RepoCard({ repo, showRank = true }: RepoCardProps) {
             </svg>
             <span>{formatNumber(repo.stars)}</span>
           </div>
-          
+
           <div className="flex items-center gap-1">
             <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M7.707 3.293a1 1 0 010 1.414L5.414 7H11a7 7 0 017 7v2a1 1 0 11-2 0v-2a5 5 0 00-5-5H5.414l2.293 2.293a1 1 0 11-1.414 1.414L2.586 7l3.707-3.707a1 1 0 011.414 0z" clipRule="evenodd" />
             </svg>
             <span>{formatNumber(repo.forks)}</span>
           </div>
-          
+
           {repo.stars_today > 0 && (
             <div className="flex items-center gap-1 text-green-600 dark:text-green-400">
               <span>+{formatNumber(repo.stars_today)}</span>
@@ -94,14 +94,20 @@ export default function RepoCard({ repo, showRank = true }: RepoCardProps) {
           )}
         </div>
       </div>
-      
+
       <div className="space-y-2">
+        {repo.overview && (
+          <div className="text-gray-800 dark:text-gray-200 text-sm leading-relaxed bg-gray-50 dark:bg-gray-700/50 p-3 rounded-md border border-gray-100 dark:border-gray-600">
+            {repo.overview.length > 300 ? repo.overview.slice(0, 300) + '...' : repo.overview}
+          </div>
+        )}
+
         {repo.zh_description && (
           <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
             {repo.zh_description}
           </p>
         )}
-        
+
         {repo.description && (
           <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
             {repo.description}
