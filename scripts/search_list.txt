@@ -1,0 +1,6 @@
+小说|novel|webnovel|网文|fiction|story|写作|writing|reader|阅读器
+agent|智能体|copilot|ai agent|autonomous|bot|assistant|助手|代理
+记忆|memory|memorize|flashcard|spaced repetition|RAG|记忆库
+笔记|note|notes|memo|obsidian|notion|logseq|知识库|双链
+语义搜索|semantic search|vector search|向量搜索|embedding|相似度搜索|faiss|chroma|milvus|qdrant
+Agent上下文|agent context|上下文管理|context management|上下文数据库|context database|长文本|long context|记忆提取|memory extraction|会话管理|session management
