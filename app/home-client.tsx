@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
 import RepoCard from '@/components/RepoCard'
@@ -12,18 +12,20 @@ import StructuredData from '@/components/StructuredData'
 import { TrendingRepo, TrendingCategory, TrendingPeriod, LanguageStats } from '@/types/database'
 
 interface HomeClientProps {
-  searchParams: { 
+  searchParams: {
     date?: string;
     category?: string;
     period?: string;
     q?: string;
   }
+  initialData?: TrendingRepo[]
+  initialLanguageStats?: LanguageStats[]
 }
 
-export default function HomeClient({ searchParams }: HomeClientProps) {
+export default function HomeClient({ searchParams, initialData = [], initialLanguageStats = [] }: HomeClientProps) {
   const router = useRouter()
-  const [repos, setRepos] = useState<TrendingRepo[]>([])
-  const [languageStats, setLanguageStats] = useState<LanguageStats[]>([])
+  const [repos, setRepos] = useState<TrendingRepo[]>(initialData)
+  const [languageStats, setLanguageStats] = useState<LanguageStats[]>(initialLanguageStats)
   const [currentCategory, setCurrentCategory] = useState<TrendingCategory>(
     (searchParams.category as TrendingCategory) || 'all'
   )
@@ -33,10 +35,11 @@ export default function HomeClient({ searchParams }: HomeClientProps) {
   const [selectedDate, setSelectedDate] = useState<string>(
     searchParams.date || new Date().toISOString().split('T')[0]
   )
-  const [loading, setLoading] = useState(true)
+  // 如果有 SSR 预取数据则初始不 loading，否则等待客户端请求
+  const [loading, setLoading] = useState(initialData.length === 0 && !searchParams.q)
   const [error, setError] = useState<string | null>(null)
   const [isSearchMode, setIsSearchMode] = useState(!!searchParams.q)
-  const [searchResults, setSearchResults] = useState<TrendingRepo[]>([])  
+  const [searchResults, setSearchResults] = useState<TrendingRepo[]>([])
   const [searchLoading, setSearchLoading] = useState(false)
   const [lastSearchParams, setLastSearchParams] = useState<SearchParams | null>(null)
 
@@ -44,19 +47,19 @@ export default function HomeClient({ searchParams }: HomeClientProps) {
     try {
       setLoading(true)
       setError(null)
-      
+
       console.log('Fetching trending data:', { category, period, date: date || selectedDate })
-      
+
       const targetDate = date || selectedDate
       const response = await fetch(`/api/trending?category=${category}&period=${period}&pageSize=25&date=${targetDate}`)
-      
+
       console.log('Response status:', response.status)
-      
+
       if (!response.ok) {
         const errorData = await response.json() as { error?: string }
         throw new Error(errorData.error || 'Failed to fetch trending data')
       }
-      
+
       const data = await response.json() as { data?: TrendingRepo[] }
       console.log('Received data:', data)
       setRepos(data.data || [])
@@ -71,18 +74,18 @@ export default function HomeClient({ searchParams }: HomeClientProps) {
   const fetchLanguageStats = useCallback(async (date?: string) => {
     try {
       console.log('Fetching language stats for date:', date || selectedDate)
-      
+
       const targetDate = date || selectedDate
       const response = await fetch(`/api/languages?date=${targetDate}`)
-      
+
       console.log('Languages response status:', response.status)
-      
+
       if (!response.ok) {
         const errorData = await response.json() as { error?: string }
         console.error('Languages API error:', errorData)
         return
       }
-      
+
       const data = await response.json() as { data?: LanguageStats[] }
       console.log('Language stats data:', data)
       setLanguageStats(data.data || [])
@@ -110,38 +113,38 @@ export default function HomeClient({ searchParams }: HomeClientProps) {
       setError(null)
       setIsSearchMode(true)
       setLastSearchParams(searchParams)
-      
+
       // 更新URL
       updateUrl({ q: searchParams.query, category: searchParams.category, period: searchParams.period })
-      
+
       console.log('Searching with params:', searchParams)
-      
+
       const params = new URLSearchParams({
         q: searchParams.query,
         category: searchParams.category,
         period: searchParams.period,
         pageSize: '25'
       })
-      
+
       if (searchParams.language) {
         params.append('language', searchParams.language)
       }
-      
+
       if (searchParams.minStars) {
         params.append('minStars', searchParams.minStars.toString())
       }
-      
+
       if (searchParams.searchField && searchParams.searchField !== 'all') {
         params.append('searchField', searchParams.searchField)
       }
-      
+
       const response = await fetch(`/api/search?${params.toString()}`)
-      
+
       if (!response.ok) {
         const errorData = await response.json() as { error?: string }
         throw new Error(errorData.error || 'Search failed')
       }
-      
+
       const data = await response.json() as { data?: TrendingRepo[] }
       console.log('Search results:', data)
       setSearchResults(data.data || [])
@@ -152,7 +155,7 @@ export default function HomeClient({ searchParams }: HomeClientProps) {
       setSearchLoading(false)
     }
   }
-  
+
   const handleBackToTrending = () => {
     setIsSearchMode(false)
     setSearchResults([])
@@ -171,18 +174,37 @@ export default function HomeClient({ searchParams }: HomeClientProps) {
         searchField: 'all'
       })
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchParams.q])
 
+  // SSR 预取的初始数据已填充，只在参数变化时重新请求
+  const isInitialMount = useRef(true)
   useEffect(() => {
+    if (isInitialMount.current) {
+      // 跳过首次挂载（已有 SSR 数据）
+      isInitialMount.current = false
+      // 如果没有 SSR 数据（比如首次无数据）才发起请求
+      if (initialData.length === 0 && !isSearchMode) {
+        fetchTrendingData(currentCategory, currentPeriod)
+      }
+      return
+    }
     if (!isSearchMode) {
       fetchTrendingData(currentCategory, currentPeriod)
     }
   }, [currentCategory, currentPeriod, selectedDate, fetchTrendingData, isSearchMode])
 
   useEffect(() => {
+    if (initialLanguageStats.length === 0) {
+      fetchLanguageStats()
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+  useEffect(() => {
     fetchLanguageStats()
-  }, [selectedDate, fetchLanguageStats])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [selectedDate])
 
   const handleCategoryChange = (category: TrendingCategory) => {
     setCurrentCategory(category)
@@ -217,13 +239,13 @@ export default function HomeClient({ searchParams }: HomeClientProps) {
 
   return (
     <>
-      <StructuredData 
-        repos={displayRepos} 
-        date={selectedDate} 
-        category={currentCategory} 
-        period={currentPeriod} 
+      <StructuredData
+        repos={displayRepos}
+        date={selectedDate}
+        category={currentCategory}
+        period={currentPeriod}
       />
-      
+
       <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
         {/* Fixed Header and Search Section */}
         <div className="fixed top-0 left-0 right-0 z-50 bg-white dark:bg-gray-800 shadow-lg border-b border-gray-200 dark:border-gray-700">
@@ -238,30 +260,30 @@ export default function HomeClient({ searchParams }: HomeClientProps) {
                   <span className="ml-3 text-sm text-gray-500 dark:text-gray-400">
                     实时追踪最热门的开源项目
                   </span>
-                  
+
                   {/* Navigation Links */}
                   <nav className="ml-6 flex items-center gap-4">
-                    <Link 
-                      href="/topic" 
+                    <Link
+                      href="/topic"
                       className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors text-sm font-medium"
                     >
                       主题
                     </Link>
-                    <Link 
-                      href="/topic/claude-code" 
+                    <Link
+                      href="/topic/claude-code"
                       className="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors text-sm font-medium"
                     >
                       Claude Code
                     </Link>
                   </nav>
                 </div>
-                
+
                 <div className="flex items-center gap-4">
-                  <DatePicker 
+                  <DatePicker
                     selectedDate={selectedDate}
                     onDateChange={handleDateChange}
                   />
-                  <PeriodSelector 
+                  <PeriodSelector
                     currentPeriod={currentPeriod}
                     onPeriodChange={handlePeriodChange}
                   />
@@ -272,7 +294,7 @@ export default function HomeClient({ searchParams }: HomeClientProps) {
 
           {/* Search Component */}
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 bg-white dark:bg-gray-800">
-            <SearchComponent 
+            <SearchComponent
               onSearch={handleSearch}
               isLoading={searchLoading}
               currentCategory={currentCategory}
@@ -286,7 +308,7 @@ export default function HomeClient({ searchParams }: HomeClientProps) {
 
         {/* Main Content */}
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          
+
           {/* Search Results Header */}
           {isSearchMode && (
             <div className="mb-6 flex items-center justify-between">
@@ -309,7 +331,7 @@ export default function HomeClient({ searchParams }: HomeClientProps) {
 
           {/* Language Tabs - 只在非搜索模式显示 */}
           {!isSearchMode && (
-            <LanguageTabs 
+            <LanguageTabs
               currentCategory={currentCategory}
               onCategoryChange={handleCategoryChange}
               languageStats={languageStats}
@@ -330,7 +352,7 @@ export default function HomeClient({ searchParams }: HomeClientProps) {
               <div className="text-center py-12">
                 <div className="text-red-500 text-lg mb-2">❌ 搜索失败</div>
                 <div className="text-gray-600 dark:text-gray-400">{error}</div>
-                <button 
+                <button
                   onClick={() => lastSearchParams && handleSearch(lastSearchParams)}
                   className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
                 >
@@ -359,9 +381,9 @@ export default function HomeClient({ searchParams }: HomeClientProps) {
                 {/* Search Results List */}
                 <div className="grid gap-6 md:grid-cols-1 lg:grid-cols-1">
                   {searchResults.map((repo) => (
-                    <RepoCard 
-                      key={repo.id} 
-                      repo={repo} 
+                    <RepoCard
+                      key={repo.id}
+                      repo={repo}
                       showRank={false}
                     />
                   ))}
@@ -381,7 +403,7 @@ export default function HomeClient({ searchParams }: HomeClientProps) {
               <div className="text-center py-12">
                 <div className="text-red-500 text-lg mb-2">❌ 加载失败</div>
                 <div className="text-gray-600 dark:text-gray-400">{error}</div>
-                <button 
+                <button
                   onClick={() => fetchTrendingData(currentCategory, currentPeriod)}
                   className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
                 >
@@ -410,9 +432,9 @@ export default function HomeClient({ searchParams }: HomeClientProps) {
                 {/* Repository List */}
                 <div className="grid gap-6 md:grid-cols-1 lg:grid-cols-1">
                   {repos.map((repo) => (
-                    <RepoCard 
-                      key={repo.id} 
-                      repo={repo} 
+                    <RepoCard
+                      key={repo.id}
+                      repo={repo}
                       showRank={true}
                     />
                   ))}

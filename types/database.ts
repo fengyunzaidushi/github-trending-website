@@ -231,6 +231,7 @@ export interface Database {
           url: string
           description: string | null
           zh_description: string | null
+          overview: string | null
           language: string | null
           owner: string | null
           repo_name: string | null

@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { Suspense } from "react";
 import HomeClient from "./home-client";
+import { supabaseAdmin } from "@/lib/supabase";
+import { TrendingRepo, LanguageStats } from "@/types/database";
 
 interface PageProps {
-  searchParams: Promise<{ 
+  searchParams: Promise<{
     date?: string;
     category?: string;
     period?: string;
@@ -17,20 +19,19 @@ export async function generateMetadata({ searchParams }: PageProps): Promise<Met
   const category = params.category || 'all';
   const period = params.period || 'daily';
   const query = params.q;
-  
+
   const periodText = {
     daily: '日榜',
-    weekly: '周榜', 
+    weekly: '周榜',
     monthly: '月榜'
   }[period] || '日榜';
-  
+
   const categoryText = category === 'all' ? '全部语言' : category;
-  
-  // 如果是搜索页面
+
   if (query) {
     const title = `搜索"${query}" - GitHub Trending`;
     const description = `在GitHub trending repositories中搜索"${query}"相关的热门开源项目。发现最新的代码库和开发工具。`;
-    
+
     return {
       title,
       description,
@@ -58,8 +59,7 @@ export async function generateMetadata({ searchParams }: PageProps): Promise<Met
       }
     };
   }
-  
-  // 常规页面
+
   const title = `GitHub Trending ${periodText} - ${categoryText} (${date})`;
   const description = `查看${date}的GitHub ${periodText}热门开源项目。包含${categoryText}的最新趋势仓库，实时更新GitHub trending repositories排行榜。发现最热门的开源代码和项目。`;
 
@@ -115,7 +115,40 @@ export async function generateMetadata({ searchParams }: PageProps): Promise<Met
 
 export default async function HomePage({ searchParams }: PageProps) {
   const params = await searchParams;
-  
+  const today = new Date().toISOString().split('T')[0];
+
+  // 搜索模式不在服务端预取（搜索词来自用户输入）
+  const isSearchMode = !!params.q;
+
+  let initialData: TrendingRepo[] = [];
+  let initialLanguageStats: LanguageStats[] = [];
+
+  if (!isSearchMode) {
+    const date = params.date || today;
+    const category = params.category || 'all';
+    const period = params.period || 'daily';
+
+    // 服务端并行预取 trending 和 language 数据，消除首屏 loading
+    const [trendingResult, languageResult] = await Promise.all([
+      supabaseAdmin.rpc('get_trending_repos', {
+        target_date: date,
+        target_category: category,
+        target_period: period,
+        limit_count: 25,
+      }),
+      supabaseAdmin.rpc('get_language_stats', {
+        target_date: date,
+      }),
+    ]);
+
+    if (!trendingResult.error && trendingResult.data) {
+      initialData = trendingResult.data as unknown as TrendingRepo[];
+    }
+    if (!languageResult.error && languageResult.data) {
+      initialLanguageStats = languageResult.data as LanguageStats[];
+    }
+  }
+
   return (
     <>
       <Suspense fallback={
@@ -123,7 +156,11 @@ export default async function HomePage({ searchParams }: PageProps) {
           <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500"></div>
         </div>
       }>
-        <HomeClient searchParams={params} />
+        <HomeClient
+          searchParams={params}
+          initialData={initialData}
+          initialLanguageStats={initialLanguageStats}
+        />
       </Suspense>
     </>
   );

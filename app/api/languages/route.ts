@@ -22,6 +22,10 @@ export async function GET(request: NextRequest) {
       return NextResponse.json({
         data: functionData,
         date
+      }, {
+        headers: {
+          'Cache-Control': 'public, s-maxage=600, stale-while-revalidate=1200'
+        }
       })
     }
 
@@ -82,6 +86,10 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({
       data: result,
       date
+    }, {
+      headers: {
+        'Cache-Control': 'public, s-maxage=600, stale-while-revalidate=1200'
+      }
     })
 
   } catch (error) {
