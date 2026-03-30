@@ -45,6 +45,7 @@ export async function GET(request: NextRequest) {
           language,
           owner,
           repo_name,
+          overview,
           trending_data!inner(
             date,
             category,
@@ -78,6 +79,7 @@ export async function GET(request: NextRequest) {
           language: repo.language,
           owner: repo.owner,
           repo_name: repo.repo_name,
+          overview: repo.overview,
           stars: repo.trending_data[0]?.stars || 0,
           forks: repo.trending_data[0]?.forks || 0,
           stars_today: repo.trending_data[0]?.stars_today || 0,

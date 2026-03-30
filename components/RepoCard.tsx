@@ -7,6 +7,8 @@ interface RepoCardProps {
 }
 
 export default function RepoCard({ repo, showRank = true }: RepoCardProps) {
+  console.log('RepoCard rendered with repo data:', { name: repo.name, overview: repo.overview });
+
   const formatNumber = (num: number) => {
     if (num >= 1000000) {
       return (num / 1000000).toFixed(1) + 'M'
