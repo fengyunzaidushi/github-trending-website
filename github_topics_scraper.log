@@ -1,0 +1,610 @@
+2026-05-17 14:36:45,973 - INFO - Found 8 GitHub tokens
+2026-05-17 14:36:45,973 - INFO - Starting to scrape GitHub topic: agent-memory
+2026-05-17 14:36:45,974 - INFO - === Page 1 ===
+2026-05-17 14:36:45,974 - INFO - Scraping: https://github.com/topics/agent-memory
+2026-05-17 14:36:47,399 - INFO - Found 20 repos using selector: article.border
+2026-05-17 14:36:47,957 - INFO - ✓ Extracted: 666ghj/MiroFish (60967 stars)
+2026-05-17 14:36:48,666 - INFO - ✓ Extracted: pingcap/tidb (40096 stars)
+2026-05-17 14:36:49,362 - INFO - ✓ Extracted: dolthub/dolt (22732 stars)
+2026-05-17 14:36:50,049 - INFO - ✓ Extracted: supermemoryai/supermemory (22595 stars)
+2026-05-17 14:36:50,767 - INFO - ✓ Extracted: MemoriLabs/Memori (14543 stars)
+2026-05-17 14:36:51,474 - INFO - ✓ Extracted: NevaMind-AI/memU (13645 stars)
+2026-05-17 14:36:52,156 - INFO - ✓ Extracted: EverMind-AI/EverOS (4854 stars)
+2026-05-17 14:36:52,856 - INFO - ✓ Extracted: plastic-labs/honcho (3573 stars)
+2026-05-17 14:36:53,491 - INFO - ✓ Extracted: FlowElement-ai/m_flow (3339 stars)
+2026-05-17 14:36:54,655 - INFO - ✓ Extracted: kayba-ai/agentic-context-engine (2224 stars)
+2026-05-17 14:36:55,354 - INFO - ✓ Extracted: trustgraph-ai/trustgraph (2090 stars)
+2026-05-17 14:36:56,051 - INFO - ✓ Extracted: doobidoo/mcp-memory-service (1850 stars)
+2026-05-17 14:36:56,151 - WARNING - No valid repo link found in element
+2026-05-17 14:36:56,761 - INFO - ✓ Extracted: Bitterbot-AI/bitterbot-desktop (1709 stars)
+2026-05-17 14:36:57,464 - INFO - ✓ Extracted: Prismer-AI/PrismerCloud (1529 stars)
+2026-05-17 14:36:58,174 - INFO - ✓ Extracted: Hawksight-AI/semantica (1153 stars)
+2026-05-17 14:36:58,837 - INFO - ✓ Extracted: ai-boost/awesome-harness-engineering (946 stars)
+2026-05-17 14:36:59,477 - INFO - ✓ Extracted: jmerelnyc/Photo-agents (899 stars)
+2026-05-17 14:37:00,200 - INFO - ✓ Extracted: IAAR-Shanghai/Awesome-AI-Memory (881 stars)
+2026-05-17 14:37:00,858 - INFO - ✓ Extracted: 24kchengYe/MemoMind (715 stars)
+2026-05-17 14:37:00,967 - INFO - Found pagination form: next page = 2
+2026-05-17 14:37:00,968 - INFO - Next URL: https://github.com/topics/agent-memory?page=2
+2026-05-17 14:37:00,968 - INFO - Page 1: 19 repos, Total: 19
+2026-05-17 14:37:01,969 - INFO - === Page 2 ===
+2026-05-17 14:37:01,969 - INFO - Scraping: https://github.com/topics/agent-memory?page=2
+2026-05-17 14:37:03,151 - INFO - Found 20 repos using selector: article.border
+2026-05-17 14:37:04,152 - INFO - ✓ Extracted: Shy2593666979/AgentChat (715 stars)
+2026-05-17 14:37:04,858 - INFO - ✓ Extracted: cortexkit/magic-context (630 stars)
+2026-05-17 14:37:05,574 - INFO - ✓ Extracted: neo4j-labs/create-context-graph (579 stars)
+2026-05-17 14:37:06,280 - INFO - ✓ Extracted: swarmclawai/swarmclaw (488 stars)
+2026-05-17 14:37:07,000 - INFO - ✓ Extracted: swarmclawai/swarmvault (454 stars)
+2026-05-17 14:37:07,635 - INFO - ✓ Extracted: AVIDS2/memorix (449 stars)
+2026-05-17 14:37:08,333 - INFO - ✓ Extracted: NevaMind-AI/memUBot (425 stars)
+2026-05-17 14:37:09,042 - INFO - ✓ Extracted: TeleAI-UAGI/Awesome-Agent-Memory (415 stars)
+2026-05-17 14:37:09,655 - INFO - ✓ Extracted: angelnicolasc/graymatter (375 stars)
+2026-05-17 14:37:10,283 - INFO - ✓ Extracted: NirDiamant/Agent_Memory_Techniques (323 stars)
+2026-05-17 14:37:10,917 - INFO - ✓ Extracted: aayoawoyemi/Ori-Mnemos (302 stars)
+2026-05-17 14:37:11,625 - INFO - ✓ Extracted: DEEP-PolyU/Awesome-GraphMemory (269 stars)
+2026-05-17 14:37:12,287 - INFO - ✓ Extracted: Goldentrii/AgentRecall-MCP (252 stars)
+2026-05-17 14:37:12,986 - INFO - ✓ Extracted: yxf203/Awesome-Efficient-Agents (248 stars)
+2026-05-17 14:37:13,654 - INFO - ✓ Extracted: LycheeMem/LycheeMem (234 stars)
+2026-05-17 14:37:14,752 - INFO - ✓ Extracted: smaramwbc/statewave (220 stars)
+2026-05-17 14:37:15,672 - INFO - ✓ Extracted: LearnPrompt/cc-harness-skills (211 stars)
+2026-05-17 14:37:16,421 - INFO - ✓ Extracted: neo4j-labs/agent-memory (210 stars)
+2026-05-17 14:37:17,122 - INFO - ✓ Extracted: Prompthon-IO/agent-systems-handbook (202 stars)
+2026-05-17 14:37:17,752 - INFO - ✓ Extracted: iamtouchskyer/memex (201 stars)
+2026-05-17 14:37:17,854 - INFO - Found pagination form: next page = 3
+2026-05-17 14:37:17,854 - INFO - Next URL: https://github.com/topics/agent-memory?page=2&page=3
+2026-05-17 14:37:17,854 - INFO - Page 2: 20 repos, Total: 39
+2026-05-17 14:37:18,855 - INFO - === Page 3 ===
+2026-05-17 14:37:18,855 - INFO - Scraping: https://github.com/topics/agent-memory?page=2&page=3
+2026-05-17 14:37:20,052 - INFO - Found 20 repos using selector: article.border
+2026-05-17 14:37:21,085 - INFO - ✓ Extracted: mathomhaus/guild (190 stars)
+2026-05-17 14:37:21,782 - INFO - ✓ Extracted: mnemon-dev/mnemon (185 stars)
+2026-05-17 14:37:22,506 - INFO - ✓ Extracted: nowledge-co/nowledge-mem (181 stars)
+2026-05-17 14:37:23,186 - INFO - ✓ Extracted: syncable-dev/memtrace-public (169 stars)
+2026-05-17 14:37:23,865 - INFO - ✓ Extracted: eiondb/eion (155 stars)
+2026-05-17 14:37:24,505 - INFO - ✓ Extracted: kevin-hs-sohn/hipocampus (155 stars)
+2026-05-17 14:37:25,208 - INFO - ✓ Extracted: qualixar/superlocalmemory (150 stars)
+2026-05-17 14:37:25,879 - INFO - ✓ Extracted: JasonDocton/lucid-memory (149 stars)
+2026-05-17 14:37:26,628 - INFO - ✓ Extracted: Signet-AI/signetai (144 stars)
+2026-05-17 14:37:27,325 - INFO - ✓ Extracted: yantrikos/yantrikdb-server (144 stars)
+2026-05-17 14:37:27,997 - INFO - ✓ Extracted: dcostenco/prism-coder (133 stars)
+2026-05-17 14:37:28,645 - INFO - ✓ Extracted: fpytloun/mnemory (131 stars)
+2026-05-17 14:37:29,416 - INFO - ✓ Extracted: Facets-cloud/flow (130 stars)
+2026-05-17 14:37:30,081 - INFO - ✓ Extracted: TIMAN-group/PlugMem (130 stars)
+2026-05-17 14:37:30,726 - INFO - ✓ Extracted: NickCirv/engram (120 stars)
+2026-05-17 14:37:31,451 - INFO - ✓ Extracted: moorcheh-ai/memanto (104 stars)
+2026-05-17 14:37:32,164 - INFO - ✓ Extracted: ogham-mcp/ogham-mcp (104 stars)
+2026-05-17 14:37:32,842 - INFO - ✓ Extracted: mainline-org/mainline (102 stars)
+2026-05-17 14:37:33,543 - INFO - ✓ Extracted: ArgentAIOS/argentos-core (101 stars)
+2026-05-17 14:37:34,173 - INFO - ✓ Extracted: Kronic90/Mimir (97 stars)
+2026-05-17 14:37:34,277 - INFO - Found pagination form: next page = 4
+2026-05-17 14:37:34,278 - INFO - Next URL: https://github.com/topics/agent-memory?page=2&page=3&page=4
+2026-05-17 14:37:34,278 - INFO - Page 3: 20 repos, Total: 59
+2026-05-17 14:37:35,279 - INFO - === Page 4 ===
+2026-05-17 14:37:35,279 - INFO - Scraping: https://github.com/topics/agent-memory?page=2&page=3&page=4
+2026-05-17 14:37:36,495 - INFO - Found 20 repos using selector: article.border
+2026-05-17 14:37:37,021 - INFO - ✓ Extracted: GuyMannDude/mnemo-cortex (95 stars)
+2026-05-17 14:37:38,122 - INFO - ✓ Extracted: radimsem/remindb (93 stars)
+2026-05-17 14:37:38,782 - INFO - ✓ Extracted: nambok/mentedb (93 stars)
+2026-05-17 14:37:39,892 - INFO - ✓ Extracted: BennettSchwartz/membrane (93 stars)
+2026-05-17 14:37:40,577 - INFO - ✓ Extracted: XortexAI/XMem (91 stars)
+2026-05-17 14:37:41,235 - INFO - ✓ Extracted: kunwar-shah/claudex (88 stars)
+2026-05-17 14:37:41,922 - INFO - ✓ Extracted: Uranid/mnem (87 stars)
+2026-05-17 14:37:42,655 - INFO - ✓ Extracted: AgentToolkit/altk-evolve (84 stars)
+2026-05-17 14:37:43,311 - INFO - ✓ Extracted: mmethodz/dreamgraph (83 stars)
+2026-05-17 14:37:44,017 - INFO - ✓ Extracted: lerim-dev/lerim-cli (81 stars)
+2026-05-17 14:37:44,640 - INFO - ✓ Extracted: Agentscreator/engram-memory (81 stars)
+2026-05-17 14:37:45,332 - INFO - ✓ Extracted: nowledge-co/community (81 stars)
+2026-05-17 14:37:46,009 - INFO - ✓ Extracted: YuanchenBei/Mem-Gallery (80 stars)
+2026-05-17 14:37:47,086 - INFO - ✓ Extracted: aiurda/cursor10x-mcp (79 stars)
+2026-05-17 14:37:47,706 - INFO - ✓ Extracted: AIPMAndy/dna-memory (78 stars)
+2026-05-17 14:37:48,368 - INFO - ✓ Extracted: kennethlaw325/awesome-llm-knowledge-systems (77 stars)
+2026-05-17 14:37:49,028 - INFO - ✓ Extracted: buildingjoshbetter/TrueMemory (77 stars)
+2026-05-17 14:37:49,715 - INFO - ✓ Extracted: MemTensor/MemPrivacy (75 stars)
+2026-05-17 14:37:50,343 - INFO - ✓ Extracted: joshuaswarren/remnic (73 stars)
+2026-05-17 14:37:50,994 - INFO - ✓ Extracted: baryhuang/mcp-openmemory (72 stars)
+2026-05-17 14:37:51,096 - INFO - Found pagination form: next page = 5
+2026-05-17 14:37:51,096 - INFO - Next URL: https://github.com/topics/agent-memory?page=2&page=3&page=4&page=5
+2026-05-17 14:37:51,096 - INFO - Page 4: 20 repos, Total: 79
+2026-05-17 14:37:52,097 - INFO - === Page 5 ===
+2026-05-17 14:37:52,097 - INFO - Scraping: https://github.com/topics/agent-memory?page=2&page=3&page=4&page=5
+2026-05-17 14:37:53,203 - INFO - Found 20 repos using selector: article.border
+2026-05-17 14:37:53,727 - INFO - ✓ Extracted: laborany/laborany (65 stars)
+2026-05-17 14:37:54,386 - INFO - ✓ Extracted: codejunkie99/brain (63 stars)
+2026-05-17 14:37:55,026 - INFO - ✓ Extracted: samfoy/pi-memory (61 stars)
+2026-05-17 14:37:55,685 - INFO - ✓ Extracted: Battam1111/Myco (61 stars)
+2026-05-17 14:37:56,310 - INFO - ✓ Extracted: JKHeadley/instar (60 stars)
+2026-05-17 14:37:56,959 - INFO - ✓ Extracted: oneal2000/SR-Agents (60 stars)
+2026-05-17 14:37:57,603 - INFO - ✓ Extracted: amanhij/Zikkaron (59 stars)
+2026-05-17 14:37:58,250 - INFO - ✓ Extracted: kromahlusenii-ops/ham (57 stars)
+2026-05-17 14:37:58,941 - INFO - ✓ Extracted: ldclabs/anda-hippocampus (55 stars)
+2026-05-17 14:37:59,615 - INFO - ✓ Extracted: backnotprop/rg_history (52 stars)
+2026-05-17 14:38:00,793 - INFO - ✓ Extracted: hermes-labs-ai/zer0dex (52 stars)
+2026-05-17 14:38:01,431 - INFO - ✓ Extracted: finewood2008/centaur-loop (50 stars)
+2026-05-17 14:38:02,110 - INFO - ✓ Extracted: jo-inc/pi-mem (49 stars)
+2026-05-17 14:38:03,240 - INFO - ✓ Extracted: ruvnet/agentdb (47 stars)
+2026-05-17 14:38:03,961 - INFO - ✓ Extracted: personizeai/governed-memory (48 stars)
+2026-05-17 14:38:04,612 - INFO - ✓ Extracted: roampal-ai/roampal-core (46 stars)
+2026-05-17 14:38:05,347 - INFO - ✓ Extracted: raia-live/amfs (45 stars)
+2026-05-17 14:38:05,989 - INFO - ✓ Extracted: remete618/widemem-ai (45 stars)
+2026-05-17 14:38:06,649 - INFO - ✓ Extracted: aiurda/devcontext (45 stars)
+2026-05-17 14:38:07,349 - INFO - ✓ Extracted: markus-global/markus (44 stars)
+2026-05-17 14:38:07,452 - INFO - Found pagination form: next page = 6
+2026-05-17 14:38:07,452 - INFO - Next URL: https://github.com/topics/agent-memory?page=2&page=3&page=4&page=5&page=6
+2026-05-17 14:38:07,452 - INFO - Page 5: 20 repos, Total: 99
+2026-05-17 14:38:08,453 - INFO - === Page 6 ===
+2026-05-17 14:38:08,453 - INFO - Scraping: https://github.com/topics/agent-memory?page=2&page=3&page=4&page=5&page=6
+2026-05-17 14:38:09,642 - INFO - Found 20 repos using selector: article.border
+2026-05-17 14:38:10,670 - INFO - ✓ Extracted: RBKunnela/ALMA-memory (43 stars)
+2026-05-17 14:38:11,336 - INFO - ✓ Extracted: AlekseiUL/openclaw-superagent (39 stars)
+2026-05-17 14:38:11,985 - INFO - ✓ Extracted: AIAnytime/Agent-Memory-Playground (38 stars)
+2026-05-17 14:38:12,604 - INFO - ✓ Extracted: diegoxtr/ctx-open (37 stars)
+2026-05-17 14:38:13,269 - INFO - ✓ Extracted: NeoLi00/openclaw-memx (36 stars)
+2026-05-17 14:38:13,913 - INFO - ✓ Extracted: breath57/how-ai-agents-remember (35 stars)
+2026-05-17 14:38:14,609 - INFO - ✓ Extracted: langchain-ai/agents-from-scratch-ts (33 stars)
+2026-05-17 14:38:15,353 - INFO - ✓ Extracted: jcartu/rasputin-memory (33 stars)
+2026-05-17 14:38:16,012 - INFO - ✓ Extracted: mpazik/Binder (32 stars)
+2026-05-17 14:38:16,673 - INFO - ✓ Extracted: johnymontana/openclaw-neo4j-agent-memory-plugin (32 stars)
+2026-05-17 14:38:17,346 - INFO - ✓ Extracted: hatawong/claude-recap (32 stars)
+2026-05-17 14:38:18,080 - INFO - ✓ Extracted: Sankhya-AI/Dhee (31 stars)
+2026-05-17 14:38:19,320 - INFO - ✓ Extracted: Vela-Engineering/kuzu (30 stars)
+2026-05-17 14:38:20,026 - INFO - ✓ Extracted: Felo-Inc/memclaw (30 stars)
+2026-05-17 14:38:20,722 - INFO - ✓ Extracted: Agent-Mem-Tools/agent-memory-store (29 stars)
+2026-05-17 14:38:21,360 - INFO - ✓ Extracted: howardpen9/hermes-gbrain-bridge (29 stars)
+2026-05-17 14:38:22,070 - INFO - ✓ Extracted: zjunlp/MemBase (28 stars)
+2026-05-17 14:38:22,734 - INFO - ✓ Extracted: phenomenoner/openclaw-mem (28 stars)
+2026-05-17 14:38:23,407 - INFO - ✓ Extracted: pouyahasanamreji/continuum (28 stars)
+2026-05-17 14:38:24,502 - INFO - ✓ Extracted: smarzola/hermes-local-memory (28 stars)
+2026-05-17 14:38:24,606 - INFO - Found pagination form: next page = 7
+2026-05-17 14:38:24,606 - INFO - Next URL: https://github.com/topics/agent-memory?page=2&page=3&page=4&page=5&page=6&page=7
+2026-05-17 14:38:24,606 - INFO - Page 6: 20 repos, Total: 119
+2026-05-17 14:38:25,607 - INFO - === Page 7 ===
+2026-05-17 14:38:25,607 - INFO - Scraping: https://github.com/topics/agent-memory?page=2&page=3&page=4&page=5&page=6&page=7
+2026-05-17 14:38:26,773 - INFO - Found 20 repos using selector: article.border
+2026-05-17 14:38:27,309 - INFO - ✓ Extracted: benjaminsehl/agent-kernel (27 stars)
+2026-05-17 14:38:28,009 - INFO - ✓ Extracted: major7apps/pensyve (26 stars)
+2026-05-17 14:38:28,739 - INFO - ✓ Extracted: AvatarMemory/CloneMemBench (26 stars)
+2026-05-17 14:38:29,906 - INFO - ✓ Extracted: agynio/claude-map-reduce-memory (26 stars)
+2026-05-17 14:38:30,551 - INFO - ✓ Extracted: TJCurnutte/memory-hive (26 stars)
+2026-05-17 14:38:31,688 - INFO - ✓ Extracted: kalamstack/KalamDB (25 stars)
+2026-05-17 14:38:32,351 - INFO - ✓ Extracted: aiurda/cursor10x (25 stars)
+2026-05-17 14:38:32,996 - INFO - ✓ Extracted: robotmem/robotmem (24 stars)
+2026-05-17 14:38:33,631 - INFO - ✓ Extracted: bgreenwell/dotagents (24 stars)
+2026-05-17 14:38:34,331 - INFO - ✓ Extracted: SuperagenticAI/specmem (23 stars)
+2026-05-17 14:38:35,039 - INFO - ✓ Extracted: phasespace-labs/palinode (23 stars)
+2026-05-17 14:38:35,719 - INFO - ✓ Extracted: markmhendrickson/neotoma (23 stars)
+2026-05-17 14:38:36,382 - INFO - ✓ Extracted: AllenMaxi/ContextGraph (21 stars)
+2026-05-17 14:38:37,516 - INFO - ✓ Extracted: huisezhiyin/agent-experience-capitalization (21 stars)
+2026-05-17 14:38:38,181 - INFO - ✓ Extracted: anthony-maio/mnemos (21 stars)
+2026-05-17 14:38:39,279 - INFO - ✓ Extracted: TheSylvester/crispy (21 stars)
+2026-05-17 14:38:40,353 - INFO - ✓ Extracted: norika1207-lab/afu-brain (21 stars)
+2026-05-17 14:38:40,997 - INFO - ✓ Extracted: kuitos/opencode-claude-memory (21 stars)
+2026-05-17 14:38:41,672 - INFO - ✓ Extracted: chappyasel/meta-kb (21 stars)
+2026-05-17 14:38:42,356 - INFO - ✓ Extracted: yantrikos/yantrikdb (20 stars)
+2026-05-17 14:38:42,458 - INFO - Found pagination form: next page = 8
+2026-05-17 14:38:42,458 - INFO - Next URL: https://github.com/topics/agent-memory?page=2&page=3&page=4&page=5&page=6&page=7&page=8
+2026-05-17 14:38:42,458 - INFO - Page 7: 20 repos, Total: 139
+2026-05-17 14:38:43,460 - INFO - === Page 8 ===
+2026-05-17 14:38:43,460 - INFO - Scraping: https://github.com/topics/agent-memory?page=2&page=3&page=4&page=5&page=6&page=7&page=8
+2026-05-17 14:38:44,549 - INFO - Found 20 repos using selector: article.border
+2026-05-17 14:38:45,116 - INFO - ✓ Extracted: rohansx/ctxgraph (20 stars)
+2026-05-17 14:38:45,730 - INFO - ✓ Extracted: norrietaylor/distillery (19 stars)
+2026-05-17 14:38:46,386 - INFO - ✓ Extracted: wouldbe12/lexwiki (18 stars)
+2026-05-17 14:38:47,105 - INFO - ✓ Extracted: EmaFanClub/EverMemoryArchive (17 stars)
+2026-05-17 14:38:47,816 - INFO - ✓ Extracted: project-nomos/nomos (17 stars)
+2026-05-17 14:38:48,580 - INFO - ✓ Extracted: weauratech/pi-memctx (17 stars)
+2026-05-17 14:38:49,319 - INFO - ✓ Extracted: yifanfeng97/ontomem (17 stars)
+2026-05-17 14:38:49,969 - INFO - ✓ Extracted: clearyss/WeLoom (16 stars)
+2026-05-17 14:38:50,633 - INFO - ✓ Extracted: TarekRaafat/skalex (16 stars)
+2026-05-17 14:38:51,305 - INFO - ✓ Extracted: hermes-labs-ai/fidelis (17 stars)
+2026-05-17 14:38:51,943 - INFO - ✓ Extracted: DJLougen/Rust-Brain (16 stars)
+2026-05-17 14:38:52,595 - INFO - ✓ Extracted: rajkripal/cashew (16 stars)
+2026-05-17 14:38:53,247 - INFO - ✓ Extracted: smixs/autograph (16 stars)
+2026-05-17 14:38:53,895 - INFO - ✓ Extracted: junjslee/episteme (16 stars)
+2026-05-17 14:38:54,581 - INFO - ✓ Extracted: AQ-MedAI/MedMemoryBench (16 stars)
+2026-05-17 14:38:55,253 - INFO - ✓ Extracted: Ladybug-Memory/hermes-memory-plugin (15 stars)
+2026-05-17 14:38:55,896 - INFO - ✓ Extracted: Hassanali4/applescript-mcp (15 stars)
+2026-05-17 14:38:56,560 - INFO - ✓ Extracted: falcoschaefer99-eng/muse-brain (15 stars)
+2026-05-17 14:38:57,280 - INFO - ✓ Extracted: agentralabs/agentic-memory (15 stars)
+2026-05-17 14:38:58,453 - INFO - ✓ Extracted: yantrikos/yantrikdb-mcp (15 stars)
+2026-05-17 14:38:58,556 - INFO - Found pagination form: next page = 9
+2026-05-17 14:38:58,556 - INFO - Next URL: https://github.com/topics/agent-memory?page=2&page=3&page=4&page=5&page=6&page=7&page=8&page=9
+2026-05-17 14:38:58,556 - INFO - Page 8: 20 repos, Total: 159
+2026-05-17 14:38:59,557 - INFO - === Page 9 ===
+2026-05-17 14:38:59,557 - INFO - Scraping: https://github.com/topics/agent-memory?page=2&page=3&page=4&page=5&page=6&page=7&page=8&page=9
+2026-05-17 14:39:01,264 - INFO - Found 20 repos using selector: article.border
+2026-05-17 14:39:01,865 - INFO - ✓ Extracted: MachineWisdomAI/fava-trails (14 stars)
+2026-05-17 14:39:02,499 - INFO - ✓ Extracted: JasperHG90/memex (14 stars)
+2026-05-17 14:39:03,153 - INFO - ✓ Extracted: Foxfire1st/agents-remember-md (14 stars)
+2026-05-17 14:39:03,852 - INFO - ✓ Extracted: atomicstrata/atomicmemory-sdk (14 stars)
+2026-05-17 14:39:04,928 - INFO - ✓ Extracted: adelaidasofia/ai-brain-starter (14 stars)
+2026-05-17 14:39:05,029 - WARNING - No valid repo link found in element
+2026-05-17 14:39:06,004 - INFO - ✓ Extracted: JohnnyFiv3r/Core-Memory (13 stars)
+2026-05-17 14:39:07,076 - INFO - ✓ Extracted: salishforge/memforge (13 stars)
+2026-05-17 14:39:07,777 - INFO - ✓ Extracted: TianqiZhang/mem.net (13 stars)
+2026-05-17 14:39:08,438 - INFO - ✓ Extracted: phelps-sg/claude-code-obsidian-skills (12 stars)
+2026-05-17 14:39:09,089 - INFO - ✓ Extracted: danielckv/ContextLoom (12 stars)
+2026-05-17 14:39:09,746 - INFO - ✓ Extracted: tashfeenahmed/scallopbot (12 stars)
+2026-05-17 14:39:10,435 - INFO - ✓ Extracted: scream4ik/MemState (12 stars)
+2026-05-17 14:39:11,069 - INFO - ✓ Extracted: codysnider/tagmem (11 stars)
+2026-05-17 14:39:11,681 - INFO - ✓ Extracted: phillipclapham/flowscript (11 stars)
+2026-05-17 14:39:12,770 - INFO - ✓ Extracted: artiebits/memdir (11 stars)
+2026-05-17 14:39:13,416 - INFO - ✓ Extracted: marklubin/kairix (11 stars)
+2026-05-17 14:39:14,110 - INFO - ✓ Extracted: thebasedcapital/brainbox (11 stars)
+2026-05-17 14:39:14,822 - INFO - ✓ Extracted: jamjet-labs/jamjet (11 stars)
+2026-05-17 14:39:15,516 - INFO - ✓ Extracted: coalesce-labs/catalyst (11 stars)
+2026-05-17 14:39:15,619 - INFO - Found pagination form: next page = 10
+2026-05-17 14:39:15,619 - INFO - Next URL: https://github.com/topics/agent-memory?page=2&page=3&page=4&page=5&page=6&page=7&page=8&page=9&page=10
+2026-05-17 14:39:15,619 - INFO - Page 9: 19 repos, Total: 178
+2026-05-17 14:39:16,620 - INFO - === Page 10 ===
+2026-05-17 14:39:16,620 - INFO - Scraping: https://github.com/topics/agent-memory?page=2&page=3&page=4&page=5&page=6&page=7&page=8&page=9&page=10
+2026-05-17 14:39:17,759 - INFO - Found 20 repos using selector: article.border
+2026-05-17 14:39:18,272 - INFO - ✓ Extracted: ZhenhangTung/openclaw-EverMemOS (11 stars)
+2026-05-17 14:39:18,901 - INFO - ✓ Extracted: honeybluesky/my-apple-remembers (10 stars)
+2026-05-17 14:39:19,532 - INFO - ✓ Extracted: alanchelmickjr/memoRable (11 stars)
+2026-05-17 14:39:20,137 - INFO - ✓ Extracted: marklubin/synix (10 stars)
+2026-05-17 14:39:20,776 - INFO - ✓ Extracted: LastEld/AMS (10 stars)
+2026-05-17 14:39:21,404 - INFO - ✓ Extracted: cucupac/shellbrain (10 stars)
+2026-05-17 14:39:22,045 - INFO - ✓ Extracted: D0NMEGA/MoltGrid (9 stars)
+2026-05-17 14:39:22,731 - INFO - ✓ Extracted: memorycrystal/memorycrystal (9 stars)
+2026-05-17 14:39:23,369 - INFO - ✓ Extracted: camgitt/memoir (10 stars)
+2026-05-17 14:39:24,494 - INFO - ✓ Extracted: Fan1234-1/tonesoul52 (9 stars)
+2026-05-17 14:39:25,176 - INFO - ✓ Extracted: johnnyjoy/pluribus (9 stars)
+2026-05-17 14:39:25,808 - INFO - ✓ Extracted: jmeyer1980/neurodivergent-memory (10 stars)
+2026-05-17 14:39:26,443 - INFO - ✓ Extracted: TonyCasey/lisa (9 stars)
+2026-05-17 14:39:27,093 - INFO - ✓ Extracted: fstech-digital/operational-ontology-framework (9 stars)
+2026-05-17 14:39:27,740 - INFO - ✓ Extracted: Abbas-Asad/Agentic-AI (9 stars)
+2026-05-17 14:39:28,821 - INFO - ✓ Extracted: sologuy/Awesome-OpenClaw-Memory (9 stars)
+2026-05-17 14:39:29,934 - INFO - ✓ Extracted: zebbern/discord-mcp-agent (8 stars)
+2026-05-17 14:39:30,605 - INFO - ✓ Extracted: onebrain-ai/onebrain (8 stars)
+2026-05-17 14:39:31,768 - INFO - ✓ Extracted: Basekick-Labs/memtrace (8 stars)
+2026-05-17 14:39:32,506 - INFO - ✓ Extracted: djinilabs/helpmaton (8 stars)
+2026-05-17 14:39:32,607 - INFO - Found pagination form: next page = 11
+2026-05-17 14:39:32,608 - INFO - Next URL: https://github.com/topics/agent-memory?page=2&page=3&page=4&page=5&page=6&page=7&page=8&page=9&page=10&page=11
+2026-05-17 14:39:32,608 - INFO - Page 10: 20 repos, Total: 198
+2026-05-17 14:39:33,609 - INFO - === Page 11 ===
+2026-05-17 14:39:33,609 - INFO - Scraping: https://github.com/topics/agent-memory?page=2&page=3&page=4&page=5&page=6&page=7&page=8&page=9&page=10&page=11
+2026-05-17 14:39:34,841 - INFO - Found 20 repos using selector: article.border
+2026-05-17 14:39:35,860 - INFO - ✓ Extracted: staticroostermedia-arch/engram (8 stars)
+2026-05-17 14:39:36,507 - INFO - ✓ Extracted: mupengi-bot/mupengism (8 stars)
+2026-05-17 14:39:37,663 - INFO - ✓ Extracted: BjornMelin/codeforge (9 stars)
+2026-05-17 14:39:38,317 - INFO - ✓ Extracted: Fail-Safe/Noema (8 stars)
+2026-05-17 14:39:39,016 - INFO - ✓ Extracted: falcoschaefer99-eng/michael-security-agent (8 stars)
+2026-05-17 14:39:39,646 - INFO - ✓ Extracted: Shangri-la-0428/oasyce_psyche (8 stars)
+2026-05-17 14:39:40,346 - INFO - ✓ Extracted: HopiumLab/skymem-io (8 stars)
+2026-05-17 14:39:40,987 - INFO - ✓ Extracted: ksm26/LLMs-as-Operating-Systems-Agent-Memory (8 stars)
+2026-05-17 14:39:41,671 - INFO - ✓ Extracted: atomicstrata/atomicmemory-python (8 stars)
+2026-05-17 14:39:42,293 - INFO - ✓ Extracted: braxtonROSE4/zorro-agent (7 stars)
+2026-05-17 14:39:42,981 - INFO - ✓ Extracted: singularityjason/lightning-memory (7 stars)
+2026-05-17 14:39:44,074 - INFO - ✓ Extracted: d-o-hub/rust-self-learning-memory (7 stars)
+2026-05-17 14:39:45,214 - INFO - ✓ Extracted: getzikra/Zikra (7 stars)
+2026-05-17 14:39:45,839 - INFO - ✓ Extracted: bamdra/bamdra-openclaw-memory (7 stars)
+2026-05-17 14:39:46,530 - INFO - ✓ Extracted: runtimenoteslabs/memory-layer (7 stars)
+2026-05-17 14:39:47,157 - INFO - ✓ Extracted: tazwaryayyyy/Memorie-AI (7 stars)
+2026-05-17 14:39:47,832 - INFO - ✓ Extracted: db0-ai/db0 (6 stars)
+2026-05-17 14:39:48,459 - INFO - ✓ Extracted: Poppyqueen/LLM_Memory_Manager (6 stars)
+2026-05-17 14:39:49,087 - INFO - ✓ Extracted: rand/recurse (6 stars)
+2026-05-17 14:39:49,709 - INFO - ✓ Extracted: oomkapwn/enquire-mcp (6 stars)
+2026-05-17 14:39:49,812 - INFO - Found pagination form: next page = 12
+2026-05-17 14:39:49,812 - INFO - Next URL: https://github.com/topics/agent-memory?page=2&page=3&page=4&page=5&page=6&page=7&page=8&page=9&page=10&page=11&page=12
+2026-05-17 14:39:49,813 - INFO - Page 11: 20 repos, Total: 218
+2026-05-17 14:39:50,813 - INFO - === Page 12 ===
+2026-05-17 14:39:50,813 - INFO - Scraping: https://github.com/topics/agent-memory?page=2&page=3&page=4&page=5&page=6&page=7&page=8&page=9&page=10&page=11&page=12
+2026-05-17 14:39:51,902 - INFO - Found 20 repos using selector: article.border
+2026-05-17 14:39:52,506 - INFO - ✓ Extracted: SuperagenticAI/turboagents (6 stars)
+2026-05-17 14:39:53,155 - INFO - ✓ Extracted: hipvlady/agent-coherence (6 stars)
+2026-05-17 14:39:54,263 - INFO - ✓ Extracted: roackb2/heddle (6 stars)
+2026-05-17 14:39:54,982 - INFO - ✓ Extracted: go-mirofish/go-mirofish (6 stars)
+2026-05-17 14:39:55,648 - INFO - ✓ Extracted: ContextFit/cf (6 stars)
+2026-05-17 14:39:56,304 - INFO - ✓ Extracted: adrozdenko/soleri (6 stars)
+2026-05-17 14:39:56,942 - INFO - ✓ Extracted: alex-feel/mcp-context-server (6 stars)
+2026-05-17 14:39:57,556 - INFO - ✓ Extracted: unname797/gsem (6 stars)
+2026-05-17 14:39:58,196 - INFO - ✓ Extracted: star-ga/mind-mem (6 stars)
+2026-05-17 14:39:58,810 - INFO - ✓ Extracted: Arcadia822/skrya (6 stars)
+2026-05-17 14:39:59,444 - INFO - ✓ Extracted: ub3dqy/llm-wiki (5 stars)
+2026-05-17 14:40:00,080 - INFO - ✓ Extracted: KeLuoJun/WolfMind (5 stars)
+2026-05-17 14:40:00,709 - INFO - ✓ Extracted: TeamSafeAI/LIFE (5 stars)
+2026-05-17 14:40:01,367 - INFO - ✓ Extracted: kingcharleslzy-ai/agent-soul (5 stars)
+2026-05-17 14:40:01,997 - INFO - ✓ Extracted: atw4757-byte/archon-memory-core (5 stars)
+2026-05-17 14:40:02,630 - INFO - ✓ Extracted: georgeantonopoulos/obsidian-cli-memory-bank-skill (5 stars)
+2026-05-17 14:40:03,309 - INFO - ✓ Extracted: mnemopay/mnemopay-sdk (5 stars)
+2026-05-17 14:40:04,090 - INFO - ✓ Extracted: musecl/musecl-memory (5 stars)
+2026-05-17 14:40:05,170 - INFO - ✓ Extracted: barrelc/kimi-mneme (5 stars)
+2026-05-17 14:40:05,807 - INFO - ✓ Extracted: Jannhsu/agent-memory (5 stars)
+2026-05-17 14:40:05,910 - INFO - Found pagination form: next page = 13
+2026-05-17 14:40:05,910 - INFO - Next URL: https://github.com/topics/agent-memory?page=2&page=3&page=4&page=5&page=6&page=7&page=8&page=9&page=10&page=11&page=12&page=13
+2026-05-17 14:40:05,910 - INFO - Page 12: 20 repos, Total: 238
+2026-05-17 14:40:06,911 - INFO - === Page 13 ===
+2026-05-17 14:40:06,911 - INFO - Scraping: https://github.com/topics/agent-memory?page=2&page=3&page=4&page=5&page=6&page=7&page=8&page=9&page=10&page=11&page=12&page=13
+2026-05-17 14:40:08,020 - INFO - Found 20 repos using selector: article.border
+2026-05-17 14:40:08,561 - INFO - ✓ Extracted: phillipclapham/anneal-memory (5 stars)
+2026-05-17 14:40:09,215 - INFO - ✓ Extracted: AEndrix03/Graft (5 stars)
+2026-05-17 14:40:09,862 - INFO - ✓ Extracted: zebbern/icron (5 stars)
+2026-05-17 14:40:10,488 - INFO - ✓ Extracted: acoyfellow/deja (5 stars)
+2026-05-17 14:40:11,591 - INFO - ✓ Extracted: steelponymike/dryft (6 stars)
+2026-05-17 14:40:12,666 - INFO - ✓ Extracted: lawyer112/personal-os-wiki (5 stars)
+2026-05-17 14:40:13,301 - INFO - ✓ Extracted: robotrocketscience/aelfrice (5 stars)
+2026-05-17 14:40:14,037 - INFO - ✓ Extracted: CryptoKrad/open-mem (5 stars)
+2026-05-17 14:40:14,700 - INFO - ✓ Extracted: justinstimatze/winze (5 stars)
+2026-05-17 14:40:15,336 - INFO - ✓ Extracted: cristian1991/AIDOCS (5 stars)
+2026-05-17 14:40:16,008 - INFO - ✓ Extracted: LucioLiu/relic (5 stars)
+2026-05-17 14:40:16,638 - INFO - ✓ Extracted: edg-l/engram-mcp (5 stars)
+2026-05-17 14:40:17,261 - INFO - ✓ Extracted: BennettSchwartz/stopusingmarkdownformemory (4 stars)
+2026-05-17 14:40:17,928 - INFO - ✓ Extracted: ayushmaanbhav/Voice-Activated-Autonomous-Knowledge-System (4 stars)
+2026-05-17 14:40:18,575 - INFO - ✓ Extracted: Ajay6093/Agentic-Context-Engineering (4 stars)
+2026-05-17 14:40:19,219 - INFO - ✓ Extracted: basst85/local-memory-mcp (4 stars)
+2026-05-17 14:40:19,959 - INFO - ✓ Extracted: daryl-labs-ai/daryl (4 stars)
+2026-05-17 14:40:20,642 - INFO - ✓ Extracted: dlxeva/synaptic-link (4 stars)
+2026-05-17 14:40:21,275 - INFO - ✓ Extracted: Lexus2016/turbo_quant_memory (4 stars)
+2026-05-17 14:40:21,924 - INFO - ✓ Extracted: XD319/RepoBrain (4 stars)
+2026-05-17 14:40:22,027 - INFO - Found pagination form: next page = 14
+2026-05-17 14:40:22,027 - INFO - Next URL: https://github.com/topics/agent-memory?page=2&page=3&page=4&page=5&page=6&page=7&page=8&page=9&page=10&page=11&page=12&page=13&page=14
+2026-05-17 14:40:22,027 - INFO - Page 13: 20 repos, Total: 258
+2026-05-17 14:40:23,028 - INFO - === Page 14 ===
+2026-05-17 14:40:23,028 - INFO - Scraping: https://github.com/topics/agent-memory?page=2&page=3&page=4&page=5&page=6&page=7&page=8&page=9&page=10&page=11&page=12&page=13&page=14
+2026-05-17 14:40:24,077 - INFO - Found 20 repos using selector: article.border
+2026-05-17 14:40:24,665 - INFO - ✓ Extracted: mrkingsleyobi/veritas-ai (4 stars)
+2026-05-17 14:40:25,828 - INFO - ✓ Extracted: orkait/graphstore (4 stars)
+2026-05-17 14:40:26,554 - INFO - ✓ Extracted: backchainai/backchain-plugins (4 stars)
+2026-05-17 14:40:27,306 - INFO - ✓ Extracted: kryptogrib/tensory (4 stars)
+2026-05-17 14:40:27,960 - INFO - ✓ Extracted: koutroutsios172/simulacra (4 stars)
+2026-05-17 14:40:28,605 - INFO - ✓ Extracted: rekal-dev/rekal-cli (4 stars)
+2026-05-17 14:40:29,731 - INFO - ✓ Extracted: udjin-labs/mnemostack (4 stars)
+2026-05-17 14:40:30,822 - INFO - ✓ Extracted: shahzebqazi/mhn-ai-agent-memory (4 stars)
+2026-05-17 14:40:31,921 - INFO - ✓ Extracted: aditrachman/Simulation-Prediction-Engine (4 stars)
+2026-05-17 14:40:32,648 - INFO - ✓ Extracted: ApiliumCode/aingle (4 stars)
+2026-05-17 14:40:33,304 - INFO - ✓ Extracted: botx-work/OpenClaw-Internals (4 stars)
+2026-05-17 14:40:34,054 - INFO - ✓ Extracted: redis-developer/agent-memory-server-with-alexa-demo (4 stars)
+2026-05-17 14:40:34,690 - INFO - ✓ Extracted: cjroth/agentsync (4 stars)
+2026-05-17 14:40:35,328 - INFO - ✓ Extracted: tverney/mcp-agent-memory (3 stars)
+2026-05-17 14:40:35,967 - INFO - ✓ Extracted: bbesner/flipclaw (3 stars)
+2026-05-17 14:40:37,086 - INFO - ✓ Extracted: mmjclayton/agent-sop (3 stars)
+2026-05-17 14:40:37,776 - INFO - ✓ Extracted: 0xPanty/misa-cybernetic-evolution (3 stars)
+2026-05-17 14:40:38,855 - INFO - ✓ Extracted: tfatykhov/awesome-agent-memory (3 stars)
+2026-05-17 14:40:39,998 - INFO - ✓ Extracted: greencube-ai/greencube (3 stars)
+2026-05-17 14:40:40,644 - INFO - ✓ Extracted: ashwanijha04/extremis (3 stars)
+2026-05-17 14:40:40,746 - INFO - Found pagination form: next page = 15
+2026-05-17 14:40:40,746 - INFO - Next URL: https://github.com/topics/agent-memory?page=2&page=3&page=4&page=5&page=6&page=7&page=8&page=9&page=10&page=11&page=12&page=13&page=14&page=15
+2026-05-17 14:40:40,746 - INFO - Page 14: 20 repos, Total: 278
+2026-05-17 14:40:41,747 - INFO - === Page 15 ===
+2026-05-17 14:40:41,747 - INFO - Scraping: https://github.com/topics/agent-memory?page=2&page=3&page=4&page=5&page=6&page=7&page=8&page=9&page=10&page=11&page=12&page=13&page=14&page=15
+2026-05-17 14:40:42,771 - INFO - Found 20 repos using selector: article.border
+2026-05-17 14:40:43,306 - INFO - ✓ Extracted: scops/engrama (3 stars)
+2026-05-17 14:40:44,522 - INFO - ✓ Extracted: Avos-Lab/git-aware-coding-agent (3 stars)
+2026-05-17 14:40:45,253 - INFO - ✓ Extracted: p8n-ai/pi-remembers (3 stars)
+2026-05-17 14:40:45,892 - INFO - ✓ Extracted: k8nstantin/OpenPraxis (3 stars)
+2026-05-17 14:40:46,511 - INFO - ✓ Extracted: AgentCommander/exploration-map (3 stars)
+2026-05-17 14:40:47,166 - INFO - ✓ Extracted: Chair4ce/braindb (3 stars)
+2026-05-17 14:40:47,854 - INFO - ✓ Extracted: Atlas-Graph-Academy/EchoMemory-Cloud-OpenClaw-Plugin (3 stars)
+2026-05-17 14:40:48,623 - INFO - ✓ Extracted: hexxla/mosaic (3 stars)
+2026-05-17 14:40:49,253 - INFO - ✓ Extracted: Yuan-ManX/octopai (3 stars)
+2026-05-17 14:40:49,974 - INFO - ✓ Extracted: shimo4228/agent-knowledge-cycle (3 stars)
+2026-05-17 14:40:51,062 - INFO - ✓ Extracted: michielhdoteth/squish (3 stars)
+2026-05-17 14:40:51,725 - INFO - ✓ Extracted: vincx2000/opendreams (3 stars)
+2026-05-17 14:40:52,360 - INFO - ✓ Extracted: alexnodeland/principled (3 stars)
+2026-05-17 14:40:53,017 - INFO - ✓ Extracted: shenchengtsi/CortiLoop (3 stars)
+2026-05-17 14:40:53,637 - INFO - ✓ Extracted: obielin/agent-memory-store (3 stars)
+2026-05-17 14:40:54,246 - INFO - ✓ Extracted: LuizEduPP/Rememb (3 stars)
+2026-05-17 14:40:55,340 - INFO - ✓ Extracted: Glucksberg/cristalina-v4 (3 stars)
+2026-05-17 14:40:56,042 - INFO - ✓ Extracted: hapticasensorics/1context (3 stars)
+2026-05-17 14:40:56,689 - INFO - ✓ Extracted: locutus71/enterprise-knowledge-architecture (4 stars)
+2026-05-17 14:40:57,370 - INFO - ✓ Extracted: leninejunior/engrene-memory-bridge (3 stars)
+2026-05-17 14:40:57,479 - INFO - Found pagination form: next page = 16
+2026-05-17 14:40:57,480 - INFO - Next URL: https://github.com/topics/agent-memory?page=2&page=3&page=4&page=5&page=6&page=7&page=8&page=9&page=10&page=11&page=12&page=13&page=14&page=15&page=16
+2026-05-17 14:40:57,481 - INFO - Page 15: 20 repos, Total: 298
+2026-05-17 14:40:58,482 - INFO - === Page 16 ===
+2026-05-17 14:40:58,482 - INFO - Scraping: https://github.com/topics/agent-memory?page=2&page=3&page=4&page=5&page=6&page=7&page=8&page=9&page=10&page=11&page=12&page=13&page=14&page=15&page=16
+2026-05-17 14:40:59,607 - INFO - Found 20 repos using selector: article.border
+2026-05-17 14:41:00,144 - INFO - ✓ Extracted: madezmedia/acmi (3 stars)
+2026-05-17 14:41:00,807 - INFO - ✓ Extracted: rockywuest/bookend-skill (3 stars)
+2026-05-17 14:41:01,453 - INFO - ✓ Extracted: ndpvt-web/capy-cortex (3 stars)
+2026-05-17 14:41:02,111 - INFO - ✓ Extracted: Billy1900/mneme (3 stars)
+2026-05-17 14:41:03,217 - INFO - ✓ Extracted: ivanzwb/agent-memory (3 stars)
+2026-05-17 14:41:04,334 - INFO - ✓ Extracted: mhashim6/kauri (3 stars)
+2026-05-17 14:41:05,440 - INFO - ✓ Extracted: ly85206559/memory-path-engine (3 stars)
+2026-05-17 14:41:06,071 - INFO - ✓ Extracted: ac12644/MemGuard (3 stars)
+2026-05-17 14:41:07,191 - INFO - ✓ Extracted: Million19/llm_to_mcp_integration_engine (3 stars)
+2026-05-17 14:41:07,873 - INFO - ✓ Extracted: qoopia/qoopia (3 stars)
+2026-05-17 14:41:08,530 - INFO - ✓ Extracted: carltonawong/durable-assistant-os (3 stars)
+2026-05-17 14:41:09,177 - INFO - ✓ Extracted: jonathangu/openclawbrain (3 stars)
+2026-05-17 14:41:09,879 - INFO - ✓ Extracted: maximem-ai/maximem_synap_sdk (3 stars)
+2026-05-17 14:41:10,521 - INFO - ✓ Extracted: huss-mo/GroundMemory (3 stars)
+2026-05-17 14:41:11,211 - INFO - ✓ Extracted: 3-Elements-Design/hangarx-obsidian (3 stars)
+2026-05-17 14:41:11,906 - INFO - ✓ Extracted: nerv00kaworu/Sacred-Essence-Viking (2 stars)
+2026-05-17 14:41:12,567 - INFO - ✓ Extracted: zd87pl/loci-db (2 stars)
+2026-05-17 14:41:13,199 - INFO - ✓ Extracted: sree-sanak/minty (2 stars)
+2026-05-17 14:41:13,870 - INFO - ✓ Extracted: sujal-maheshwari2004/DriftGuard (2 stars)
+2026-05-17 14:41:14,567 - INFO - ✓ Extracted: memstate-ai/memstate-mcp (2 stars)
+2026-05-17 14:41:14,668 - INFO - Found pagination form: next page = 17
+2026-05-17 14:41:14,669 - INFO - Next URL: https://github.com/topics/agent-memory?page=2&page=3&page=4&page=5&page=6&page=7&page=8&page=9&page=10&page=11&page=12&page=13&page=14&page=15&page=16&page=17
+2026-05-17 14:41:14,669 - INFO - Page 16: 20 repos, Total: 318
+2026-05-17 14:41:15,670 - INFO - === Page 17 ===
+2026-05-17 14:41:15,670 - INFO - Scraping: https://github.com/topics/agent-memory?page=2&page=3&page=4&page=5&page=6&page=7&page=8&page=9&page=10&page=11&page=12&page=13&page=14&page=15&page=16&page=17
+2026-05-17 14:41:16,813 - INFO - Found 20 repos using selector: article.border
+2026-05-17 14:41:17,350 - INFO - ✓ Extracted: ZXXZ1000/LATRACE-AI (2 stars)
+2026-05-17 14:41:18,011 - INFO - ✓ Extracted: loveysuby/agent-ltm-persistence-layer (2 stars)
+2026-05-17 14:41:18,666 - INFO - ✓ Extracted: kensave/agent-memory-rs (2 stars)
+2026-05-17 14:41:19,314 - INFO - ✓ Extracted: smaramwbc/statewave-bench (2 stars)
+2026-05-17 14:41:19,975 - INFO - ✓ Extracted: rore/Pallium (2 stars)
+2026-05-17 14:41:21,062 - INFO - ✓ Extracted: kledidoda/skill-evolution (2 stars)
+2026-05-17 14:41:22,252 - INFO - ✓ Extracted: archetypal-ai/archetypal-ai (2 stars)
+2026-05-17 14:41:22,993 - INFO - ✓ Extracted: sam-ent/fleet-mem (2 stars)
+2026-05-17 14:41:23,644 - INFO - ✓ Extracted: zzhang82/Agent-Memory-Bridge (2 stars)
+2026-05-17 14:41:24,293 - INFO - ✓ Extracted: thefilesareinthecomputer/agent-zero (2 stars)
+2026-05-17 14:41:24,943 - INFO - ✓ Extracted: CVPaul/mneme (2 stars)
+2026-05-17 14:41:25,627 - INFO - ✓ Extracted: mnemebrain/mnemebrain-lite (2 stars)
+2026-05-17 14:41:26,253 - INFO - ✓ Extracted: For-Sunny/capability-graph-neuroscience (2 stars)
+2026-05-17 14:41:26,916 - INFO - ✓ Extracted: LeoLB-Wang/pensieve-obsidian-skill (2 stars)
+2026-05-17 14:41:27,565 - INFO - ✓ Extracted: bv-saketha-rama/flux-cache (2 stars)
+2026-05-17 14:41:28,191 - INFO - ✓ Extracted: Alan-512/ExperienceEngine (2 stars)
+2026-05-17 14:41:28,829 - INFO - ✓ Extracted: futhgar/agent-memory-architecture (3 stars)
+2026-05-17 14:41:29,482 - INFO - ✓ Extracted: skbylife/openclaw-os-notion (2 stars)
+2026-05-17 14:41:30,149 - INFO - ✓ Extracted: Kronic90/VividEmbed (2 stars)
+2026-05-17 14:41:30,790 - INFO - ✓ Extracted: HugoLopes45/mneo (2 stars)
+2026-05-17 14:41:30,893 - INFO - Found pagination form: next page = 18
+2026-05-17 14:41:30,893 - INFO - Next URL: https://github.com/topics/agent-memory?page=2&page=3&page=4&page=5&page=6&page=7&page=8&page=9&page=10&page=11&page=12&page=13&page=14&page=15&page=16&page=17&page=18
+2026-05-17 14:41:30,894 - INFO - Page 17: 20 repos, Total: 338
+2026-05-17 14:41:31,895 - INFO - === Page 18 ===
+2026-05-17 14:41:31,895 - INFO - Scraping: https://github.com/topics/agent-memory?page=2&page=3&page=4&page=5&page=6&page=7&page=8&page=9&page=10&page=11&page=12&page=13&page=14&page=15&page=16&page=17&page=18
+2026-05-17 14:41:32,968 - INFO - Found 20 repos using selector: article.border
+2026-05-17 14:41:33,525 - INFO - ✓ Extracted: Alperen012/TurboQuant (2 stars)
+2026-05-17 14:41:34,200 - INFO - ✓ Extracted: Ryurexflipper/Opencode-Dreams (2 stars)
+2026-05-17 14:41:34,865 - INFO - ✓ Extracted: Es00bac/OpenCAS_runtime (2 stars)
+2026-05-17 14:41:35,523 - INFO - ✓ Extracted: MakiDevelop/memory-hall (2 stars)
+2026-05-17 14:41:36,190 - INFO - ✓ Extracted: yanixkz/sce-core (2 stars)
+2026-05-17 14:41:37,393 - INFO - ✓ Extracted: runlegion/legion (2 stars)
+2026-05-17 14:41:38,067 - INFO - ✓ Extracted: kkonstvol-lab/obsidian-memory (2 stars)
+2026-05-17 14:41:38,689 - INFO - ✓ Extracted: pankaj4u4m/atelier (2 stars)
+2026-05-17 14:41:39,848 - INFO - ✓ Extracted: ReallyArtificial/engram (2 stars)
+2026-05-17 14:41:40,527 - INFO - ✓ Extracted: Kujirafu/AgentRune (2 stars)
+2026-05-17 14:41:41,246 - INFO - ✓ Extracted: Dakera-AI/dakera-cli (2 stars)
+2026-05-17 14:41:41,888 - INFO - ✓ Extracted: not-a-skid/Awesome-Agent-Memory (2 stars)
+2026-05-17 14:41:42,569 - INFO - ✓ Extracted: Zoranner/memo-brain (2 stars)
+2026-05-17 14:41:43,233 - INFO - ✓ Extracted: quangdang46/membrain (2 stars)
+2026-05-17 14:41:43,903 - INFO - ✓ Extracted: rubysthedog/dotagents (2 stars)
+2026-05-17 14:41:45,105 - INFO - ✓ Extracted: redis-developer/redis-agent-memory-with-langgraph-demo (2 stars)
+2026-05-17 14:41:46,199 - INFO - ✓ Extracted: hiparker/echo-fade-memory (2 stars)
+2026-05-17 14:41:46,833 - INFO - ✓ Extracted: urmzd/mnemonist (2 stars)
+2026-05-17 14:41:47,490 - INFO - ✓ Extracted: vinay9986/ContextWeave (2 stars)
+2026-05-17 14:41:48,197 - INFO - ✓ Extracted: pgmnemo/pgmnemo (2 stars)
+2026-05-17 14:41:48,304 - INFO - Found pagination form: next page = 19
+2026-05-17 14:41:48,305 - INFO - Next URL: https://github.com/topics/agent-memory?page=2&page=3&page=4&page=5&page=6&page=7&page=8&page=9&page=10&page=11&page=12&page=13&page=14&page=15&page=16&page=17&page=18&page=19
+2026-05-17 14:41:48,306 - INFO - Page 18: 20 repos, Total: 358
+2026-05-17 14:41:49,306 - INFO - === Page 19 ===
+2026-05-17 14:41:49,306 - INFO - Scraping: https://github.com/topics/agent-memory?page=2&page=3&page=4&page=5&page=6&page=7&page=8&page=9&page=10&page=11&page=12&page=13&page=14&page=15&page=16&page=17&page=18&page=19
+2026-05-17 14:41:50,451 - INFO - Found 20 repos using selector: article.border
+2026-05-17 14:41:51,015 - INFO - ✓ Extracted: smafjal/neomemx (2 stars)
+2026-05-17 14:41:51,675 - INFO - ✓ Extracted: jasonno1/multi-agent-memory-skill (2 stars)
+2026-05-17 14:41:52,312 - INFO - ✓ Extracted: Wpoithge/PruneMem (2 stars)
+2026-05-17 14:41:52,970 - INFO - ✓ Extracted: WeberG619/neveronce (3 stars)
+2026-05-17 14:41:53,634 - INFO - ✓ Extracted: dominosaurs/konteks (2 stars)
+2026-05-17 14:41:54,338 - INFO - ✓ Extracted: jayzeng/agentmemory (2 stars)
+2026-05-17 14:41:54,971 - INFO - ✓ Extracted: Fly-Carrot/agent-shared-fabric (2 stars)
+2026-05-17 14:41:55,638 - INFO - ✓ Extracted: antonygiomarxdev/rango (2 stars)
+2026-05-17 14:41:56,286 - INFO - ✓ Extracted: KeLuoJun/MindCast (2 stars)
+2026-05-17 14:41:56,935 - INFO - ✓ Extracted: cafitac/agent-memory (2 stars)
+2026-05-17 14:41:57,578 - INFO - ✓ Extracted: oxgeneral/agentmem (2 stars)
+2026-05-17 14:41:58,658 - INFO - ✓ Extracted: saicharanbugatha/MiroFish (2 stars)
+2026-05-17 14:41:59,315 - INFO - ✓ Extracted: atakanatali/contextify (2 stars)
+2026-05-17 14:41:59,934 - INFO - ✓ Extracted: tverney/agent-memory-daemon (2 stars)
+2026-05-17 14:42:01,065 - INFO - ✓ Extracted: sochdb/sochdb-python-sdk (2 stars)
+2026-05-17 14:42:01,699 - INFO - ✓ Extracted: generalaimodels/agentic_design_patterns (2 stars)
+2026-05-17 14:42:02,336 - INFO - ✓ Extracted: AgusLoza2021/Thoughtline (2 stars)
+2026-05-17 14:42:02,970 - INFO - ✓ Extracted: KongDS-alien/openclaw-shared-memory-manager (2 stars)
+2026-05-17 14:42:03,608 - INFO - ✓ Extracted: deths74r/sift-releases (2 stars)
+2026-05-17 14:42:04,399 - INFO - ✓ Extracted: Quaid-Labs/quaid (2 stars)
+2026-05-17 14:42:04,507 - INFO - Found pagination form: next page = 20
+2026-05-17 14:42:04,507 - INFO - Next URL: https://github.com/topics/agent-memory?page=2&page=3&page=4&page=5&page=6&page=7&page=8&page=9&page=10&page=11&page=12&page=13&page=14&page=15&page=16&page=17&page=18&page=19&page=20
+2026-05-17 14:42:04,508 - INFO - Page 19: 20 repos, Total: 378
+2026-05-17 14:42:05,508 - INFO - === Page 20 ===
+2026-05-17 14:42:05,508 - INFO - Scraping: https://github.com/topics/agent-memory?page=2&page=3&page=4&page=5&page=6&page=7&page=8&page=9&page=10&page=11&page=12&page=13&page=14&page=15&page=16&page=17&page=18&page=19&page=20
+2026-05-17 14:42:06,619 - INFO - Found 20 repos using selector: article.border
+2026-05-17 14:42:07,140 - INFO - ✓ Extracted: ronsse/trellis-ai (2 stars)
+2026-05-17 14:42:07,793 - INFO - ✓ Extracted: jettjia/agent-test (1 stars)
+2026-05-17 14:42:08,469 - INFO - ✓ Extracted: nullure/openmemory-langgraph-starter (1 stars)
+2026-05-17 14:42:09,134 - INFO - ✓ Extracted: fraction12/agentrem (1 stars)
+2026-05-17 14:42:10,229 - INFO - ✓ Extracted: OctavianTocan/mem0-api (1 stars)
+2026-05-17 14:42:10,893 - INFO - ✓ Extracted: vocatus23/Cortex (1 stars)
+2026-05-17 14:42:11,542 - INFO - ✓ Extracted: DomLynch/Lucid (1 stars)
+2026-05-17 14:42:12,683 - INFO - ✓ Extracted: pmestre-Forge/signal-api (1 stars)
+2026-05-17 14:42:13,785 - INFO - ✓ Extracted: heyrtl/fossil (1 stars)
+2026-05-17 14:42:14,442 - INFO - ✓ Extracted: quanttraderkim/instructionguard (1 stars)
+2026-05-17 14:42:15,072 - INFO - ✓ Extracted: danilagoleen/vetka-memory-stack (1 stars)
+2026-05-17 14:42:15,771 - INFO - ✓ Extracted: INOSX/agent-memory (1 stars)
+2026-05-17 14:42:16,465 - INFO - ✓ Extracted: LabsKrishna/kalairos (1 stars)
+2026-05-17 14:42:17,423 - INFO - ✓ Extracted: lu-zhengda/mcp-virtual-fs (1 stars)
+2026-05-17 14:42:18,562 - INFO - ✓ Extracted: cj-wang-sowork/atlas-Enterprise-AI-Self-Learning-Skills-System- (1 stars)
+2026-05-17 14:42:19,241 - INFO - ✓ Extracted: RobThePCGuy/markdown-agent-studio (1 stars)
+2026-05-17 14:42:19,976 - INFO - ✓ Extracted: awchzh/moyu-memory (1 stars)
+2026-05-17 14:42:20,671 - INFO - ✓ Extracted: pond-db/pond-db (1 stars)
+2026-05-17 14:42:21,307 - INFO - ✓ Extracted: stef-k/CogniRelay (1 stars)
+2026-05-17 14:42:22,015 - INFO - ✓ Extracted: mnemebrain/mnemebrain-benchmark (1 stars)
+2026-05-17 14:42:22,120 - INFO - Found pagination form: next page = 21
+2026-05-17 14:42:22,120 - INFO - Next URL: https://github.com/topics/agent-memory?page=2&page=3&page=4&page=5&page=6&page=7&page=8&page=9&page=10&page=11&page=12&page=13&page=14&page=15&page=16&page=17&page=18&page=19&page=20&page=21
+2026-05-17 14:42:22,120 - INFO - Page 20: 20 repos, Total: 398
+2026-05-17 14:42:23,121 - INFO - Scraping completed. Total repos: 398
+2026-05-17 14:42:23,148 - INFO - Results saved to: ./total/agent-memory_topics_2026-05-17_14-42-23_398.json
+2026-05-17 14:42:23,148 - INFO - === 统计信息 ===
+2026-05-17 14:42:23,148 - INFO - 总仓库数: 398
+2026-05-17 14:46:33,536 - INFO - Found 8 GitHub tokens
+2026-05-17 14:46:33,536 - INFO - Starting to scrape GitHub topic: memory
+2026-05-17 14:46:33,536 - INFO - === Page 1 ===
+2026-05-17 14:46:33,536 - INFO - Scraping: https://github.com/topics/memory
+2026-05-17 14:46:34,802 - INFO - Found 20 repos using selector: article.border
+2026-05-17 14:46:35,451 - INFO - ✓ Extracted: mem0ai/mem0 (55902 stars)
+2026-05-17 14:46:36,146 - INFO - ✓ Extracted: MemPalace/mempalace (52350 stars)
+2026-05-17 14:46:37,323 - INFO - ✓ Extracted: pingcap/tidb (40096 stars)
+2026-05-17 14:46:38,042 - INFO - ✓ Extracted: volcengine/OpenViking (23994 stars)
+2026-05-17 14:46:38,731 - INFO - ✓ Extracted: supermemoryai/supermemory (22595 stars)
+2026-05-17 14:46:39,426 - INFO - ✓ Extracted: humanlayer/12-factor-agents (19829 stars)
+2026-05-17 14:46:40,569 - INFO - ✓ Extracted: memvid/memvid (15519 stars)
+2026-05-17 14:46:41,292 - INFO - ✓ Extracted: bloomberg/memray (15031 stars)
+2026-05-17 14:46:41,910 - INFO - ✓ Extracted: Lum1104/Understand-Anything (14875 stars)
+2026-05-17 14:46:42,734 - INFO - ✓ Extracted: MemoriLabs/Memori (14543 stars)
+2026-05-17 14:46:43,461 - INFO - ✓ Extracted: NevaMind-AI/memU (13645 stars)
+2026-05-17 14:46:44,223 - INFO - ✓ Extracted: vectorize-io/hindsight (13535 stars)
+2026-05-17 14:46:44,941 - INFO - ✓ Extracted: simular-ai/Agent-S (11365 stars)
+2026-05-17 14:46:45,576 - INFO - ✓ Extracted: giampaolo/psutil (11170 stars)
+2026-05-17 14:46:46,197 - INFO - ✓ Extracted: rohitg00/agentmemory (10533 stars)
+2026-05-17 14:46:46,867 - INFO - ✓ Extracted: henrypp/memreduct (9416 stars)
+2026-05-17 14:46:47,543 - INFO - ✓ Extracted: MemTensor/MemOS (9139 stars)
+2026-05-17 14:46:48,788 - INFO - ✓ Extracted: activeloopai/deeplake (9127 stars)
+2026-05-17 14:46:49,869 - INFO - ✓ Extracted: Freika/dawarich (9036 stars)
+2026-05-17 14:46:50,589 - INFO - ✓ Extracted: volatilityfoundation/volatility (8008 stars)
+2026-05-17 14:46:50,692 - INFO - Found pagination form: next page = 2
+2026-05-17 14:46:50,693 - INFO - Next URL: https://github.com/topics/memory?page=2
+2026-05-17 14:46:50,693 - INFO - Page 1: 20 repos, Total: 20
+2026-05-17 14:46:51,694 - INFO - === Page 2 ===
+2026-05-17 14:46:51,694 - INFO - Scraping: https://github.com/topics/memory?page=2
+2026-05-17 14:46:52,900 - INFO - Found 20 repos using selector: article.border
+2026-05-17 14:46:53,508 - INFO - ✓ Extracted: holaboss-ai/holaOS (5632 stars)
+2026-05-17 14:46:54,246 - INFO - ✓ Extracted: memovai/mimiclaw (5411 stars)
+2026-05-17 14:46:54,953 - INFO - ✓ Extracted: volcengine/MineContext (5319 stars)
+2026-05-17 14:46:56,125 - INFO - ✓ Extracted: GoogleChromeLabs/react-adaptive-hooks (5158 stars)
+2026-05-17 14:46:56,753 - INFO - ✓ Extracted: tianshiyeben/wgcloud (5138 stars)
+2026-05-17 14:46:57,440 - INFO - ✓ Extracted: facebook/memlab (4967 stars)
+2026-05-17 14:46:58,161 - INFO - ✓ Extracted: EverMind-AI/EverOS (4854 stars)
+2026-05-17 14:46:58,851 - INFO - ✓ Extracted: campfirein/byterover-cli (4756 stars)
+2026-05-17 14:46:59,927 - INFO - ✓ Extracted: IgorMundstein/WinMemoryCleaner (4588 stars)
+2026-05-17 14:47:00,624 - INFO - ✓ Extracted: CortexReach/memory-lancedb-pro (4348 stars)
+2026-05-17 14:47:01,308 - INFO - ✓ Extracted: modelscope/ms-agent (4258 stars)
+2026-05-17 14:47:01,996 - INFO - ✓ Extracted: volatilityfoundation/volatility3 (4120 stars)
+2026-05-17 14:47:03,128 - INFO - ✓ Extracted: CaviraOSS/OpenMemory (4115 stars)
+2026-05-17 14:47:03,824 - INFO - ✓ Extracted: open-spaced-repetition/fsrs4anki (3950 stars)
+2026-05-17 14:47:04,508 - INFO - ✓ Extracted: plastic-labs/honcho (3573 stars)
+2026-05-17 14:47:05,188 - INFO - ✓ Extracted: memodb-io/Acontext (3374 stars)
+2026-05-17 14:47:06,301 - INFO - ✓ Extracted: sysstat/sysstat (3318 stars)
+2026-05-17 14:47:06,982 - INFO - ✓ Extracted: aiming-lab/SimpleMem (3202 stars)
+2026-05-17 14:47:07,696 - INFO - ✓ Extracted: MemMachine/MemMachine (3079 stars)
+2026-05-17 14:47:08,397 - INFO - ✓ Extracted: EvoAgentX/EvoAgentX (3015 stars)
+2026-05-17 14:47:08,500 - INFO - Found pagination form: next page = 3
+2026-05-17 14:47:08,500 - INFO - Next URL: https://github.com/topics/memory?page=2&page=3
+2026-05-17 14:47:08,500 - INFO - Page 2: 20 repos, Total: 40
+2026-05-17 14:47:09,502 - INFO - === Page 3 ===
+2026-05-17 14:47:09,502 - INFO - Scraping: https://github.com/topics/memory?page=2&page=3
+2026-05-17 14:47:10,692 - INFO - Found 20 repos using selector: article.border
+2026-05-17 14:47:11,282 - INFO - ✓ Extracted: agentscope-ai/ReMe (2950 stars)
+2026-05-17 14:47:11,949 - INFO - ✓ Extracted: eko/gocache (2857 stars)
+2026-05-17 14:47:12,638 - INFO - ✓ Extracted: RudjiGames/MTuner (2773 stars)
+2026-05-17 14:47:13,297 - INFO - ✓ Extracted: awnumar/memguard (2736 stars)
+2026-05-17 14:47:13,980 - INFO - ✓ Extracted: memodb-io/memobase (2725 stars)
+2026-05-17 14:47:14,614 - INFO - ✓ Extracted: ColinIanKing/stress-ng (2628 stars)
+2026-05-17 14:47:15,284 - INFO - ✓ Extracted: aozhimin/iOS-Monitor-Platform (2616 stars)
+2026-05-17 14:47:15,918 - INFO - ✓ Extracted: kingjulio8238/Memary (2616 stars)
+2026-05-17 14:47:16,613 - INFO - ✓ Extracted: iglance/iGlance (2478 stars)
+2026-05-17 14:47:17,661 - INFO - ✓ Extracted: jasonjmcghee/rem (2478 stars)
+2026-05-17 14:47:18,395 - INFO - ✓ Extracted: Tencent/TencentDB-Agent-Memory (2466 stars)
+2026-05-17 14:47:19,049 - INFO - ✓ Extracted: mjansson/rpmalloc (2445 stars)
+2026-05-17 14:47:19,745 - INFO - ✓ Extracted: node-cache/node-cache (2372 stars)
+2026-05-17 14:47:20,471 - INFO - ✓ Extracted: google/zerocopy (2295 stars)
+2026-05-17 14:47:21,101 - INFO - ✓ Extracted: wassim249/fastapi-langgraph-agent-production-ready-template (2270 stars)
+2026-05-17 14:47:21,779 - INFO - ✓ Extracted: qhjqhj00/MemoRAG (2242 stars)
+2026-05-17 14:47:22,460 - INFO - ✓ Extracted: kayba-ai/agentic-context-engine (2224 stars)
+2026-05-17 14:47:23,261 - INFO - ✓ Extracted: microsoft/kernel-memory (2155 stars)
+2026-05-17 14:47:23,884 - INFO - ✓ Extracted: streamich/memfs (2058 stars)
+2026-05-17 14:47:24,513 - INFO - ✓ Extracted: Shichun-Liu/Agent-Memory-Paper-List (1995 stars)
+2026-05-17 14:47:24,616 - INFO - Found pagination form: next page = 4
+2026-05-17 14:47:24,616 - INFO - Next URL: https://github.com/topics/memory?page=2&page=3&page=4
+2026-05-17 14:47:24,617 - INFO - Page 3: 20 repos, Total: 60
+2026-05-17 14:47:25,617 - INFO - Scraping completed. Total repos: 60
+2026-05-17 14:47:25,621 - INFO - Results saved to: ./total/memory_topics_2026-05-17_14-47-25_60.json
+2026-05-17 14:47:25,622 - INFO - === 统计信息 ===
+2026-05-17 14:47:25,622 - INFO - 总仓库数: 60

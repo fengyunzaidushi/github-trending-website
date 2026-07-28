@@ -215,13 +215,3 @@ npm run topic:import   # 导入话题数据
 - **变更记录**：`openspec/` — OpenSpec 变更单（specs、delta、tasks）
 
 如需了解项目代码细节，优先查阅 `.agent/skills/my-project/` 下的 `references/` 参考文档。
-
-
-
-
-
-
-
-
-
-

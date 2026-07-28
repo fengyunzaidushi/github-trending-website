@@ -1,0 +1,4 @@
+interface:
+  display_name: "GitHub Memory Topic Search"
+  short_description: "Find AI memory repos by language"
+  default_prompt: "Use $github-memory-topic-search to search GitHub Trending data for AI memory projects and summarize the results by language."

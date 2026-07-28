@@ -47,9 +47,9 @@ async function main() {
     fs.mkdirSync(DATA_DIR, { recursive: true })
   }
 
-  let offset = 0
+  let offset = 7612 // 从这个偏移开始导出，之前的已经导出过了
   const limit = isDryRun ? 5 : 1000 // 如果是 dry-run 则一次最多 5 条
-  let fileIndex = 1
+  let fileIndex = 9
   let hasMore = true
 
   console.log(isDryRun ? '⚠️ 开启 Dry-run 模式：最多只导出 5 条数据' : '📦 正常模式：每 1000 条数据保存为一个文件')
@@ -75,8 +75,8 @@ async function main() {
     }
 
     const baseFilename = `repositories_export_part${fileIndex}`
-    const jsonFilename = path.join(DATA_DIR, `${baseFilename}.json`)
-    const excelFilename = path.join(DATA_DIR, `${baseFilename}.xlsx`)
+    const jsonFilename = path.join(DATA_DIR,"repos_data_json", `${baseFilename}.json`)
+    const excelFilename = path.join(DATA_DIR, "repos_data_excel", `${baseFilename}.xlsx`)
 
     // 1. 导出 JSON
     try {

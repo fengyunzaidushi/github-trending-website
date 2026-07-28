@@ -3,6 +3,7 @@ import json
 import argparse
 import sys
 import os
+import glob
 
 def read_keywords_from_list(list_file, idx=-1, start_range=-1):
     try:
@@ -59,14 +60,27 @@ def search_repositories(json_file, keywords, theme_name, data=None):
     
     results = []
     for repo in data:
+        name = repo.get('name') or ''
+        url = repo.get('url') or ''
+        owner = repo.get('owner') or ''
+        repo_name = repo.get('repo_name') or ''
         desc = repo.get('description') or ''
         zh_desc = repo.get('zh_description') or ''
         overview = repo.get('overview') or ''
+        searchable_text = '\n'.join([
+            name,
+            url,
+            owner,
+            repo_name,
+            desc,
+            zh_desc,
+            overview,
+        ]).lower()
         
         
         matched = False
         for k in keywords:
-            if k in desc or k in zh_desc or k in overview:
+            if k.lower() in searchable_text:
                 matched = True
                 break
                 
@@ -110,6 +124,7 @@ def search_repositories(json_file, keywords, theme_name, data=None):
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Search exported GitHub repositories JSON file.")
     parser.add_argument('--file', '-f', default='data/repos_data_json/repositories_export_part1.json', help='Path to the JSON file')
+    parser.add_argument('--all-parts', action='store_true', help='Search all data/repos_data_json/repositories_export_part*.json files.')
     parser.add_argument('--list', '-l', default='scripts/search_list.txt', help='Path to the search list text file')
     parser.add_argument('--idx', '-i', type=int, default=-1, help='Line index to search (1-indexed). Defaults to -1 (last line).')
     parser.add_argument('--range', '-r', type=int, default=-1, help='Start line index to process till the end (1-indexed). Overrides --idx if provided.')
@@ -117,14 +132,28 @@ if __name__ == '__main__':
     
     themes = read_keywords_from_list(args.list, args.idx, args.range)
     
-    # Load data once to avoid reloading for every theme
-    try:
-        with open(args.file, 'r', encoding='utf-8') as f:
-            preloaded_data = json.load(f)
-            print(f"Loading {len(preloaded_data)} repositories from {args.file}...")
-    except FileNotFoundError:
-        print(f"Error: File '{args.file}' not found.")
-        sys.exit(1)
+    # Load data once to avoid reloading for every theme.
+    if args.all_parts:
+        part_files = sorted(glob.glob(os.path.join('data', 'repos_data_json', 'repositories_export_part*.json')))
+        if not part_files:
+            print("Error: No repository part files found under data/repos_data_json.")
+            sys.exit(1)
+        preloaded_data = []
+        for part_file in part_files:
+            with open(part_file, 'r', encoding='utf-8') as f:
+                part_data = json.load(f)
+                preloaded_data.extend(part_data)
+                print(f"Loading {len(part_data)} repositories from {part_file}...")
+        args.file = os.path.join('data', 'repos_data_json', 'repositories_export_all.json')
+        print(f"Loaded {len(preloaded_data)} repositories from {len(part_files)} part files.")
+    else:
+        try:
+            with open(args.file, 'r', encoding='utf-8') as f:
+                preloaded_data = json.load(f)
+                print(f"Loading {len(preloaded_data)} repositories from {args.file}...")
+        except FileNotFoundError:
+            print(f"Error: File '{args.file}' not found.")
+            sys.exit(1)
         
     for keywords, theme_name in themes:
         search_repositories(args.file, keywords, theme_name, data=preloaded_data)
